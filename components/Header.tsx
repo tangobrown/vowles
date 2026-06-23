@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui";
-import { PhoneIcon } from "@/components/icons";
+import { PhoneIcon, ArrowUpRight } from "@/components/icons";
 import { SERVICES, PHONE_DISPLAY, PHONE_HREF, servicePath } from "@/lib/data";
 
 export function Header() {
@@ -135,9 +135,9 @@ export function Header() {
                       Paul takes on plenty that isn&apos;t listed — just ask.
                     </div>
                   </div>
-                  <span className="inline-flex shrink-0 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand transition-transform duration-200 group-hover/cta:translate-x-0.5">
+                  <span className="inline-flex shrink-0 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand">
                     Enquire
-                    <span aria-hidden="true">→</span>
+                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
                   </span>
                 </Link>
               </div>
