@@ -245,10 +245,10 @@ export default function AboutPage() {
     <main>
       <AboutHero />
       <PaulSection />
-      <Testimonials divided />
       <Accreditations />
       <HowWeWork />
       <GalleryPreview />
+      <Testimonials divided />
       <FinalCTA />
     </main>
   );
