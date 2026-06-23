@@ -20,7 +20,7 @@ export function Header() {
 
   const nav = [
     { label: "Home", href: "/#top" },
-    { label: "About", href: "/#about" },
+    { label: "About", href: "/about" },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
   ];
@@ -55,7 +55,7 @@ export function Header() {
             Home
           </Link>
           <Link
-            href="/#about"
+            href="/about"
             className="px-3.5 py-2 text-[15px] font-medium text-white/85 transition-colors hover:text-brand"
           >
             About

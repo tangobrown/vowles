@@ -112,7 +112,7 @@ export function AboutTeaser() {
           </Reveal>
           <Reveal delay={260}>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/contact" variant="ghost">More about Paul</Button>
+              <Button href="/about" variant="ghost">More about Paul</Button>
               <Button href="/contact#form">Start a conversation</Button>
             </div>
           </Reveal>
