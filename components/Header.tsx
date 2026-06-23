@@ -85,21 +85,40 @@ export function Header() {
                   : "invisible opacity-0 -translate-y-1"
               }`}
             >
-              <div className="grid grid-cols-2 gap-1 border border-white/10 bg-surface2 p-2 shadow-2xl">
-                {SERVICES.map((s) => (
-                  <Link
-                    key={s.id}
-                    href={servicePath(s.id)}
-                    className="group/svc px-3 py-2.5 transition-colors hover:bg-white/5"
-                  >
-                    <div className="text-[14px] font-semibold text-white group-hover/svc:text-brand">
-                      {s.name}
+              <div className="border border-white/10 bg-surface2 shadow-2xl">
+                <div className="grid grid-cols-2 gap-1 p-2">
+                  {SERVICES.map((s) => (
+                    <Link
+                      key={s.id}
+                      href={servicePath(s.id)}
+                      className="group/svc px-3 py-2.5 transition-colors hover:bg-white/5"
+                    >
+                      <div className="text-[14px] font-semibold text-white group-hover/svc:text-brand">
+                        {s.name}
+                      </div>
+                      <div className="mt-0.5 text-[12px] leading-snug text-white/45">
+                        {s.blurb}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <Link
+                  href="/contact#form"
+                  className="group/cta flex items-center justify-between gap-4 border-t border-white/10 bg-ink/40 px-4 py-3.5 transition-colors hover:bg-ink/70"
+                >
+                  <div className="min-w-0">
+                    <div className="text-[13px] font-semibold text-white">
+                      Something else in mind?
                     </div>
-                    <div className="mt-0.5 text-[12px] leading-snug text-white/45">
-                      {s.blurb}
+                    <div className="mt-0.5 text-[12px] leading-snug text-white/55">
+                      Paul takes on plenty that isn&apos;t listed — just ask.
                     </div>
-                  </Link>
-                ))}
+                  </div>
+                  <span className="inline-flex shrink-0 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand transition-transform duration-200 group-hover/cta:translate-x-0.5">
+                    Enquire
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
