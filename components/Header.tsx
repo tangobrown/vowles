@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui";
 import { PhoneIcon } from "@/components/icons";
@@ -10,6 +10,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [svcOpen, setSvcOpen] = useState(false);
+  const svcRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -17,6 +18,25 @@ export function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  /* Click-outside + Escape to close the services dropdown. */
+  useEffect(() => {
+    if (!svcOpen) return;
+    const onDown = (e: MouseEvent) => {
+      if (svcRef.current && !svcRef.current.contains(e.target as Node)) {
+        setSvcOpen(false);
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSvcOpen(false);
+    };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [svcOpen]);
 
   const nav = [
     { label: "Home", href: "/#top" },
@@ -61,13 +81,12 @@ export function Header() {
             About
           </Link>
 
-          <div
-            className="relative"
-            onMouseEnter={() => setSvcOpen(true)}
-            onMouseLeave={() => setSvcOpen(false)}
-          >
-            <Link
-              href="/#services"
+          <div className="relative" ref={svcRef}>
+            <button
+              type="button"
+              onClick={() => setSvcOpen((v) => !v)}
+              aria-haspopup="menu"
+              aria-expanded={svcOpen}
               className="flex items-center gap-1.5 px-3.5 py-2 text-[15px] font-medium text-white/85 transition-colors hover:text-brand"
             >
               Services
@@ -77,7 +96,7 @@ export function Header() {
               >
                 ▾
               </span>
-            </Link>
+            </button>
             <div
               className={`absolute left-1/2 top-full w-[420px] -translate-x-1/2 pt-3 transition-all duration-200 ${
                 svcOpen
@@ -91,6 +110,7 @@ export function Header() {
                     <Link
                       key={s.id}
                       href={servicePath(s.id)}
+                      onClick={() => setSvcOpen(false)}
                       className="group/svc px-3 py-2.5 transition-colors hover:bg-white/5"
                     >
                       <div className="text-[14px] font-semibold text-white group-hover/svc:text-brand">
@@ -104,6 +124,7 @@ export function Header() {
                 </div>
                 <Link
                   href="/contact#form"
+                  onClick={() => setSvcOpen(false)}
                   className="group/cta flex items-center justify-between gap-4 border-t border-white/10 bg-ink/40 px-4 py-3.5 transition-colors hover:bg-ink/70"
                 >
                   <div className="min-w-0">
