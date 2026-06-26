@@ -37,6 +37,8 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export type GalleryItem = { slot: string; label: string; span?: "lg" | "wide" };
 
+/* Curated set shown on the home page bento preview. The `span` values assume
+   exactly five items — don't add more here; add to GALLERY_EXTRA instead. */
 export const GALLERY: GalleryItem[] = [
   { slot: "gal-1", label: "Kitchen renovation in Torquay", span: "lg" },
   { slot: "gal-2", label: "Fitted wardrobes in Teignmouth" },
@@ -44,6 +46,20 @@ export const GALLERY: GalleryItem[] = [
   { slot: "gal-4", label: "Garden building in Newton Abbot" },
   { slot: "gal-5", label: "Kitchen renovation in Kenn", span: "wide" },
 ];
+
+/* Extra items shown only on the full /gallery page (appended after GALLERY). */
+export const GALLERY_EXTRA: GalleryItem[] = [
+  { slot: "gal-6", label: "Loft conversion in Torquay" },
+  { slot: "gal-7", label: "Slatted media wall in Exeter" },
+  { slot: "gal-8", label: "Bi-fold garden doors in Shaldon" },
+  { slot: "gal-9", label: "Bedroom built-in storage in Dawlish" },
+  { slot: "gal-10", label: "Hardwood deck in Bishopsteignton" },
+  { slot: "gal-11", label: "Front door replacement in Teignmouth" },
+  { slot: "gal-12", label: "Engineered oak flooring in Topsham" },
+  { slot: "gal-13", label: "Vaulted oak ceiling in Newton Abbot" },
+];
+
+export const GALLERY_FULL: GalleryItem[] = [...GALLERY, ...GALLERY_EXTRA];
 
 export const PHONE_DISPLAY = "07866 599 043";
 export const PHONE_HREF = "tel:+447866599043";

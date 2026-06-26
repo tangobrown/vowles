@@ -5,11 +5,11 @@ import Link from "next/link";
 import { Container, Reveal } from "@/components/ui";
 import { ImageSlot } from "@/components/ImageSlot";
 import { ExpandIcon, XIcon, ChevronIcon } from "@/components/icons";
-import { GALLERY } from "@/lib/data";
+import { GALLERY_FULL } from "@/lib/data";
 
 const ASPECTS = ["4 / 3", "1 / 1", "3 / 4", "4 / 5", "5 / 4", "4 / 3"];
 
-const GALLERY_ITEMS = GALLERY.map((g, i) => ({
+const GALLERY_ITEMS = GALLERY_FULL.map((g, i) => ({
   slot: g.slot,
   label: g.label,
   ar: ASPECTS[i % ASPECTS.length],
