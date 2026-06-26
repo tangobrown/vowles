@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Container, Reveal, Eyebrow, Button, CornerLines } from "@/components/ui";
+import { Container, Reveal, Eyebrow, CornerLines } from "@/components/ui";
 import { ImageSlot } from "@/components/ImageSlot";
+import { QuoteButton } from "@/components/QuoteButton";
 import { CheckIcon, PhoneIcon } from "@/components/icons";
 import { ServiceCarousel } from "@/components/ServiceCarousel";
 import { ServiceFaq } from "@/components/ServiceFaq";
@@ -59,7 +60,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </Reveal>
 
           <Reveal delay={180} className="mt-9 flex flex-wrap gap-3">
-            <Button href="/contact#form">Get a free quote</Button>
+            <QuoteButton>Get a free quote</QuoteButton>
             <a
               href={PHONE_HREF}
               className="inline-flex items-center justify-center gap-2.5 border border-white/25 px-6 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:border-brand hover:text-brand"

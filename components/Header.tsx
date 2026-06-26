@@ -5,12 +5,14 @@ import Link from "next/link";
 import { Container } from "@/components/ui";
 import { PhoneIcon, ArrowUpRight } from "@/components/icons";
 import { SERVICES, PHONE_DISPLAY, PHONE_HREF, servicePath } from "@/lib/data";
+import { useQuote } from "@/components/QuoteContext";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [svcOpen, setSvcOpen] = useState(false);
   const svcRef = useRef<HTMLDivElement>(null);
+  const { open: openQuote } = useQuote();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -122,10 +124,13 @@ export function Header() {
                     </Link>
                   ))}
                 </div>
-                <Link
-                  href="/contact#form"
-                  onClick={() => setSvcOpen(false)}
-                  className="group/cta flex items-center justify-between gap-4 border-t border-white/10 bg-ink/40 px-4 py-3.5 transition-colors hover:bg-ink/70"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSvcOpen(false);
+                    openQuote();
+                  }}
+                  className="group/cta flex w-full items-center justify-between gap-4 border-t border-white/10 bg-ink/40 px-4 py-3.5 text-left transition-colors hover:bg-ink/70"
                 >
                   <div className="min-w-0">
                     <div className="text-[13px] font-semibold text-white">
@@ -139,7 +144,7 @@ export function Header() {
                     Enquire
                     <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
                   </span>
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -168,12 +173,13 @@ export function Header() {
             </span>
             <span className="hidden xl:inline">{PHONE_DISPLAY}</span>
           </a>
-          <Link
-            href="/contact#form"
+          <button
+            type="button"
+            onClick={openQuote}
             className="hidden items-center justify-center gap-2 bg-brand px-6 py-3.5 text-[15px] font-semibold tracking-wide text-ink transition-[filter] duration-200 hover:brightness-95 sm:inline-flex"
           >
             Get a Quote
-          </Link>
+          </button>
 
           <button
             onClick={() => setOpen((v) => !v)}
@@ -242,13 +248,16 @@ export function Header() {
               >
                 Call Paul
               </a>
-              <Link
-                href="/contact#form"
-                onClick={() => setOpen(false)}
+              <button
+                type="button"
+                onClick={() => {
+                  setOpen(false);
+                  openQuote();
+                }}
                 className="inline-flex items-center justify-center gap-2 bg-brand px-6 py-3.5 text-[15px] font-semibold text-ink hover:brightness-95"
               >
                 Get a Quote
-              </Link>
+              </button>
             </div>
           </div>
         </Container>

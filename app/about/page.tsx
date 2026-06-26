@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Container, Reveal, Eyebrow, Button, CornerLines } from "@/components/ui";
+import { Container, Reveal, Eyebrow, CornerLines } from "@/components/ui";
 import { ImageSlot } from "@/components/ImageSlot";
+import { QuoteButton } from "@/components/QuoteButton";
 import { CheckIcon, PhoneIcon } from "@/components/icons";
 import { Testimonials, GalleryPreview, FinalCTA } from "@/components/Sections";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
@@ -125,7 +126,7 @@ function PaulSection() {
           </Reveal>
           <Reveal delay={320}>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/contact#form">Start a conversation</Button>
+              <QuoteButton>Start a conversation</QuoteButton>
               <a
                 href={PHONE_HREF}
                 className="inline-flex items-center justify-center gap-2.5 border border-white/25 px-6 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:border-brand hover:text-brand"

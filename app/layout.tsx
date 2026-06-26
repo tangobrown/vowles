@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Bricolage_Grotesque } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { QuoteProvider } from "@/components/QuoteContext";
+import { QuotePanel } from "@/components/QuotePanel";
 import "./globals.css";
 
 const inter = Inter({
@@ -32,9 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en-GB" className={`${inter.variable} ${bricolage.variable}`}>
       <body className="font-sans bg-ink text-white antialiased">
-        <Header />
-        {children}
-        <Footer />
+        <QuoteProvider>
+          <Header />
+          {children}
+          <Footer />
+          <QuotePanel />
+        </QuoteProvider>
       </body>
     </html>
   );

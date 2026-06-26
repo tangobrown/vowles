@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container, Reveal, Eyebrow, Button, CornerLines } from "@/components/ui";
 import { ImageSlot } from "@/components/ImageSlot";
+import { QuoteButton } from "@/components/QuoteButton";
 import { GoogleG, ArrowUpRight, PhoneIcon } from "@/components/icons";
 import {
   SERVICES,
@@ -33,7 +34,7 @@ export function Services() {
             </Reveal>
           </div>
           <Reveal delay={160} className="hidden md:block">
-            <Button href="/contact#form" variant="ghost">Get a Quote</Button>
+            <QuoteButton variant="ghost">Get a Quote</QuoteButton>
           </Reveal>
         </div>
 
@@ -113,7 +114,7 @@ export function AboutTeaser() {
           <Reveal delay={260}>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/about" variant="ghost">More about Paul</Button>
-              <Button href="/contact#form">Start a conversation</Button>
+              <QuoteButton>Start a conversation</QuoteButton>
             </div>
           </Reveal>
         </div>
@@ -256,12 +257,9 @@ export function FinalCTA() {
               Free, no-obligation, no pressure — just honest advice from a local builder.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Link
-                href="/contact#form"
-                className="inline-flex items-center justify-center gap-2 bg-ink px-7 py-4 text-[16px] font-semibold text-white transition-colors duration-200 hover:bg-black"
-              >
+              <QuoteButton variant="dark" className="px-7 py-4 text-[16px]">
                 Get a Quote
-              </Link>
+              </QuoteButton>
               <a
                 href={PHONE_HREF}
                 className="inline-flex items-center gap-2.5 border border-ink/25 px-6 py-4 text-[16px] font-semibold text-ink transition-colors hover:bg-ink hover:text-white"

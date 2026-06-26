@@ -14,9 +14,20 @@ export function Container({
   );
 }
 
+export const buttonBase =
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold tracking-wide transition-all duration-200 px-6 py-3.5 text-[15px] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60";
+
+export type ButtonVariant = "primary" | "ghost" | "dark";
+
+export const buttonVariants: Record<ButtonVariant, string> = {
+  primary: "bg-brand text-ink hover:bg-brandDark",
+  ghost: "border border-white/25 text-white hover:border-brand hover:text-brand",
+  dark: "bg-ink text-white hover:bg-black",
+};
+
 type ButtonProps = {
   href?: string;
-  variant?: "primary" | "ghost" | "dark";
+  variant?: ButtonVariant;
   className?: string;
   children: ReactNode;
 } & Omit<HTMLAttributes<HTMLAnchorElement>, "children">;
@@ -28,15 +39,8 @@ export function Button({
   children,
   ...rest
 }: ButtonProps) {
-  const base =
-    "inline-flex items-center justify-center gap-2 whitespace-nowrap font-semibold tracking-wide transition-all duration-200 px-6 py-3.5 text-[15px] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/60";
-  const variants = {
-    primary: "bg-brand text-ink hover:bg-brandDark",
-    ghost: "border border-white/25 text-white hover:border-brand hover:text-brand",
-    dark: "bg-ink text-white hover:bg-black",
-  };
   return (
-    <a href={href} className={`${base} ${variants[variant]} ${className}`} {...rest}>
+    <a href={href} className={`${buttonBase} ${buttonVariants[variant]} ${className}`} {...rest}>
       {children}
     </a>
   );

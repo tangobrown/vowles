@@ -6,6 +6,7 @@ import { Container, Reveal, Eyebrow } from "@/components/ui";
 import { ImageSlot } from "@/components/ImageSlot";
 import { PhoneIcon } from "@/components/icons";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
+import { useQuote } from "@/components/QuoteContext";
 
 const HERO_SLOTS = [
   { id: "hero-photo", label: "Hero project photo" },
@@ -16,6 +17,7 @@ const HERO_SLOTS = [
 export function Hero() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const { open: openQuote } = useQuote();
 
   useEffect(() => {
     if (paused) return;
@@ -66,12 +68,13 @@ export function Hero() {
 
           <Reveal delay={240}>
             <div className="pointer-events-auto mt-9 flex flex-wrap items-center gap-3">
-              <Link
-                href="/contact#form"
+              <button
+                type="button"
+                onClick={openQuote}
                 className="inline-flex items-center justify-center gap-2 bg-brand px-7 py-4 text-[16px] font-semibold tracking-wide text-ink transition-[filter] duration-200 hover:brightness-95"
               >
                 Get a Quote
-              </Link>
+              </button>
               <Link
                 href="/gallery"
                 className="inline-flex items-center justify-center gap-2 border border-white/25 px-7 py-4 text-[16px] font-semibold tracking-wide text-white transition-colors hover:border-brand hover:text-brand"
