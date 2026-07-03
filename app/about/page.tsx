@@ -86,7 +86,11 @@ function PaulSection() {
       <Container className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
         <Reveal className="relative">
           <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
-            <ImageSlot id="about-paul" label="A friendly photo of Paul" />
+            <ImageSlot
+              id="about-paul"
+              label="A friendly photo of Paul"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
           <div className="absolute -bottom-6 -right-4 hidden h-32 w-32 flex-col items-center justify-center rounded-full bg-brand text-center text-ink shadow-xl sm:flex">
             <div className="display text-[34px] leading-none">20+</div>

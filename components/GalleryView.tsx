@@ -87,7 +87,12 @@ function Lightbox({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="w-full" style={{ height: "min(74vh, 720px)" }}>
-          <ImageSlot id={item.slot} label={item.label} fit="contain" />
+          <ImageSlot
+            id={item.slot}
+            label={item.label}
+            fit="contain"
+            sizes="(max-width: 1100px) 100vw, 1100px"
+          />
         </div>
         <div className="mt-5 text-center">
           <div className="text-[16px] font-semibold text-white sm:text-[18px]">
@@ -157,7 +162,11 @@ export function GalleryView() {
                   style={{ aspectRatio: item.ar }}
                 >
                   <div className="pointer-events-none absolute inset-0">
-                    <ImageSlot id={item.slot} label={item.label} />
+                    <ImageSlot
+                      id={item.slot}
+                      label={item.label}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   </div>
                   <div className="pointer-events-none absolute inset-0 bg-ink/0 transition-colors duration-300 group-hover:bg-ink/35" />
                   <span className="pointer-events-none absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-ink/70 text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">

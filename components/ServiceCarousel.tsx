@@ -116,7 +116,11 @@ export function ServiceCarousel({
                     onClick={() => !isActive && go(i)}
                   >
                     <div className="relative h-full w-full overflow-hidden border border-white/10">
-                      <ImageSlot id={s.id} label={s.label} />
+                      <ImageSlot
+                        id={s.id}
+                        label={s.label}
+                        sizes="(max-width: 720px) 84vw, (max-width: 1280px) 72vw, 900px"
+                      />
                       <div
                         className="pointer-events-none absolute inset-0 bg-ink transition-opacity duration-500"
                         style={{ opacity: isActive ? 0 : 0.5 }}

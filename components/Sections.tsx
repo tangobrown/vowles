@@ -46,7 +46,11 @@ export function Services() {
                 className="flex h-full flex-col overflow-hidden border border-white/10 bg-surface transition-colors duration-300 hover:border-brand/50"
               >
                 <div className="relative aspect-[16/11] overflow-hidden">
-                  <ImageSlot id={s.slot} label={s.name} />
+                  <ImageSlot
+                    id={s.slot}
+                    label={s.name}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-60" />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
@@ -79,7 +83,11 @@ export function AboutTeaser() {
       <Container className="relative z-10 grid items-center gap-12 md:grid-cols-2 lg:gap-16">
         <Reveal className="relative">
           <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
-            <ImageSlot id="about-paul" label="A friendly photo of Paul" />
+            <ImageSlot
+              id="about-paul"
+              label="A friendly photo of Paul"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
           <div className="absolute -bottom-6 -right-4 hidden h-32 w-32 flex-col items-center justify-center rounded-full bg-brand text-center text-ink shadow-xl sm:flex">
             <div className="display text-[34px] leading-none">20+</div>
@@ -160,7 +168,15 @@ export function GalleryPreview() {
                 delay={i * 60}
                 className={`group relative overflow-hidden border border-white/10 ${span}`}
               >
-                <ImageSlot id={g.slot} label={g.label} />
+                <ImageSlot
+                  id={g.slot}
+                  label={g.label}
+                  sizes={
+                    g.span === "lg" || g.span === "wide"
+                      ? "(max-width: 1024px) 100vw, 50vw"
+                      : "(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+                  }
+                />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="pointer-events-none absolute bottom-0 left-0 p-4 opacity-0 transition-all duration-300 group-hover:opacity-100">
                   <span className="text-[14px] font-semibold text-white">{g.label}</span>

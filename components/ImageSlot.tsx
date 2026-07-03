@@ -13,7 +13,10 @@ type Props = {
   style?: CSSProperties;
 };
 
-const DEFAULT_SIZES = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw";
+/* Safe default: serve a full-viewport-width variant. Callers displaying at a
+   smaller fraction of the viewport (cards, tiles, portrait) should pass a
+   tighter sizes prop to avoid over-fetching. */
+const DEFAULT_SIZES = "100vw";
 
 export function ImageSlot({
   id,
