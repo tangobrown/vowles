@@ -37,7 +37,7 @@ This folder is gitignored (except this README) — photos never get committed to
 | `gal-2` | Cedar-clad extension in Teignmouth | ✅ |
 | `gal-3` | Cedar garden building in Torbay | ✅ |
 | `gal-4` | Bespoke fitted wardrobes in Exeter | ✅ |
-| `gal-5` | Oak floor & slatted wall in Newton Abbot | ✅ |
+| `gal-5` | Timber-frame build in progress | ✅ |
 
 ### Gallery — extra (8, `/gallery` only)
 

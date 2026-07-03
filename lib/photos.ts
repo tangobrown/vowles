@@ -8,7 +8,7 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "gal-2": "/images/cedar-clad-extension-teignmouth.jpg",
   "gal-3": "/images/cedar-garden-building-torbay.jpg",
   "gal-4": "/images/bespoke-fitted-wardrobes-exeter.jpg",
-  "gal-5": "/images/oak-floor-slatted-wall-newton-abbot.jpg",
+  "gal-5": "/images/timber-frame-build.jpg",
 
   // Home service cards
   "svc-kit": "/images/shaker-kitchen-fit.jpg",

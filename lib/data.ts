@@ -44,7 +44,7 @@ export const GALLERY: GalleryItem[] = [
   { slot: "gal-2", label: "Cedar-clad extension in Teignmouth" },
   { slot: "gal-3", label: "Cedar garden building in Torbay" },
   { slot: "gal-4", label: "Bespoke fitted wardrobes in Exeter" },
-  { slot: "gal-5", label: "Oak floor & slatted wall in Newton Abbot", span: "wide" },
+  { slot: "gal-5", label: "Timber-frame build in progress", span: "wide" },
 ];
 
 /* Extra items shown only on the full /gallery page (appended after GALLERY). */
