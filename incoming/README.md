@@ -29,15 +29,15 @@ This folder is gitignored (except this README) — photos never get committed to
 | `svc-maint` | Home service card | Maintenance Contracts |
 | `svc-doors` | Home service card | Windows & Doors |
 
-### Gallery — home bento (5)
+### Gallery — home bento (5) — done
 
-| Slot ID | Label |
-|---|---|
-| `gal-1` | Kitchen renovation in Torquay |
-| `gal-2` | Fitted wardrobes in Teignmouth |
-| `gal-3` | Extension in Newton Abbot |
-| `gal-4` | Garden building in Newton Abbot |
-| `gal-5` | Kitchen renovation in Kenn |
+| Slot ID | Label | Status |
+|---|---|---|
+| `gal-1` | Shaker kitchen fit in Torquay | ✅ |
+| `gal-2` | Cedar-clad extension in Teignmouth | ✅ |
+| `gal-3` | Cedar garden building in Torbay | ✅ |
+| `gal-4` | Bespoke fitted wardrobes in Exeter | ✅ |
+| `gal-5` | Oak floor & slatted wall in Newton Abbot | ✅ |
 
 ### Gallery — extra (8, `/gallery` only)
 

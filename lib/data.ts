@@ -40,11 +40,11 @@ export type GalleryItem = { slot: string; label: string; span?: "lg" | "wide" };
 /* Curated set shown on the home page bento preview. The `span` values assume
    exactly five items — don't add more here; add to GALLERY_EXTRA instead. */
 export const GALLERY: GalleryItem[] = [
-  { slot: "gal-1", label: "Kitchen renovation in Torquay", span: "lg" },
-  { slot: "gal-2", label: "Fitted wardrobes in Teignmouth" },
-  { slot: "gal-3", label: "Extension in Newton Abbot" },
-  { slot: "gal-4", label: "Garden building in Newton Abbot" },
-  { slot: "gal-5", label: "Kitchen renovation in Kenn", span: "wide" },
+  { slot: "gal-1", label: "Shaker kitchen fit in Torquay", span: "lg" },
+  { slot: "gal-2", label: "Cedar-clad extension in Teignmouth" },
+  { slot: "gal-3", label: "Cedar garden building in Torbay" },
+  { slot: "gal-4", label: "Bespoke fitted wardrobes in Exeter" },
+  { slot: "gal-5", label: "Oak floor & slatted wall in Newton Abbot", span: "wide" },
 ];
 
 /* Extra items shown only on the full /gallery page (appended after GALLERY). */

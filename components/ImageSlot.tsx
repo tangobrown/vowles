@@ -1,17 +1,47 @@
 import { CSSProperties } from "react";
+import Image from "next/image";
+import { SLOT_PHOTOS } from "@/lib/photos";
 
 type Props = {
   id: string;
   label: string;
   fit?: "cover" | "contain";
+  /* Responsive sizes hint for next/image. Override per-caller when the slot
+     displays at a known size (e.g. a full-bleed hero should pass 100vw). */
+  sizes?: string;
   className?: string;
   style?: CSSProperties;
 };
 
-/* Dark, striped placeholder. Drop a real photo at /public/images/<id>.jpg
-   later and swap this for <Image src={`/images/${id}.jpg`} alt={label} … />.
-   Kept lightweight on purpose: no JS, no images, no layout shift. */
-export function ImageSlot({ id, label, fit = "cover", className = "", style }: Props) {
+const DEFAULT_SIZES = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw";
+
+export function ImageSlot({
+  id,
+  label,
+  fit = "cover",
+  sizes = DEFAULT_SIZES,
+  className = "",
+  style,
+}: Props) {
+  const photo = SLOT_PHOTOS[id];
+
+  if (photo) {
+    return (
+      <div
+        className={`relative h-full w-full overflow-hidden ${className}`}
+        style={style}
+      >
+        <Image
+          src={photo}
+          alt={label}
+          fill
+          sizes={sizes}
+          style={{ objectFit: fit }}
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       data-slot-id={id}
