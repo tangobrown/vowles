@@ -16,3 +16,7 @@ next-env.d.ts.bak
 
 # typescript
 *.tsbuildinfo
+
+# scratch folder for raw photo uploads before processing
+incoming/*
+!incoming/README.md
