@@ -10,12 +10,19 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "gal-4": "/images/bespoke-fitted-wardrobes-exeter.jpg",
   "gal-5": "/images/timber-frame-build.jpg",
 
-  // Home service cards
+  // Home service cards + service page heroes share the same photo per service.
   "svc-kit": "/images/shaker-kitchen-fit.jpg",
+  "kit-hero": "/images/shaker-kitchen-fit.jpg",
   "svc-loft": "/images/dormer-loft-conversion.jpg",
+  "loft-hero": "/images/dormer-loft-conversion.jpg",
   "svc-doors": "/images/timber-french-doors.jpg",
+  "doors-hero": "/images/timber-french-doors.jpg",
   "svc-roof": "/images/cut-roof-carpentry.jpg",
+  "roof-hero": "/images/cut-roof-carpentry.jpg",
   "svc-ext": "/images/home-extension-build.jpg",
+  "ext-hero": "/images/home-extension-build.jpg",
   "svc-media": "/images/media-wall-exminster.jpg",
+  "media-hero": "/images/media-wall-exminster.jpg",
   "svc-floor": "/images/raised-deck-build.jpg",
+  "floor-hero": "/images/raised-deck-build.jpg",
 };

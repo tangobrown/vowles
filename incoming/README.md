@@ -54,16 +54,21 @@ This folder is gitignored (except this README) — photos never get committed to
 
 ### Service page heroes (8)
 
+Each hero slot uses the same photo as the corresponding home service card
+(via a shared entry in `lib/photos.ts`) — so the photo you approve for
+`svc-loft` also becomes the `loft-hero` background, etc. Change one, both
+update.
+
 | Slot ID | Service page |
 |---|---|
-| `loft-hero` | Loft Conversions |
-| `ext-hero` | Extensions |
-| `kit-hero` | Kitchens |
-| `media-hero` | Media Walls |
-| `roof-hero` | Cut Roofs |
-| `floor-hero` | Flooring & Decking |
+| `loft-hero` | Loft Conversions ✅ (shares `svc-loft`) |
+| `ext-hero` | Extensions ✅ (shares `svc-ext`) |
+| `kit-hero` | Kitchens ✅ (shares `svc-kit`) |
+| `media-hero` | Media Walls ✅ (shares `svc-media`) |
+| `roof-hero` | Cut Roofs ✅ (shares `svc-roof`) |
+| `floor-hero` | Flooring & Decking ✅ (shares `svc-floor`) |
 | `maint-hero` | Maintenance Contracts |
-| `doors-hero` | Windows & Doors |
+| `doors-hero` | Windows & Doors ✅ (shares `svc-doors`) |
 
 ### Service page carousels (48)
 
