@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Container } from "@/components/ui";
-import { PhoneIcon, ArrowUpRight } from "@/components/icons";
+import { PhoneIcon, ArrowUpRight, ChevronDown } from "@/components/icons";
+import { ImageSlot } from "@/components/ImageSlot";
 import { SERVICES, PHONE_DISPLAY, PHONE_HREF, servicePath } from "@/lib/data";
 import { useQuote } from "@/components/QuoteContext";
 
@@ -92,33 +93,37 @@ export function Header() {
               className="flex items-center gap-1.5 px-3.5 py-2 text-[15px] font-medium text-white/85 transition-colors hover:text-brand"
             >
               Services
-              <span
-                className={`mt-0.5 inline-block transition-transform ${svcOpen ? "rotate-180" : ""}`}
-                style={{ fontSize: 10 }}
-              >
-                ▾
-              </span>
+              <ChevronDown
+                className={`h-3.5 w-3.5 transition-transform duration-200 ${svcOpen ? "rotate-180" : ""}`}
+              />
             </button>
             <div
-              className={`absolute left-1/2 top-full w-[420px] -translate-x-1/2 pt-3 transition-all duration-200 ${
+              className={`absolute left-1/2 top-full w-[640px] -translate-x-1/2 pt-3 transition-all duration-200 ${
                 svcOpen
                   ? "visible opacity-100 translate-y-0"
                   : "invisible opacity-0 -translate-y-1"
               }`}
             >
               <div className="border border-white/10 bg-surface2 shadow-2xl">
-                <div className="grid grid-cols-2 gap-1 p-2">
+                <div className="grid grid-cols-3 gap-1 p-2">
                   {SERVICES.map((s) => (
                     <Link
                       key={s.id}
                       href={servicePath(s.id)}
                       onClick={() => setSvcOpen(false)}
-                      className="group/svc px-3 py-2.5 transition-colors hover:bg-white/5"
+                      className="group/svc p-2 transition-colors hover:bg-white/5"
                     >
-                      <div className="text-[14px] font-semibold text-white group-hover/svc:text-brand">
+                      <div className="relative mb-2 aspect-[16/10] overflow-hidden border border-white/10 transition-colors group-hover/svc:border-brand/40">
+                        <ImageSlot
+                          id={s.slot}
+                          label={s.name}
+                          sizes="220px"
+                        />
+                      </div>
+                      <div className="text-[13px] font-semibold leading-snug text-white group-hover/svc:text-brand">
                         {s.name}
                       </div>
-                      <div className="mt-0.5 text-[12px] leading-snug text-white/45">
+                      <div className="mt-0.5 line-clamp-2 text-[11px] leading-snug text-white/45">
                         {s.blurb}
                       </div>
                     </Link>
