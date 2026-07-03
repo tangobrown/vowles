@@ -73,7 +73,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* Intro + sub-services */}
-      <section className="relative overflow-hidden bg-ink py-24 sm:py-28">
+      <section className="relative overflow-clip bg-ink py-24 sm:py-28">
         <CornerLines />
         <Container className="relative z-10 grid gap-12 md:grid-cols-2 lg:gap-20">
           <div className="md:sticky md:top-24 md:self-start">
