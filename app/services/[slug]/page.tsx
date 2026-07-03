@@ -76,7 +76,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       <section className="relative overflow-hidden bg-ink py-24 sm:py-28">
         <CornerLines />
         <Container className="relative z-10 grid gap-12 md:grid-cols-2 lg:gap-20">
-          <div>
+          <div className="md:sticky md:top-24 md:self-start">
             <Reveal><Eyebrow>What&apos;s involved</Eyebrow></Reveal>
             <Reveal delay={60}>
               <h2 className="display mt-5 text-[34px] text-white sm:text-[44px]">
