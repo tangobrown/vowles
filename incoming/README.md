@@ -23,7 +23,7 @@ This folder is gitignored (except this README) — photos never get committed to
 | `svc-loft` | Home service card | Loft Conversions ✅ |
 | `svc-ext` | Home service card | Extensions ✅ |
 | `svc-kit` | Home service card | Kitchens ✅ |
-| `svc-media` | Home service card | Media Walls |
+| `svc-media` | Home service card | Media Walls ✅ |
 | `svc-roof` | Home service card | Cut Roofs ✅ |
 | `svc-floor` | Home service card | Flooring & Decking |
 | `svc-maint` | Home service card | Maintenance Contracts |
