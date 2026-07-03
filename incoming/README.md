@@ -20,14 +20,14 @@ This folder is gitignored (except this README) — photos never get committed to
 | `hero-photo-2` | Home hero slide 2 | |
 | `hero-photo-3` | Home hero slide 3 | |
 | `about-paul` | Home + About page, image of Paul | Friendly photo of Paul |
-| `svc-loft` | Home service card | Loft Conversions |
-| `svc-ext` | Home service card | Extensions |
-| `svc-kit` | Home service card | Kitchens |
+| `svc-loft` | Home service card | Loft Conversions ✅ |
+| `svc-ext` | Home service card | Extensions ✅ |
+| `svc-kit` | Home service card | Kitchens ✅ |
 | `svc-media` | Home service card | Media Walls |
-| `svc-roof` | Home service card | Cut Roofs |
+| `svc-roof` | Home service card | Cut Roofs ✅ |
 | `svc-floor` | Home service card | Flooring & Decking |
 | `svc-maint` | Home service card | Maintenance Contracts |
-| `svc-doors` | Home service card | Windows & Doors |
+| `svc-doors` | Home service card | Windows & Doors ✅ |
 
 ### Gallery — home bento (5) — done
 
