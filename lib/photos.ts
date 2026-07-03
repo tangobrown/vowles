@@ -17,4 +17,5 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "svc-roof": "/images/cut-roof-carpentry.jpg",
   "svc-ext": "/images/home-extension-build.jpg",
   "svc-media": "/images/media-wall-exminster.jpg",
+  "svc-floor": "/images/raised-deck-build.jpg",
 };
