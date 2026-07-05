@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useQuote } from "@/components/QuoteContext";
 import { XIcon, CheckCircleIcon } from "@/components/icons";
+import { HoneypotField } from "@/components/HoneypotField";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
 import { submitToFormspree } from "@/lib/formspree";
 
@@ -37,6 +38,7 @@ export function QuotePanel() {
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
 
   // Lock body scroll + Esc-to-close while open
   useEffect(() => {
@@ -62,6 +64,7 @@ export function QuotePanel() {
       setForm(EMPTY);
       setErrors({});
       setSubmitError(null);
+      setHoneypot("");
     }, 400);
     return () => clearTimeout(t);
   }, [isOpen, sent]);
@@ -91,6 +94,14 @@ export function QuotePanel() {
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Honeypot: bots fill the hidden "website" field. Silently show success
+    // without hitting Formspree so they can't tell they were dropped.
+    if (honeypot.trim()) {
+      setSent(true);
+      return;
+    }
+
     const er = validate();
     setErrors(er);
     if (Object.keys(er).length > 0) return;
@@ -186,6 +197,7 @@ export function QuotePanel() {
                   setForm(EMPTY);
                   setErrors({});
                   setSubmitError(null);
+                  setHoneypot("");
                 }}
                 className="mt-6 text-[14px] font-semibold text-white/60 underline-offset-4 hover:text-brand hover:underline"
               >
@@ -205,6 +217,7 @@ export function QuotePanel() {
               </ol>
 
               <form onSubmit={submit} noValidate className="mt-7 grid gap-4">
+                <HoneypotField value={honeypot} onChange={setHoneypot} />
                 <div>
                   <label className="mb-1.5 block text-[13px] font-semibold text-white/80">
                     Your name <span className="text-brand">*</span>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircleIcon } from "@/components/icons";
+import { HoneypotField } from "@/components/HoneypotField";
 import { SERVICES, PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
 import { submitToFormspree } from "@/lib/formspree";
 
@@ -29,6 +30,7 @@ export function ContactForm() {
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
 
   const set =
     (k: keyof FormState) =>
@@ -53,6 +55,14 @@ export function ContactForm() {
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Honeypot: bots fill the hidden "website" field. Silently show success
+    // without hitting Formspree so they can't tell they were dropped.
+    if (honeypot.trim()) {
+      setSent(true);
+      return;
+    }
+
     const er = validate();
     setErrors(er);
     if (Object.keys(er).length > 0) return;
@@ -102,6 +112,7 @@ export function ContactForm() {
             setForm(EMPTY);
             setErrors({});
             setSubmitError(null);
+            setHoneypot("");
           }}
           className="mt-7 text-[14px] font-semibold text-white/60 underline-offset-4 hover:text-brand hover:underline"
         >
@@ -122,6 +133,8 @@ export function ContactForm() {
       <p className="mt-2 text-[14px] text-white/55">
         Fields marked with <span className="text-brand">*</span> are required.
       </p>
+
+      <HoneypotField value={honeypot} onChange={setHoneypot} />
 
       <div className="mt-6 grid gap-5">
         <div>
