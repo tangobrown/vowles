@@ -16,9 +16,9 @@ This folder is gitignored (except this README) — photos never get committed to
 
 | Slot ID | Where it shows | Label / usage |
 |---|---|---|
-| `hero-photo` | Home hero slide 1 (also reused as gallery banner) | Main project photo |
-| `hero-photo-2` | Home hero slide 2 | |
-| `hero-photo-3` | Home hero slide 3 | |
+| `hero-photo` | Home hero slide 1 (also reused as gallery banner) | Main project photo — **placeholder: sage shaker kitchen** |
+| `hero-photo-2` | Home hero slide 2 | **placeholder: sage shaker kitchen** |
+| `hero-photo-3` | Home hero slide 3 | **placeholder: sage shaker kitchen** |
 | `about-paul` | Home + About page, image of Paul | Friendly photo of Paul |
 | `svc-loft` | Home service card | Loft Conversions ✅ |
 | `svc-ext` | Home service card | Extensions ✅ |
