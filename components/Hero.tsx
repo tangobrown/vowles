@@ -55,7 +55,8 @@ export function Hero() {
 
           <Reveal delay={80}>
             <h1 className="display mt-6 text-white">
-              A local builder you can <span className="text-brand">actually</span> get hold of
+              An experienced carpenter who treats your home like{" "}
+              <span className="text-brand">his own</span>.
             </h1>
           </Reveal>
 
