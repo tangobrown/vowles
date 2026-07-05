@@ -54,7 +54,10 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="display mt-6 text-white">
+            <h1
+              className="display mt-6 text-white"
+              style={{ fontSize: "clamp(36px, 5.6vw, 68px)" }}
+            >
               An experienced carpenter who treats your home like{" "}
               <span className="text-brand">his own</span>.
             </h1>
