@@ -42,4 +42,60 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "media-hero": "/images/media-wall-exminster.jpg",
   "svc-floor": "/images/raised-deck-build.jpg",
   "floor-hero": "/images/raised-deck-build.jpg",
+  "svc-maint": "/images/timber-driveway-gates.jpg",
+  "maint-hero": "/images/timber-driveway-gates.jpg",
+
+  // Service page carousels
+  // Loft Conversions
+  "loft-gal-1": "/images/dormer-loft-conversion.jpg",
+  "loft-gal-2": "/images/bespoke-oak-staircase.jpg",
+  "loft-gal-3": "/images/pine-staircase-loft.jpg",
+  "loft-gal-4": "/images/loft-structural-steel.jpg",
+  "loft-gal-5": "/images/steel-timber-junction.jpg",
+  "loft-gal-6": "/images/oak-staircase-loft-conversion.jpg",
+
+  // Extensions
+  "ext-gal-1": "/images/home-extension-build.jpg",
+  "ext-gal-2": "/images/vaulted-extension-bifolds.jpg",
+  "ext-gal-3": "/images/gable-end-glazing-install.jpg",
+  "ext-gal-4": "/images/cedar-clad-extension-teignmouth.jpg",
+  "ext-gal-5": "/images/vaulted-extension-plaster.jpg",
+  "ext-gal-6": "/images/timber-frame-build.jpg",
+
+  // Kitchens (short — 2 of 6)
+  "kit-gal-1": "/images/shaker-kitchen-fit.jpg",
+  "kit-gal-2": "/images/shaker-kitchen-fit-torquay.jpg",
+
+  // Media Walls (short — 4 of 6)
+  "media-gal-1": "/images/media-wall-exminster.jpg",
+  "media-gal-2": "/images/slatted-office-fit-out.jpg",
+  "media-gal-3": "/images/oak-floor-slatted-wall.jpg",
+  "media-gal-4": "/images/oak-panelling-detail.jpg",
+
+  // Cut Roofs
+  "roof-gal-1": "/images/cut-roof-carpentry.jpg",
+  "roof-gal-2": "/images/cut-roof-rafters.jpg",
+  "roof-gal-3": "/images/cut-roof-interior.jpg",
+  "roof-gal-4": "/images/roof-valley-carpentry.jpg",
+  "roof-gal-5": "/images/steel-truss-timber-rafters.jpg",
+  "roof-gal-6": "/images/structural-steel-rafters.jpg",
+
+  // Flooring & Decking (short — 3 of 6)
+  "floor-gal-1": "/images/raised-deck-build.jpg",
+  "floor-gal-2": "/images/oak-floor-slatted-wall.jpg",
+  "floor-gal-3": "/images/bespoke-oak-staircase.jpg",
+
+  // Maintenance Contracts (short — 4 of 6)
+  "maint-gal-1": "/images/timber-driveway-gates.jpg",
+  "maint-gal-2": "/images/heritage-staircase-panelling-detail.jpg",
+  "maint-gal-3": "/images/hallway-panelling-bench.jpg",
+  "maint-gal-4": "/images/heritage-staircase-panelling.jpg",
+
+  // Windows & Doors
+  "doors-gal-1": "/images/timber-french-doors.jpg",
+  "doors-gal-2": "/images/summerhouse-garden-french-doors.jpg",
+  "doors-gal-3": "/images/white-summerhouse-french-doors.jpg",
+  "doors-gal-4": "/images/summerhouse-frame-build.jpg",
+  "doors-gal-5": "/images/vaulted-extension-bifolds.jpg",
+  "doors-gal-6": "/images/gable-end-glazing-install.jpg",
 };
