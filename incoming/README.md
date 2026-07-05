@@ -39,18 +39,25 @@ This folder is gitignored (except this README) — photos never get committed to
 | `gal-4` | Bespoke fitted wardrobes in Exeter | ✅ |
 | `gal-5` | Timber-frame build in progress | ✅ |
 
-### Gallery — extra (8, `/gallery` only)
+### Gallery — extra (15, `/gallery` only) — done
 
-| Slot ID | Label |
-|---|---|
-| `gal-6` | Loft conversion in Torquay |
-| `gal-7` | Slatted media wall in Exeter |
-| `gal-8` | Bi-fold garden doors in Shaldon |
-| `gal-9` | Bedroom built-in storage in Dawlish |
-| `gal-10` | Hardwood deck in Bishopsteignton |
-| `gal-11` | Front door replacement in Teignmouth |
-| `gal-12` | Engineered oak flooring in Topsham |
-| `gal-13` | Vaulted oak ceiling in Newton Abbot |
+| Slot ID | Label | Status |
+|---|---|---|
+| `gal-6` | Heritage staircase and wall panelling | ✅ |
+| `gal-7` | Installing gable-end glazing | ✅ |
+| `gal-8` | Oak floor and slatted feature wall | ✅ |
+| `gal-9` | Vaulted extension with bi-fold doors | ✅ |
+| `gal-10` | Three-gable timber-clad house | ✅ |
+| `gal-11` | Bespoke timber driveway gates | ✅ |
+| `gal-12` | Bespoke oak staircase | ✅ |
+| `gal-13` | Oak trim and tongue-and-groove panelling | ✅ |
+| `gal-14` | Timber-clad house mid-build | ✅ |
+| `gal-15` | Cut roof rafters and breather membrane | ✅ |
+| `gal-16` | Inside a cut roof structure | ✅ |
+| `gal-17` | Steel and timber structural junction | ✅ |
+| `gal-18` | On site with the Paul Vowles Carpentry van | ✅ |
+| `gal-19` | Roof valley carpentry from the scaffold | ✅ |
+| `gal-20` | Slatted office fit-out with signage | ✅ |
 
 ### Service page heroes (8)
 

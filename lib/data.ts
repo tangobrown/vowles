@@ -49,14 +49,21 @@ export const GALLERY: GalleryItem[] = [
 
 /* Extra items shown only on the full /gallery page (appended after GALLERY). */
 export const GALLERY_EXTRA: GalleryItem[] = [
-  { slot: "gal-6", label: "Loft conversion in Torquay" },
-  { slot: "gal-7", label: "Slatted media wall in Exeter" },
-  { slot: "gal-8", label: "Bi-fold garden doors in Shaldon" },
-  { slot: "gal-9", label: "Bedroom built-in storage in Dawlish" },
-  { slot: "gal-10", label: "Hardwood deck in Bishopsteignton" },
-  { slot: "gal-11", label: "Front door replacement in Teignmouth" },
-  { slot: "gal-12", label: "Engineered oak flooring in Topsham" },
-  { slot: "gal-13", label: "Vaulted oak ceiling in Newton Abbot" },
+  { slot: "gal-6", label: "Heritage staircase and wall panelling" },
+  { slot: "gal-7", label: "Installing gable-end glazing" },
+  { slot: "gal-8", label: "Oak floor and slatted feature wall" },
+  { slot: "gal-9", label: "Vaulted extension with bi-fold doors" },
+  { slot: "gal-10", label: "Three-gable timber-clad house" },
+  { slot: "gal-11", label: "Bespoke timber driveway gates" },
+  { slot: "gal-12", label: "Bespoke oak staircase" },
+  { slot: "gal-13", label: "Oak trim and tongue-and-groove panelling" },
+  { slot: "gal-14", label: "Timber-clad house mid-build" },
+  { slot: "gal-15", label: "Cut roof rafters and breather membrane" },
+  { slot: "gal-16", label: "Inside a cut roof structure" },
+  { slot: "gal-17", label: "Steel and timber structural junction" },
+  { slot: "gal-18", label: "On site with the Paul Vowles Carpentry van" },
+  { slot: "gal-19", label: "Roof valley carpentry from the scaffold" },
+  { slot: "gal-20", label: "Slatted office fit-out with signage" },
 ];
 
 export const GALLERY_FULL: GalleryItem[] = [...GALLERY, ...GALLERY_EXTRA];
