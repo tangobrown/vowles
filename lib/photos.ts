@@ -3,12 +3,13 @@
    placeholder otherwise. Add entries as photos are processed. */
 
 export const SLOT_PHOTOS: Record<string, string> = {
-  // Home hero slideshow — placeholder: all three slides use the same kitchen
-  // photo so the slideshow doesn't cycle to striped placeholders. Swap for
-  // three distinct hero photos when they arrive.
+  // Home hero slideshow (placeholder — 4 diverse landscape shots covering
+  // finished interiors, on-site work, action, and craft). Swap for dedicated
+  // hero photography when it arrives.
   "hero-photo": "/images/shaker-kitchen-fit-torquay.jpg",
-  "hero-photo-2": "/images/shaker-kitchen-fit-torquay.jpg",
-  "hero-photo-3": "/images/shaker-kitchen-fit-torquay.jpg",
+  "hero-photo-2": "/images/paul-vowles-carpentry-van.jpg",
+  "hero-photo-3": "/images/gable-end-glazing-install.jpg",
+  "hero-photo-4": "/images/cut-roof-carpentry.jpg",
 
   // Home gallery bento
   "gal-1": "/images/shaker-kitchen-fit-torquay.jpg",

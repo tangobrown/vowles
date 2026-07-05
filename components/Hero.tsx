@@ -9,9 +9,10 @@ import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
 import { useQuote } from "@/components/QuoteContext";
 
 const HERO_SLOTS = [
-  { id: "hero-photo", label: "Hero project photo" },
-  { id: "hero-photo-2", label: "Hero project photo (2)" },
-  { id: "hero-photo-3", label: "Hero project photo (3)" },
+  { id: "hero-photo", label: "Fitted shaker kitchen in Torquay" },
+  { id: "hero-photo-2", label: "On site with Paul Vowles Carpentry" },
+  { id: "hero-photo-3", label: "Installing gable-end glazing" },
+  { id: "hero-photo-4", label: "Cut roof carpentry with worker on the ridge" },
 ];
 
 export function Hero() {
