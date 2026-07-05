@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CheckCircleIcon } from "@/components/icons";
 import { SERVICES, PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
+import { submitToFormspree } from "@/lib/formspree";
 
 type FormState = {
   name: string;
@@ -26,6 +27,8 @@ export function ContactForm() {
   const [form, setForm] = useState<FormState>(EMPTY);
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const set =
     (k: keyof FormState) =>
@@ -48,11 +51,29 @@ export function ContactForm() {
     return er;
   };
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     const er = validate();
     setErrors(er);
-    if (Object.keys(er).length === 0) setSent(true);
+    if (Object.keys(er).length > 0) return;
+
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      await submitToFormspree({
+        ...form,
+        _subject: `New message from vowlescarpentry.co.uk — from ${form.name}`,
+      });
+      setSent(true);
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error
+          ? err.message
+          : "Sorry — couldn't send that. Please try again or call Paul.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const field =
@@ -79,6 +100,8 @@ export function ContactForm() {
           onClick={() => {
             setSent(false);
             setForm(EMPTY);
+            setErrors({});
+            setSubmitError(null);
           }}
           className="mt-7 text-[14px] font-semibold text-white/60 underline-offset-4 hover:text-brand hover:underline"
         >
@@ -191,10 +214,14 @@ export function ContactForm() {
 
         <button
           type="submit"
-          className="mt-1 inline-flex items-center justify-center gap-2 bg-brand px-7 py-4 text-[16px] font-semibold text-ink transition-[filter] duration-200 hover:brightness-95"
+          disabled={submitting}
+          className="mt-1 inline-flex items-center justify-center gap-2 bg-brand px-7 py-4 text-[16px] font-semibold text-ink transition-[filter] duration-200 hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          Send message
+          {submitting ? "Sending…" : "Send message"}
         </button>
+        {submitError && (
+          <p className="text-center text-[13px] text-red-400/90">{submitError}</p>
+        )}
         <p className="text-center text-[12px] text-white/40">
           No spam, ever. Your details are only used to reply to your enquiry.
         </p>

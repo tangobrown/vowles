@@ -79,13 +79,14 @@ export function ImageSlot({ id, label, fit = "cover" }: Props) {
 }
 ```
 
-## Contact form
+## Contact + quote forms
 
-Client-side validation only. On valid submit it shows a success state — **no email is sent yet**. To wire it up, change the `submit` handler in `components/ContactForm.tsx` to POST to a Next.js API route (`app/api/contact/route.ts`) that forwards via Resend, Postmark, or a `mailto:` fallback.
+Both the `/contact` form and the slide-out `<QuotePanel>` submit to **Formspree**. The endpoint lives in `lib/formspree.ts` — change it there once (not per form) to move to a different provider or a new inbox.
+
+Client-side validation runs first (name required, phone or email required, etc.); on valid submit both forms POST JSON to Formspree, disable the button while sending, show any error message inline, and switch to a success state on 200. The success screen offers a "send another" reset.
 
 ## What's not done
 
-- Real photography (slots are placeholders).
-- Contact form does not actually send mail.
 - Privacy / Terms pages are placeholder `#` links in the footer.
 - Social links in the footer are `#` placeholders.
+- Some service-page carousels are shorter than 6 slides until more photography arrives (Kitchens, Media Walls, Flooring & Decking, Maintenance Contracts).
