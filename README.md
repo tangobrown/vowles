@@ -79,6 +79,20 @@ export function ImageSlot({ id, label, fit = "cover" }: Props) {
 }
 ```
 
+## SEO
+
+Central config lives in [`lib/seo.ts`](lib/seo.ts) — site URL, business info, and JSON-LD generators.
+
+- **Canonical domain**: `SITE_URL` in `lib/seo.ts` defaults to `https://vowlescarpentry.co.uk`. Override at build time via the `NEXT_PUBLIC_SITE_URL` env var in the Vercel dashboard once the real domain is connected (or if the site launches on a different domain).
+- **Metadata**: root `app/layout.tsx` sets `metadataBase`, a title template (`%s | Vowles Carpentry & Building`), Open Graph + Twitter card defaults, robots directives, viewport theme colour, and application category. Each page overrides `title`, `description`, and `alternates.canonical`.
+- **Structured data (JSON-LD)**:
+  - Site-wide: `GeneralContractor` LocalBusiness with address, service area, phone/email, and services.
+  - Service pages: `Service` (linked to the business), `FAQPage` (from the FAQs already in `SERVICE_PAGES`), and `BreadcrumbList`.
+  - About page: `Person` (Paul) linked to the business, plus a `BreadcrumbList`.
+  - Gallery and Contact pages: `BreadcrumbList`.
+- **`app/robots.ts`** allows all crawlers and points at the sitemap. **`app/sitemap.ts`** generates `/sitemap.xml` at build with all static and service pages.
+- **Favicon**: `app/icon.svg` — a yellow "V" on dark background, picked up automatically by Next.
+
 ## Contact + quote forms
 
 Both the `/contact` form and the slide-out `<QuotePanel>` submit to **Formspree**. The endpoint lives in `lib/formspree.ts` — change it there once (not per form) to move to a different provider or a new inbox.

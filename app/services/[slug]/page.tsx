@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container, Reveal, Eyebrow, CornerLines } from "@/components/ui";
@@ -7,19 +8,41 @@ import { CheckIcon, PhoneIcon } from "@/components/icons";
 import { ServiceCarousel } from "@/components/ServiceCarousel";
 import { ServiceFaq } from "@/components/ServiceFaq";
 import { Testimonials, FinalCTA } from "@/components/Sections";
+import { JsonLd } from "@/components/JsonLd";
 import { SERVICE_PAGES, SERVICE_SLUGS } from "@/lib/services";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
+import {
+  breadcrumbJsonLd,
+  faqPageJsonLd,
+  serviceJsonLd,
+} from "@/lib/seo";
+import { SLOT_PHOTOS } from "@/lib/photos";
 
 export function generateStaticParams() {
   return SERVICE_SLUGS.map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
   const page = SERVICE_PAGES[params.slug];
-  if (!page) return { title: "Service — Vowles Carpentry & Building" };
+  if (!page) {
+    return { title: "Service Not Found" };
+  }
+  const title = `${page.name} in South Devon`;
+  const description = page.heroSubhead;
+  const canonical = `/services/${params.slug}`;
   return {
-    title: `${page.name} — Vowles Carpentry & Building`,
-    description: page.heroSubhead,
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title: `${page.name} in South Devon — Vowles Carpentry & Building`,
+      description,
+      url: canonical,
+    },
   };
 }
 
@@ -27,8 +50,27 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   const page = SERVICE_PAGES[params.slug];
   if (!page) notFound();
 
+  const heroImage = SLOT_PHOTOS[page.heroSlot];
+
   return (
     <main>
+      <JsonLd
+        data={serviceJsonLd({
+          name: page.name,
+          description: page.heroSubhead,
+          slug: params.slug,
+          image: heroImage,
+        })}
+      />
+      <JsonLd data={faqPageJsonLd(page.faqs)} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/#services" },
+          { name: page.name, path: `/services/${params.slug}` },
+        ])}
+      />
+
       {/* Hero */}
       <section
         id="top"

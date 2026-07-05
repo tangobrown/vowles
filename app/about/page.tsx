@@ -5,12 +5,21 @@ import { ImageSlot } from "@/components/ImageSlot";
 import { QuoteButton } from "@/components/QuoteButton";
 import { CheckIcon, PhoneIcon } from "@/components/icons";
 import { Testimonials, GalleryPreview, FinalCTA } from "@/components/Sections";
+import { JsonLd } from "@/components/JsonLd";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
+import { breadcrumbJsonLd, personJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "About Paul — Vowles Carpentry & Building",
+  title: "About Paul Vowles — South Devon Carpenter & Builder",
   description:
-    "Meet Paul Vowles — a South Devon carpenter and builder with 20+ years on the tools. How we work, what we believe in, and why local homeowners come back.",
+    "Meet Paul Vowles: a Bishopsteignton-based carpenter and builder with 20+ years on the tools across Torquay, Teignmouth, Newton Abbot, Exeter and Torbay. How we work, what we believe in, and why local homeowners come back.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Paul Vowles — South Devon Carpenter & Builder",
+    description:
+      "20+ years on the tools across South Devon. Honest, careful, and on your side — first call to handover.",
+    url: "/about",
+  },
 };
 
 /* Placeholder accreditations. Swap each entry below for Paul's actual
@@ -248,6 +257,13 @@ function HowWeWork() {
 export default function AboutPage() {
   return (
     <main>
+      <JsonLd data={personJsonLd()} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ])}
+      />
       <AboutHero />
       <PaulSection />
       <Accreditations />

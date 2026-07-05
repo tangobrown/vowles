@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import {
   Services,
@@ -6,6 +7,11 @@ import {
   Testimonials,
   FinalCTA,
 } from "@/components/Sections";
+
+export const metadata: Metadata = {
+  /* Home uses layout's default title (full brand + tagline). */
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (

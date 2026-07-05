@@ -9,12 +9,21 @@ import {
   ClockIcon,
 } from "@/components/icons";
 import { ContactForm } from "@/components/ContactForm";
+import { JsonLd } from "@/components/JsonLd";
 import { TOWNS, PHONE_DISPLAY, PHONE_HREF, EMAIL } from "@/lib/data";
+import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Contact — Vowles Carpentry & Building",
+  title: "Contact Paul — Free, No-Obligation Quote in South Devon",
   description:
-    "Get in touch with Paul Vowles for a free, no-obligation chat about your carpentry or building project across South Devon.",
+    "Get in touch with Paul Vowles for a free, no-obligation chat about your carpentry or building project across Torquay, Teignmouth, Newton Abbot, Torbay and Exeter. Call, email or send a message — you'll get Paul himself.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Paul — Free, No-Obligation Quote in South Devon",
+    description:
+      "Call or message Paul Vowles for a free chat about your project. Usually a reply within a day.",
+    url: "/contact",
+  },
 };
 
 function DetailCard({
@@ -57,6 +66,12 @@ function DetailCard({
 export default function ContactPage() {
   return (
     <main>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}
+      />
       {/* Slim hero */}
       <section
         id="top"
