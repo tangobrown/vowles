@@ -26,11 +26,11 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     name: "Loft Conversions",
     eyebrow: "Loft Conversions",
     heroSubhead:
-      "Turn that dusty, unused roof space into a bright, beautiful room — an extra bedroom, a home office or a quiet retreat — adding genuine space and real value to your home.",
+      "Let's turn that dusty, forgotten roof space into a bright, beautiful room you'll actually want to spend time in. An extra bedroom, a home office or a quiet retreat, adding real space and genuine value to your home.",
     heroSlot: "loft-hero",
     introHeading: "More room, without the upheaval of moving",
     introBody:
-      "A loft conversion is one of the most cost-effective ways to add space and value to a property — and it all happens above your head, with the rest of the house left to get on as normal. Paul handles the whole job end to end, from the first sketch and structural calculations through to the final coat of paint, so you deal with one trusted local builder rather than a chain of subcontractors.",
+      "A loft conversion is one of the kindest ways to add space and value to your home, and the lovely thing is it all happens up above your head, with the rest of the house left to get on as normal. Paul looks after the whole job from start to finish, from the very first sketch and structural calculations through to the final coat of paint, so you've got one friendly, trusted local builder throughout rather than a chain of subcontractors.",
     subServicesTitle: "What we can do up there",
     subServices: [
       { label: "Dormer conversions", text: "Extend headroom and usable floor space with a flat or pitched dormer." },
@@ -38,9 +38,9 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
       { label: "Hip-to-gable & L-shaped", text: "Reclaim awkward roof shapes for a larger, squarer, more usable room." },
       { label: "Structural steel & floor strengthening", text: "Building-control-approved support, properly calculated, beneath your feet." },
       { label: "Staircases", text: "Space-saving stairs designed to fit and finished to match your home." },
-      { label: "Insulation & plastering", text: "Warm, quiet, fully finished walls and ceilings — ready to decorate." },
+      { label: "Insulation & plastering", text: "Warm, quiet, fully finished walls and ceilings, ready to decorate." },
       { label: "Electrics, heating & plumbing", text: "First-fix through to a room that's genuinely ready to live in." },
-      { label: "En-suites & storage", text: "Optional extras — a tucked-in shower room or built-in eaves storage." },
+      { label: "En-suites & storage", text: "Lovely optional extras, like a tucked-in shower room or built-in eaves storage." },
     ],
     galleryEyebrow: "Recent work",
     galleryHeading: "Lofts we've transformed",
@@ -55,14 +55,14 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     faqEyebrow: "Good to know",
     faqHeading: "Loft conversion questions, answered",
     faqIntro:
-      "A few of the things homeowners ask Paul most often. Got one that isn't here? Just pick up the phone — he's happy to talk it through.",
+      "A few of the things homeowners ask Paul most often. Got one that isn't here? Do just pick up the phone. Paul's always happy to talk it through, no pressure at all.",
     faqs: [
-      { q: "How long does a loft conversion take?", a: "Most take around 6–8 weeks on site, depending on the type and any structural work involved. Paul will give you a realistic timeline before anything starts, and keep you updated as the job progresses." },
-      { q: "Will I need planning permission?", a: "Many loft conversions fall under permitted development, but it depends on your roof, the design and your property. Paul handles building regulations as standard and can advise on planning from the very first visit." },
-      { q: "Can I stay in the house during the work?", a: "Yes — in most cases. The bulk of the work happens up in the loft and is sealed off from the rest of the home, so day-to-day life carries on with minimal disruption." },
-      { q: "How much does a loft conversion cost?", a: "It varies with the size, type and finish you're after. After a free, no-obligation visit Paul gives you a clear, itemised quote with no hidden extras — so you know exactly where you stand." },
-      { q: "Will it add value to my home?", a: "A well-built loft conversion is one of the most reliable ways to add both living space and value, often returning more than it costs when done properly." },
-      { q: "Do you handle everything, or do I need other trades?", a: "Paul manages the whole job end to end — structural work, carpentry, electrics, plumbing and plastering — coordinating any specialists so you only ever deal with one trusted person." },
+      { q: "How long does a loft conversion take?", a: "Most take around 6 to 8 weeks on site, depending on the type and any structural work involved. Paul will give you a realistic timeline before anything starts, and keep you gently updated as the job progresses." },
+      { q: "Will I need planning permission?", a: "Many loft conversions fall under permitted development, but it really does depend on your roof, the design and your property. Paul handles building regulations as standard and is happy to advise on planning from the very first visit." },
+      { q: "Can I stay in the house during the work?", a: "Yes, in most cases you can. The bulk of the work happens up in the loft and is sealed off from the rest of the home, so day-to-day life carries on with as little disruption as possible." },
+      { q: "How much does a loft conversion cost?", a: "It varies with the size, type and finish you're after. After a free, no-obligation visit Paul gives you a clear, itemised quote with no hidden extras, so you always know exactly where you stand." },
+      { q: "Will it add value to my home?", a: "A well-built loft conversion is one of the most reliable ways to add both living space and value, often returning more than it costs when it's done properly." },
+      { q: "Do you handle everything, or do I need other trades?", a: "Paul looks after the whole job from start to finish, including the structural work, carpentry, electrics, plumbing and plastering, coordinating any specialists so you only ever deal with one trusted, friendly person." },
     ],
   },
 
@@ -70,11 +70,11 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     name: "Extensions",
     eyebrow: "Extensions",
     heroSubhead:
-      "Add the space your family really needs — a bigger kitchen, an extra bedroom, a proper utility — built to last and managed end to end, so an extension feels less daunting than you'd think.",
+      "Let's add the space your family really needs, whether that's a bigger kitchen, an extra bedroom or a proper utility. Built to last and looked after from start to finish, so an extension feels far less daunting than you'd think.",
     heroSlot: "ext-hero",
     introHeading: "The space you need, without the cost of moving",
     introBody:
-      "Outgrowing your home doesn't have to mean leaving it. A well-planned extension gives you the room you need and adds real value, and because Paul handles the whole project — groundworks, structure, carpentry and finish — you've got one point of contact from the first drawing to the final handover. Clear timelines, tidy sites and honest pricing throughout.",
+      "Outgrowing your home doesn't have to mean leaving the place you love. A well-planned extension gives you the room you need and adds real value, and because Paul looks after the whole project himself, from groundworks and structure through to carpentry and finish, you've got one friendly point of contact from the first drawing to the final handover. Clear timelines, tidy sites and honest pricing all the way through.",
     subServicesTitle: "What we build",
     subServices: [
       { label: "Single-storey rear extensions", text: "Open up the back of the house for a bigger kitchen, dining or living space." },
@@ -99,14 +99,14 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     faqEyebrow: "Good to know",
     faqHeading: "Extension questions, answered",
     faqIntro:
-      "The things homeowners ask Paul most often when they're thinking about extending. Got a question that isn't here? Give him a call.",
+      "The things homeowners ask Paul most often when they're thinking about extending. Got a question that isn't here? Do give him a call. He'd love to help.",
     faqs: [
-      { q: "How long does an extension take?", a: "A single-storey extension is typically 10–14 weeks, a double-storey longer, depending on size and ground conditions. Paul gives you a realistic programme before work starts and keeps you updated throughout." },
-      { q: "Will I need planning permission?", a: "Some extensions fall under permitted development, others need a planning application — it depends on size, position and your property. Paul advises on this early and handles building regulations as standard." },
-      { q: "Can I stay in the house during the build?", a: "In most cases yes. There'll be noisy and dusty stages, but Paul works to keep the home liveable and the site sealed, clean and safe day to day." },
-      { q: "How much does an extension cost?", a: "It depends on the size, complexity and finish. After a free site visit you'll get a clear, itemised quote with no hidden extras, so you can plan with confidence." },
-      { q: "Do you handle the foundations and structural work?", a: "Yes — groundworks, foundations, steelwork and structural openings are all part of the service, properly engineered and signed off by building control." },
-      { q: "Will the extension match the rest of my house?", a: "Absolutely. Materials, brickwork, render and rooflines are all chosen to blend with the existing property so the extension looks like it was always there." },
+      { q: "How long does an extension take?", a: "A single-storey extension is typically 10 to 14 weeks, and a double-storey a little longer, depending on size and ground conditions. Paul gives you a realistic programme before work starts and keeps you updated throughout." },
+      { q: "Will I need planning permission?", a: "Some extensions fall under permitted development, while others need a planning application. It depends on the size, position and your property. Paul advises on this early and handles building regulations as standard." },
+      { q: "Can I stay in the house during the build?", a: "In most cases, yes. There'll be noisy and dusty stages along the way, but Paul works hard to keep the home liveable and the site sealed, clean and safe day to day." },
+      { q: "How much does an extension cost?", a: "It depends on the size, complexity and finish. After a free site visit you'll get a clear, itemised quote with no hidden extras, so you can plan with real confidence." },
+      { q: "Do you handle the foundations and structural work?", a: "Yes, the groundworks, foundations, steelwork and structural openings are all part of the service, properly engineered and signed off by building control." },
+      { q: "Will the extension match the rest of my house?", a: "Absolutely. The materials, brickwork, render and rooflines are all chosen to blend with your existing home, so the extension looks like it was always meant to be there." },
     ],
   },
 
@@ -114,11 +114,11 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     name: "Kitchens",
     eyebrow: "Kitchens",
     heroSubhead:
-      "The heart of the home, fitted and built right. From careful installs of your chosen kitchen to bespoke carpentry and the building work behind it — Paul delivers a kitchen that looks and works beautifully.",
+      "The heart of the home, fitted beautifully and built to last. From careful installs of your chosen kitchen to the bespoke carpentry and building work behind it, Paul creates a kitchen that looks lovely and works beautifully for years to come.",
     heroSlot: "kit-hero",
     introHeading: "A kitchen built around how you live",
     introBody:
-      "A great kitchen is as much about the carpentry and building behind it as the units on show. Paul fits supplied kitchens to a meticulous standard and can handle everything around them too — walls, floors, plastering and the services beneath — so it all comes together as one properly finished room rather than a patchwork of trades.",
+      "A great kitchen is every bit as much about the carpentry and building behind it as the units on show. Paul fits supplied kitchens to a lovely, meticulous standard, and he can happily handle everything around them too, from the walls and floors to the plastering and the services beneath, so it all comes together as one properly finished room rather than a patchwork of different trades.",
     subServicesTitle: "What's involved",
     subServices: [
       { label: "Full kitchen installation", text: "Precise fitting of your chosen units, worktops and appliances." },
@@ -139,14 +139,14 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     faqEyebrow: "Good to know",
     faqHeading: "Kitchen questions, answered",
     faqIntro:
-      "What homeowners most often ask Paul about a new kitchen. If yours isn't covered, just get in touch.",
+      "What homeowners most often ask Paul about a new kitchen. If yours isn't covered here, do just get in touch.",
     faqs: [
-      { q: "Do I buy the kitchen, or do you supply it?", a: "Either works. Many clients buy their kitchen from a supplier they like and Paul fits it; he can also advise on suppliers and coordinate the order if you'd prefer." },
-      { q: "How long does a kitchen fit take?", a: "A straightforward replacement is usually 1–2 weeks; more if there's structural work, replastering or new flooring. Paul gives you a clear schedule up front." },
-      { q: "Can you knock through to make it open-plan?", a: "Yes — structural openings, beams and the making-good around them are all part of what Paul does, properly calculated and building-control approved." },
-      { q: "Will you handle plumbing and electrics too?", a: "Yes. Paul coordinates the plumbing and electrical work so sinks, appliances, sockets and lighting are all done and certified as part of the job." },
-      { q: "How much does a new kitchen cost?", a: "It depends on the units, worktops and any building work involved. After a visit you'll get a clear, itemised quote separating the fit from any extras." },
-      { q: "Can I use the kitchen during the work?", a: "There'll be a short period without a working kitchen during the changeover. Paul plans the sequence to keep that window as short and predictable as possible." },
+      { q: "Do I buy the kitchen, or do you supply it?", a: "Either works beautifully. Many clients buy their kitchen from a supplier they like and Paul fits it, and he's also happy to advise on suppliers and coordinate the order if you'd prefer." },
+      { q: "How long does a kitchen fit take?", a: "A straightforward replacement is usually 1 to 2 weeks, or a little more if there's structural work, replastering or new flooring. Paul gives you a clear schedule up front." },
+      { q: "Can you knock through to make it open-plan?", a: "Yes, the structural openings, beams and the making-good around them are all part of what Paul does, properly calculated and building-control approved." },
+      { q: "Will you handle plumbing and electrics too?", a: "Yes. Paul coordinates the plumbing and electrical work so the sinks, appliances, sockets and lighting are all done and certified as part of the job." },
+      { q: "How much does a new kitchen cost?", a: "It depends on the units, worktops and any building work involved. After a visit you'll get a clear, itemised quote that separates the fit from any extras." },
+      { q: "Can I use the kitchen during the work?", a: "There'll be a short period without a working kitchen during the changeover. Paul plans the sequence carefully to keep that window as short and predictable as it can be." },
     ],
   },
 
@@ -154,11 +154,11 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     name: "Media Walls",
     eyebrow: "Media Walls",
     heroSubhead:
-      "Bespoke feature builds with the carpentry on show. A made-to-measure media wall turns a blank living-room wall into a striking centrepiece — and shows off exactly the kind of work Paul loves doing.",
+      "Bespoke feature walls with lovely carpentry on show. A made-to-measure media wall turns a blank living-room wall into a real centrepiece, and it shows off exactly the kind of work Paul loves doing best.",
     heroSlot: "media-hero",
     introHeading: "A centrepiece, made to measure",
     introBody:
-      "A media wall is where carefully planned carpentry meets the tech and the finish. Paul designs and builds each one around your room, your TV and your kit — hiding the cables, framing an electric fire, and integrating shelving and storage — so the result is a clean, modern feature that looks built-in because it is.",
+      "A media wall is where carefully planned carpentry meets the tech and the finish. Paul designs and builds each one around your room, your TV and your kit, hiding the cables away, framing in an electric fire, and integrating shelving and storage, so the result is a clean, modern feature that looks built-in because it genuinely is.",
     subServicesTitle: "What we can build in",
     subServices: [
       { label: "Recessed TV mounting", text: "A flush, floating screen with brackets and weight properly supported." },
@@ -180,14 +180,14 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     ],
     faqEyebrow: "Good to know",
     faqHeading: "Media wall questions, answered",
-    faqIntro: "The questions Paul hears most about bespoke media walls. Anything else, just ask.",
+    faqIntro: "The questions Paul hears most about bespoke media walls. Anything else at all, do just ask.",
     faqs: [
-      { q: "How long does a media wall take to build?", a: "Most are completed in around 1–2 weeks depending on size, the finish and any electrical work. Paul will confirm timings when he quotes." },
-      { q: "Can you fit an electric fire and TV together?", a: "Yes — integrating an inset electric fire below a recessed TV is one of the most popular setups, and Paul builds the framing and ventilation to suit." },
-      { q: "Will the cables and devices be hidden?", a: "Completely. Power and AV cabling is routed inside the wall, with consoles and boxes housed in concealed, accessible compartments." },
+      { q: "How long does a media wall take to build?", a: "Most are completed in around 1 to 2 weeks, depending on the size, the finish and any electrical work. Paul will confirm timings when he quotes." },
+      { q: "Can you fit an electric fire and TV together?", a: "Yes, and it's a lovely look. Integrating an inset electric fire below a recessed TV is one of the most popular setups, and Paul builds the framing and ventilation to suit." },
+      { q: "Will the cables and devices be hidden?", a: "Completely. The power and AV cabling is routed inside the wall, with consoles and boxes housed in concealed but easily accessible compartments." },
       { q: "Do you handle the electrics?", a: "Yes. Any additional sockets, fused spurs and lighting are coordinated and certified as part of the build." },
-      { q: "Can you match it to my interior?", a: "Absolutely — slatted timber, painted MDF, panelling or a mix; Paul designs the finish around your room and colour scheme." },
-      { q: "How much does a media wall cost?", a: "It varies with size, materials and the tech involved. You'll get a clear, itemised quote after Paul has seen the space." },
+      { q: "Can you match it to my interior?", a: "Absolutely. Slatted timber, painted MDF, panelling or a mix of them, Paul designs the finish around your room and your colour scheme." },
+      { q: "How much does a media wall cost?", a: "It varies with the size, materials and the tech involved. You'll get a clear, itemised quote once Paul has seen the space." },
     ],
   },
 
@@ -195,11 +195,11 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     name: "Cut Roofs",
     eyebrow: "Cut Roofs",
     heroSubhead:
-      "Traditional roof carpentry, cut by hand on site. From new builds to complex extensions and repairs, Paul cuts roofs the proper way — accurate, strong and built to last for generations.",
+      "Traditional roof carpentry, cut by hand on site. From new builds to complex extensions and repairs, Paul cuts roofs the proper way, accurate, strong and built to last for generations.",
     heroSlot: "roof-hero",
     introHeading: "Proper roof carpentry, cut on site",
     introBody:
-      "A cut roof — built rafter by rafter on site rather than craned in as a truss — gives you strength, flexibility and a usable roof space that prefabricated systems can't match. It's skilled, traditional carpentry, and it's exactly the kind of work Paul takes pride in: set out correctly, cut accurately and built to carry the loads it should for the life of the building.",
+      "A cut roof, built rafter by rafter on site rather than craned in as a truss, gives you strength, flexibility and a usable roof space that prefabricated systems simply can't match. It's skilled, traditional carpentry, and it's exactly the kind of work Paul takes real pride in. Set out correctly, cut accurately, and built to carry the loads it should for the whole life of the building.",
     subServicesTitle: "What we cut & build",
     subServices: [
       { label: "Traditional cut roofs", text: "Rafters, purlins and ridges set out and cut by hand on site." },
@@ -223,14 +223,14 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     ],
     faqEyebrow: "Good to know",
     faqHeading: "Cut roof questions, answered",
-    faqIntro: "What clients most often ask about traditional roof carpentry. If yours isn't here, give Paul a call.",
+    faqIntro: "What clients most often ask about traditional roof carpentry. If yours isn't here, do give Paul a call.",
     faqs: [
-      { q: "What's the difference between a cut roof and trusses?", a: "A cut roof is built piece by piece on site, giving more flexibility and usable loft space; trusses are prefabricated and craned in. Paul cuts roofs traditionally where strength, shape or future use call for it." },
-      { q: "Can you cut a roof for an awkward or complex shape?", a: "Yes — hips, valleys, dormers and link roofs into existing buildings are all part of the work, set out accurately on site." },
-      { q: "Do you handle the structural calculations?", a: "Yes. Timber and any supporting steel are correctly sized and the work is carried out to meet building regulations." },
-      { q: "Can you leave the timbers exposed?", a: "Absolutely — vaulted and open ceilings that show off the carpentry are a lovely option and something Paul enjoys building." },
-      { q: "Do you do roof repairs as well as new roofs?", a: "Yes, from replacing failed rafters and timbers to altering and extending existing roof structures." },
-      { q: "How much does a cut roof cost?", a: "It depends entirely on the size and complexity. After assessing the job Paul gives you a clear, itemised quote." },
+      { q: "What's the difference between a cut roof and trusses?", a: "A cut roof is built piece by piece on site, which gives more flexibility and usable loft space, whereas trusses are prefabricated and craned in. Paul cuts roofs traditionally where the strength, shape or future use call for it." },
+      { q: "Can you cut a roof for an awkward or complex shape?", a: "Yes, and it's work he really enjoys. Hips, valleys, dormers and link roofs into existing buildings are all part of what he does, set out accurately on site." },
+      { q: "Do you handle the structural calculations?", a: "Yes. The timber and any supporting steel are correctly sized, and the work is carried out to meet building regulations." },
+      { q: "Can you leave the timbers exposed?", a: "Absolutely. Vaulted and open ceilings that show off the carpentry are a lovely option, and something Paul really enjoys building." },
+      { q: "Do you do roof repairs as well as new roofs?", a: "Yes, from replacing failed rafters and timbers through to altering and extending existing roof structures." },
+      { q: "How much does a cut roof cost?", a: "It depends entirely on the size and complexity. After assessing the job, Paul gives you a clear, itemised quote." },
     ],
   },
 
@@ -238,11 +238,11 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     name: "Flooring & Decking",
     eyebrow: "Flooring & Decking",
     heroSubhead:
-      "Quality floors indoors and decking that lasts outdoors. Whether it's solid timber underfoot or a deck to make the most of the garden, Paul lays it level, solid and beautifully finished.",
+      "Quality floors indoors and decking made to enjoy outdoors. Whether it's solid timber underfoot or a deck to make the most of the garden, Paul lays it level, solid and beautifully finished.",
     heroSlot: "floor-hero",
     introHeading: "Solid underfoot, indoors and out",
     introBody:
-      "Floors and decks get used every single day, so they have to be built right. Paul prepares the base properly, sets everything dead level, and finishes neatly at the edges and thresholds — whether that's engineered oak in the lounge or a hardwood deck stepping out into the garden. Done well, they look great and last for years.",
+      "Floors and decks get used every single day, so it really matters that they're built right. Paul prepares the base properly, sets everything dead level, and finishes it all neatly at the edges and thresholds, whether that's engineered oak in the lounge or a hardwood deck stepping out into the garden. Done well, they look wonderful and last for years.",
     subServicesTitle: "What we lay",
     subServices: [
       { label: "Solid & engineered wood floors", text: "Timber floors laid level and finished cleanly at the edges." },
@@ -263,13 +263,13 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     ],
     faqEyebrow: "Good to know",
     faqHeading: "Flooring & decking questions, answered",
-    faqIntro: "The questions Paul hears most about floors and decks. Anything else, just ask.",
+    faqIntro: "The questions Paul hears most about floors and decks. Anything else at all, do just ask.",
     faqs: [
-      { q: "Can you level an uneven floor before laying?", a: "Yes — proper subfloor preparation, including levelling, ply and battening, is part of the job so the finished floor sits flat and solid." },
-      { q: "What decking materials do you use?", a: "Both timber (hardwood and softwood) and low-maintenance composite. Paul will talk through the look, lifespan and upkeep of each so you can choose what suits." },
-      { q: "How long does decking take to build?", a: "Most domestic decks take a few days to a week or so, depending on size, height and groundwork. Paul confirms timings when he quotes." },
-      { q: "Will the deck need much maintenance?", a: "Composite needs very little; timber benefits from occasional cleaning and treating. Paul builds with proper drainage and ventilation so it lasts either way." },
-      { q: "Can you match new flooring to existing rooms?", a: "Yes — flooring, skirting and thresholds are all finished to tie in neatly with adjoining rooms." },
+      { q: "Can you level an uneven floor before laying?", a: "Yes. Proper subfloor preparation, including levelling, ply and battening, is part of the job, so the finished floor sits lovely and flat and feels solid underfoot." },
+      { q: "What decking materials do you use?", a: "Both timber, in hardwood and softwood, and low-maintenance composite. Paul will happily talk through the look, lifespan and upkeep of each, so you can choose what suits you best." },
+      { q: "How long does decking take to build?", a: "Most domestic decks take a few days to a week or so, depending on the size, height and groundwork. Paul confirms timings when he quotes." },
+      { q: "Will the deck need much maintenance?", a: "Composite needs very little, while timber benefits from occasional cleaning and treating. Paul builds with proper drainage and ventilation so it lasts beautifully either way." },
+      { q: "Can you match new flooring to existing rooms?", a: "Yes. The flooring, skirting and thresholds are all finished to tie in neatly with your adjoining rooms." },
       { q: "How much does flooring or decking cost?", a: "It depends on the material and the area. After measuring up, Paul gives you a clear, itemised quote." },
     ],
   },
@@ -278,11 +278,11 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     name: "Maintenance Contracts",
     eyebrow: "Maintenance Contracts",
     heroSubhead:
-      "Reliable, ongoing care for homes and businesses. One trusted local tradesman on hand for the repairs, jobs and upkeep that keep a property in good order — no chasing, no surprises.",
+      "Reliable, friendly care for homes and businesses. One trusted local tradesman on hand for the repairs, jobs and upkeep that keep a property in lovely order, with no chasing and no surprises.",
     heroSlot: "maint-hero",
     introHeading: "One trusted tradesman, on call",
     introBody:
-      "Properties need looking after, and finding someone reliable for the steady stream of smaller jobs is half the battle. A maintenance arrangement with Paul means you've got a skilled, trustworthy local builder who knows your property and turns up when he says he will — ideal for busy households, landlords, holiday lets and small businesses across South Devon.",
+      "Properties always need looking after, and finding someone reliable for that steady stream of smaller jobs is honestly half the battle. A maintenance arrangement with Paul means you've got a skilled, trustworthy local builder who knows your property and turns up when he says he will. It's ideal for busy households, landlords, holiday lets and small businesses right across South Devon.",
     subServicesTitle: "What we look after",
     subServices: [
       { label: "Carpentry repairs", text: "Doors, windows, stairs, skirting and the everyday fixes." },
@@ -304,14 +304,14 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     ],
     faqEyebrow: "Good to know",
     faqHeading: "Maintenance questions, answered",
-    faqIntro: "What clients most often ask about ongoing maintenance. If yours isn't here, just get in touch.",
+    faqIntro: "What clients most often ask about ongoing maintenance. If yours isn't here, do just get in touch.",
     faqs: [
-      { q: "Do I have to sign a long contract?", a: "No. Arrangements are flexible — from a simple 'call when you need me' understanding to regular planned visits. Paul will set up whatever suits your property." },
-      { q: "Is this just for businesses, or homes too?", a: "Both. Busy households, landlords, holiday-let owners and small businesses all use Paul for ongoing upkeep and repairs." },
-      { q: "How quickly can you come out?", a: "For maintenance clients Paul prioritises reactive jobs and will give you a realistic timeframe when you call — no being left waiting." },
-      { q: "Is there a minimum job size?", a: "No job too small — that's rather the point. Small repairs and odd jobs are exactly what a maintenance arrangement is for." },
-      { q: "Do you cover holiday lets and rentals?", a: "Yes — quick, reliable turnarounds between guests or tenants are a big part of the maintenance work Paul does." },
-      { q: "How does pricing work?", a: "Either per visit or as an agreed arrangement for regular work. Paul keeps it transparent so you always know where you stand." },
+      { q: "Do I have to sign a long contract?", a: "Not at all. Arrangements are lovely and flexible, from a simple 'call when you need me' understanding through to regular planned visits. Paul will set up whatever suits your property best." },
+      { q: "Is this just for businesses, or homes too?", a: "Both, very happily. Busy households, landlords, holiday-let owners and small businesses all use Paul for their ongoing upkeep and repairs." },
+      { q: "How quickly can you come out?", a: "For maintenance clients Paul prioritises reactive jobs and will give you a realistic timeframe when you call, so you're never left waiting and wondering." },
+      { q: "Is there a minimum job size?", a: "No job is too small, and that's rather the whole point. Small repairs and odd jobs are exactly what a maintenance arrangement is for." },
+      { q: "Do you cover holiday lets and rentals?", a: "Yes. Quick, reliable turnarounds between guests or tenants are a big part of the maintenance work Paul does." },
+      { q: "How does pricing work?", a: "Either per visit or as an agreed arrangement for regular work. Paul keeps it all transparent, so you always know exactly where you stand." },
     ],
   },
 
@@ -319,11 +319,11 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     name: "Windows & Doors",
     eyebrow: "Windows & Doors",
     heroSubhead:
-      "Supply and fit — the everyday jobs done properly. From a single internal door to new windows throughout, Paul fits them square, sealed and finished to a standard you'll notice every time you use them.",
+      "Supply and fit, with the everyday jobs done properly. From a single internal door to new windows throughout, Paul fits them square, sealed and finished to a standard you'll notice and enjoy every single time you use them.",
     heroSlot: "doors-hero",
     introHeading: "The everyday jobs, done properly",
     introBody:
-      "Windows and doors are used countless times a day, so a good fit really shows. Paul supplies and installs internal and external doors, windows and frames — hung square, sealed against the weather and finished neatly — whether it's one door you've been meaning to sort for years or a full set of windows for the whole house.",
+      "Windows and doors are used countless times a day, so a really good fit always shows. Paul supplies and installs internal and external doors, windows and frames, hung square, sealed against the weather and finished neatly. Whether it's that one door you've been meaning to sort for years or a full set of windows for the whole house, it'll be done with care.",
     subServicesTitle: "What we fit",
     subServices: [
       { label: "Internal doors", text: "Hung square and swinging sweetly, with neat ironmongery." },
@@ -347,14 +347,14 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     ],
     faqEyebrow: "Good to know",
     faqHeading: "Windows & doors questions, answered",
-    faqIntro: "The questions Paul hears most about windows and doors. Anything else, just ask.",
+    faqIntro: "The questions Paul hears most about windows and doors. Anything else at all, do just ask.",
     faqs: [
-      { q: "Will you supply the doors and windows, or do I?", a: "Either. Paul can supply and fit, or fit units you've bought yourself — whatever works best for you." },
-      { q: "Is no job too small?", a: "Exactly right — from rehanging a single sticking door to fitting windows throughout the house, it's all welcome." },
-      { q: "Do you fit bi-fold and French doors?", a: "Yes — bi-folds, French doors and patio doors are all part of the service, fitted square and running smoothly." },
-      { q: "Can you make good around new frames?", a: "Yes. Frames, linings, skirting and architrave are all finished neatly so the opening looks properly done, not patched." },
-      { q: "Will new doors and windows help with draughts?", a: "A proper fit and good sealing make a real difference to warmth and noise — Paul draught-proofs and seals as part of the job." },
-      { q: "How much does it cost?", a: "It depends on the units and how many. After seeing the job Paul gives you a clear, itemised quote separating supply from fitting." },
+      { q: "Will you supply the doors and windows, or do I?", a: "Either is absolutely fine. Paul can supply and fit, or happily fit units you've bought yourself, whatever works best for you." },
+      { q: "Is no job too small?", a: "Exactly right. From rehanging a single sticking door to fitting windows throughout the whole house, it's all genuinely welcome." },
+      { q: "Do you fit bi-fold and French doors?", a: "Yes. Bi-folds, French doors and patio doors are all part of the service, fitted square and running beautifully smoothly." },
+      { q: "Can you make good around new frames?", a: "Yes. The frames, linings, skirting and architrave are all finished neatly, so the opening looks properly done rather than patched." },
+      { q: "Will new doors and windows help with draughts?", a: "A proper fit and good sealing make a real difference to both warmth and noise, and Paul draught-proofs and seals as part of the job." },
+      { q: "How much does it cost?", a: "It depends on the units and how many. After seeing the job, Paul gives you a clear, itemised quote that separates the supply from the fitting." },
     ],
   },
 };
