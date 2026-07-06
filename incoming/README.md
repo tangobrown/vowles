@@ -20,7 +20,7 @@ This folder is gitignored (except this README) — photos never get committed to
 | `hero-photo-2` | Home hero slide 2 | **placeholder: Paul Vowles Carpentry van + build** |
 | `hero-photo-3` | Home hero slide 3 | **placeholder: gable-end glazing install** |
 | `hero-photo-4` | Home hero slide 4 | **placeholder: cut roof carpentry** |
-| `about-paul` | Home + About page, image of Paul | Friendly photo of Paul |
+| `about-paul` | Home + About page, image of Paul | Friendly photo of Paul ✅ |
 | `svc-loft` | Home service card | Loft Conversions ✅ |
 | `svc-ext` | Home service card | Extensions ✅ |
 | `svc-kit` | Home service card | Kitchens ✅ |

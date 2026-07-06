@@ -11,6 +11,9 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "hero-photo-3": "/images/gable-end-glazing-install.jpg",
   "hero-photo-4": "/images/cut-roof-carpentry.jpg",
 
+  // Paul (home about teaser + about page portrait)
+  "about-paul": "/images/paul-vowles-carpenter-torbay.jpg",
+
   // Home gallery bento
   "gal-1": "/images/shaker-kitchen-fit-torquay.jpg",
   "gal-2": "/images/cedar-clad-extension-teignmouth.jpg",
