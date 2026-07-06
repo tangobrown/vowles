@@ -6,14 +6,14 @@ export type Service = {
 };
 
 export const SERVICES: Service[] = [
-  { id: "loft-conversions", name: "Loft Conversions", blurb: "Turn unused roof space into a bright, usable room.", slot: "svc-loft" },
-  { id: "extensions", name: "Extensions", blurb: "Add the space your family needs, managed end to end.", slot: "svc-ext" },
-  { id: "kitchens", name: "Kitchens", blurb: "The heart of the home, fitted and built right.", slot: "svc-kit" },
-  { id: "media-walls", name: "Media Walls", blurb: "Bespoke feature builds with the carpentry on show.", slot: "svc-media" },
-  { id: "cut-roofs", name: "Cut Roofs", blurb: "Traditional roof carpentry, cut by hand on site.", slot: "svc-roof" },
-  { id: "flooring-decking", name: "Flooring & Decking", blurb: "Quality floors indoors and decking that lasts outdoors.", slot: "svc-floor" },
-  { id: "maintenance", name: "Maintenance Contracts", blurb: "Reliable, ongoing care for homes and businesses.", slot: "svc-maint" },
-  { id: "windows-doors", name: "Windows & Doors", blurb: "Supply and fit — the everyday jobs done properly.", slot: "svc-doors" },
+  { id: "loft-conversions", name: "Loft Conversions", blurb: "Turn that unused roof space into a bright, welcoming room you'll love.", slot: "svc-loft" },
+  { id: "extensions", name: "Extensions", blurb: "Add the space your family needs, looked after from start to finish.", slot: "svc-ext" },
+  { id: "kitchens", name: "Kitchens", blurb: "The heart of the home, fitted beautifully and built to last.", slot: "svc-kit" },
+  { id: "media-walls", name: "Media Walls", blurb: "Bespoke feature walls with lovely carpentry on show.", slot: "svc-media" },
+  { id: "cut-roofs", name: "Cut Roofs", blurb: "Traditional roof carpentry, cut by hand on site with real care.", slot: "svc-roof" },
+  { id: "flooring-decking", name: "Flooring & Decking", blurb: "Quality floors indoors and decking made to enjoy outdoors.", slot: "svc-floor" },
+  { id: "maintenance", name: "Maintenance Contracts", blurb: "Reliable, friendly care for homes and businesses, all year round.", slot: "svc-maint" },
+  { id: "windows-doors", name: "Windows & Doors", blurb: "Supply and fit, with the everyday jobs done properly.", slot: "svc-doors" },
 ];
 
 export const servicePath = (id: string) => `/services/${id}`;

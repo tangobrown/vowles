@@ -36,8 +36,8 @@ export function Footer() {
             className="h-12 w-auto"
           />
           <p className="mt-5 max-w-[300px] text-[14px] leading-relaxed text-white/55">
-            Skilled, local carpentry and building across South Devon. Run by Paul
-            Vowles — where no job is too small.
+            Friendly, skilled carpentry and building across South Devon. Run by Paul
+            Vowles, where no job is ever too small.
           </p>
           <div className="mt-6 flex gap-2.5">
             {SOCIAL.map((s) => (

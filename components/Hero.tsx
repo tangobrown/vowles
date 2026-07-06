@@ -65,8 +65,8 @@ export function Hero() {
 
           <Reveal delay={160}>
             <p className="mt-6 max-w-[620px] text-[18px] leading-relaxed text-white/75 sm:text-[20px]">
-              Skilled carpentry and building across Torquay, Teignmouth, Newton Abbot, Torbay and
-              Exeter — done properly, explained plainly, and with{" "}
+              Friendly, skilled carpentry and building for homes across Torquay, Teignmouth,
+              Newton Abbot, Torbay and Exeter. Done properly, explained in plain English, and with{" "}
               <span className="font-semibold text-white">no job too small.</span>
             </p>
           </Reveal>

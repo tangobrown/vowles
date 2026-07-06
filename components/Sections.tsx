@@ -20,7 +20,7 @@ export function Services() {
       <Container>
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-[640px]">
-            <Reveal><Eyebrow>What Paul does</Eyebrow></Reveal>
+            <Reveal><Eyebrow>How Paul can help</Eyebrow></Reveal>
             <Reveal delay={80}>
               <h2 className="display mt-5 text-[40px] leading-[0.98] text-white sm:text-[52px]">
                 From a single door to a full extension
@@ -28,8 +28,10 @@ export function Services() {
             </Reveal>
             <Reveal delay={140}>
               <p className="mt-5 text-[17px] leading-relaxed text-white/60">
-                Quality carpentry and joinery at the core, backed by years of hands-on building.
-                If what you need isn&apos;t listed here, it&apos;s still worth asking.
+                Beautiful carpentry and joinery sit at the heart of everything Paul does, backed
+                by years of hands-on building experience. If the job you have in mind isn&apos;t
+                listed here, do please still ask. There&apos;s a good chance it&apos;s something
+                he&apos;d love to help with.
               </p>
             </Reveal>
           </div>
@@ -85,7 +87,7 @@ export function AboutTeaser() {
           <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
             <ImageSlot
               id="about-paul-home"
-              label="Paul Vowles — Guild of Master Craftsmen member"
+              label="Paul Vowles, Guild of Master Craftsmen member"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
@@ -106,17 +108,17 @@ export function AboutTeaser() {
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-6 text-[17px] leading-relaxed text-white/70">
-              I&apos;m a carpenter and builder born in Devon and based in Bishopsteignton. For over
-              twenty years I&apos;ve been helping South Devon homeowners get jobs done, from a
-              sticking door or a run of new skirting through to loft conversions, extensions and
-              bespoke media walls.
+              I&apos;m a carpenter and builder, born in Devon and based in Bishopsteignton. For
+              more than twenty years I&apos;ve been helping local homeowners get jobs done, from a
+              sticking door or a fresh run of skirting right through to loft conversions,
+              extensions and bespoke media walls.
             </p>
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-4 text-[17px] leading-relaxed text-white/70">
-              My promise is simple: I turn up when I say I will, I give honest advice, and I treat
-              a small repair with the same care as a full build. No pushy sales, no jargon, just
-              quality work with a smile.
+              My promise to you is a simple one. I turn up when I say I will, I give honest advice,
+              and I treat a small repair with exactly the same care as a full build. No pushy
+              sales, no jargon, just lovely work and a friendly face.
             </p>
           </Reveal>
           <Reveal delay={260}>
@@ -148,8 +150,14 @@ export function GalleryPreview() {
                 Built to be lived in
               </h2>
             </Reveal>
+            <Reveal delay={140}>
+              <p className="mt-5 text-[17px] leading-relaxed text-white/60">
+                A little look at some of the projects Paul has been proud to work on across South
+                Devon. Every one started with a friendly chat, just like yours could.
+              </p>
+            </Reveal>
           </div>
-          <Reveal delay={140} className="md:pb-2">
+          <Reveal delay={160} className="md:pb-2">
             <Button href="/gallery" variant="ghost">View full gallery</Button>
           </Reveal>
         </div>
@@ -269,8 +277,9 @@ export function FinalCTA() {
               Got a project in mind, big or small?
             </h2>
             <p className="mt-5 max-w-[560px] text-[18px] leading-relaxed text-ink/75">
-              Tell Paul what you&apos;re thinking and he&apos;ll get back to you personally.
-              Free, no-obligation, no pressure — just honest advice from a local builder.
+              Tell Paul what you&apos;re thinking and he&apos;ll get back to you personally. It&apos;s
+              free, there&apos;s no obligation and absolutely no pressure. Just honest, friendly
+              advice from a local builder who genuinely wants to help.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <QuoteButton variant="dark" className="px-7 py-4 text-[16px]">

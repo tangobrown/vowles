@@ -60,7 +60,7 @@ export function Header() {
         <Link
           href="/#top"
           className="flex shrink-0 items-center"
-          aria-label="Vowles Carpentry & Building — home"
+          aria-label="Vowles Carpentry & Building, home"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -142,7 +142,7 @@ export function Header() {
                       Something else in mind?
                     </div>
                     <div className="mt-0.5 text-[12px] leading-snug text-white/55">
-                      Paul takes on plenty that isn&apos;t listed — just ask.
+                      Paul takes on plenty that isn&apos;t listed, so do just ask.
                     </div>
                   </div>
                   <span className="inline-flex shrink-0 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand">
