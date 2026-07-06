@@ -39,6 +39,7 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "gal-18": "/images/paul-vowles-carpentry-van.jpg",
   "gal-19": "/images/roof-valley-carpentry.jpg",
   "gal-20": "/images/slatted-office-fit-out.jpg",
+  "gal-21": "/images/media-wall-exminster.jpg",
 
   // Home service cards + service page heroes share the same photo per service.
   "svc-kit": "/images/shaker-kitchen-fit.jpg",
