@@ -138,8 +138,9 @@ export function GalleryView() {
           </Reveal>
           <Reveal delay={120}>
             <p className="mt-4 max-w-[620px] text-[17px] leading-relaxed text-white/75 sm:text-[19px]">
-              A look at projects Paul has completed across South Devon — from full builds to the
-              smaller jobs done properly. Tap any photo to take a closer look.
+              A lovely look at some of the projects Paul has completed across South Devon, from
+              full builds right down to the smaller jobs done properly. Do tap any photo to take a
+              closer look.
             </p>
           </Reveal>
         </Container>

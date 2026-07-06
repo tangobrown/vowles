@@ -39,7 +39,7 @@ export function generateMetadata({
     description,
     alternates: { canonical },
     openGraph: {
-      title: `${page.name} in South Devon — Vowles Carpentry & Building`,
+      title: `${page.name} in South Devon | Vowles Carpentry & Building`,
       description,
       url: canonical,
     },

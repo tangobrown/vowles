@@ -10,12 +10,12 @@ export const SITE_URL = (
 export const SITE_NAME = "Vowles Carpentry & Building";
 export const SITE_TAGLINE = "Local Builder in South Devon";
 export const SITE_DESCRIPTION =
-  "Skilled, local carpentry and building across Torquay, Teignmouth, Newton Abbot, Torbay and Exeter. Run by Paul Vowles in Bishopsteignton — no job too small. Free, no-obligation quotes.";
+  "Friendly, skilled carpentry and building across Torquay, Teignmouth, Newton Abbot, Torbay and Exeter. Run by Paul Vowles in Bishopsteignton, where no job is ever too small. Free, no-obligation quotes and honest advice.";
 
-/* Default social preview image — the shaker kitchen finished shot works well
-   as a hero. Absolute URL so it renders on Slack/Facebook/LinkedIn/Twitter. */
+/* Default social preview image (the shaker kitchen finished shot works well
+   as a hero). Absolute URL so it renders on Slack, Facebook, LinkedIn and X. */
 export const OG_IMAGE = `${SITE_URL}/images/shaker-kitchen-fit-torquay.jpg`;
-export const OG_IMAGE_ALT = `${SITE_NAME} — recent kitchen fit-out`;
+export const OG_IMAGE_ALT = `${SITE_NAME}, a recent kitchen fit-out`;
 
 export const OWNER_NAME = "Paul Vowles";
 export const BUSINESS_LOCALITY = "Bishopsteignton";
@@ -127,6 +127,6 @@ export function personJsonLd() {
     url: absoluteUrl("/about"),
     image: absoluteUrl("/images/vowles-logo.png"),
     description:
-      "Paul Vowles is a South Devon carpenter and builder based in Bishopsteignton, with 20+ years on the tools across loft conversions, extensions, kitchens, media walls and bespoke joinery.",
+      "Paul Vowles is a friendly South Devon carpenter and builder based in Bishopsteignton, with over twenty years on the tools across loft conversions, extensions, kitchens, media walls and bespoke joinery.",
   };
 }

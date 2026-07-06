@@ -10,14 +10,14 @@ import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
 import { breadcrumbJsonLd, personJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "About Paul Vowles — South Devon Carpenter & Builder",
+  title: "About Paul Vowles | South Devon Carpenter & Builder",
   description:
-    "Meet Paul Vowles: a Bishopsteignton-based carpenter and builder with 20+ years on the tools across Torquay, Teignmouth, Newton Abbot, Exeter and Torbay. How we work, what we believe in, and why local homeowners come back.",
+    "Meet Paul Vowles, a friendly Bishopsteignton carpenter and builder with over twenty years on the tools across Torquay, Teignmouth, Newton Abbot, Exeter and Torbay. How we work, what we believe in, and why local homeowners keep coming back.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Paul Vowles — South Devon Carpenter & Builder",
+    title: "About Paul Vowles | South Devon Carpenter & Builder",
     description:
-      "20+ years on the tools across South Devon. Honest, careful, and on your side — first call to handover.",
+      "Over twenty years on the tools across South Devon. Honest, careful and firmly on your side, from your first call right through to handover.",
     url: "/about",
   },
 };

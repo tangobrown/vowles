@@ -14,14 +14,14 @@ import { TOWNS, PHONE_DISPLAY, PHONE_HREF, EMAIL } from "@/lib/data";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Contact Paul — Free, No-Obligation Quote in South Devon",
+  title: "Contact Paul | Free, No-Obligation Quote in South Devon",
   description:
-    "Get in touch with Paul Vowles for a free, no-obligation chat about your carpentry or building project across Torquay, Teignmouth, Newton Abbot, Torbay and Exeter. Call, email or send a message — you'll get Paul himself.",
+    "Get in touch with Paul Vowles for a free, no-obligation chat about your carpentry or building project across Torquay, Teignmouth, Newton Abbot, Torbay and Exeter. Call, email or send a message and you'll always get Paul himself.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Paul — Free, No-Obligation Quote in South Devon",
+    title: "Contact Paul | Free, No-Obligation Quote in South Devon",
     description:
-      "Call or message Paul Vowles for a free chat about your project. Usually a reply within a day.",
+      "Call or message Paul Vowles for a free, friendly chat about your project. Usually a reply within a day.",
     url: "/contact",
   },
 };
