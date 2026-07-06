@@ -11,7 +11,9 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "hero-photo-3": "/images/gable-end-glazing-install.jpg",
   "hero-photo-4": "/images/cut-roof-carpentry.jpg",
 
-  // Paul (home about teaser + about page portrait)
+  // Paul — home page teaser (Guild of Master Craftsmen shot) and About page
+  // portrait (on-site in Torbay). Two different photos.
+  "about-paul-home": "/images/paul-vowles-guild-of-master-craftsmen.jpg",
   "about-paul": "/images/paul-vowles-carpenter-torbay.jpg",
 
   // Home gallery bento

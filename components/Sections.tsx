@@ -84,8 +84,8 @@ export function AboutTeaser() {
         <Reveal className="relative">
           <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
             <ImageSlot
-              id="about-paul"
-              label="A friendly photo of Paul"
+              id="about-paul-home"
+              label="Paul Vowles — Guild of Master Craftsmen member"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
