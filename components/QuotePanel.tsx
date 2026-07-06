@@ -26,9 +26,9 @@ const EMPTY: FormState = {
 };
 
 const STEPS = [
-  "Tell Paul about your project in the form below.",
-  "He'll come back to you personally — usually within a day — to arrange a free site visit.",
-  "You'll get a written, itemised quote. No pressure, no surprise extras.",
+  "Tell Paul a little about your project in the form below.",
+  "He'll come back to you personally, usually within a day, to arrange a free site visit.",
+  "You'll get a clear, written quote. No pressure and no surprise extras.",
 ];
 
 export function QuotePanel() {
@@ -111,14 +111,14 @@ export function QuotePanel() {
     try {
       await submitToFormspree({
         ...form,
-        _subject: `New quote enquiry from vowlescarpentry.co.uk — from ${form.name}`,
+        _subject: `New quote enquiry from vowlescarpentry.co.uk, from ${form.name}`,
       });
       setSent(true);
     } catch (err) {
       setSubmitError(
         err instanceof Error
           ? err.message
-          : "Sorry — couldn't send that. Please try again or call Paul.",
+          : "Sorry, we couldn't send that just now. Please try again, or give Paul a call.",
       );
     } finally {
       setSubmitting(false);
@@ -181,8 +181,8 @@ export function QuotePanel() {
                 Thanks, {form.name.split(" ")[0] || "there"}!
               </h3>
               <p className="mt-3 text-[15px] leading-relaxed text-white/65">
-                Your enquiry is on its way. Paul will be in touch personally — usually within a
-                day. If it&apos;s urgent, give him a call on{" "}
+                Your enquiry is on its way. Paul will be in touch personally, usually within a
+                day. If it&apos;s urgent, do give him a call on{" "}
                 <a
                   href={PHONE_HREF}
                   className="font-semibold text-brand hover:text-brandDark"

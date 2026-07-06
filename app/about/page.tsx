@@ -37,25 +37,25 @@ const PROCESS = [
     n: "01",
     title: "A proper conversation first",
     text:
-      "Paul comes round, has a look at the job and listens to what you're hoping for. No pressure, no rushed pitch — just a friendly chat about whether and how it can be done.",
+      "Paul comes round, has a good look at the job and really listens to what you're hoping for. No pressure and no rushed pitch, just a friendly chat about whether and how it can all be done.",
   },
   {
     n: "02",
     title: "A clear, itemised quote",
     text:
-      "You get a written quote with the work broken down line by line, so you can see exactly where the money's going. No surprise extras halfway through.",
+      "You'll get a written quote with the work broken down line by line, so you can see exactly where every penny is going. No nasty surprises halfway through, ever.",
   },
   {
     n: "03",
     title: "On site when we say, tidy as we go",
     text:
-      "Paul turns up when promised, keeps the workspace clean and updates you as the job progresses. If something changes, you'll hear it from him before it lands as a bill.",
+      "Paul turns up when he's promised, keeps the workspace clean and updates you as the job progresses. If anything changes along the way, you'll always hear it from him first, well before it lands as a bill.",
   },
   {
     n: "04",
     title: "Snagged before we leave",
     text:
-      "Every detail is checked, every snag put right, before we hand the room back. The mark of a good job is what you don't notice — the doors that swing sweetly, the joints you can't see.",
+      "Every detail is checked and every little snag put right before we hand the room back to you. The mark of a good job is really what you don't notice: the doors that swing sweetly, the joints you simply can't see.",
   },
 ];
 
@@ -79,9 +79,9 @@ function AboutHero() {
         </Reveal>
         <Reveal delay={120}>
           <p className="mt-4 max-w-[640px] text-[17px] leading-relaxed text-white/75 sm:text-[19px]">
-            Vowles Carpentry &amp; Building is Paul Vowles — a South Devon carpenter and builder
+            Vowles Carpentry &amp; Building is Paul Vowles, a South Devon carpenter and builder
             who turns up when he says he will, gives honest advice, and treats a small repair
-            with the same care as a full build.
+            with just as much care as a full build.
           </p>
         </Reveal>
       </Container>
@@ -97,7 +97,7 @@ function PaulSection() {
           <div className="relative aspect-[4/5] overflow-hidden border border-white/10">
             <ImageSlot
               id="about-paul"
-              label="A friendly photo of Paul"
+              label="Paul Vowles on site in Torbay, spirit level in hand"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
@@ -118,23 +118,24 @@ function PaulSection() {
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-6 text-[17px] leading-relaxed text-white/70">
-              I&apos;m a carpenter and builder born in Devon and based in Bishopsteignton. I&apos;ve
-              spent over twenty years on the tools across South Devon — from sticking doors and
-              new skirting through to loft conversions, extensions and bespoke media walls.
+              I&apos;m a carpenter and builder, born in Devon and based in Bishopsteignton.
+              I&apos;ve spent more than twenty years on the tools across South Devon, working on
+              everything from sticking doors and new skirting through to loft conversions,
+              extensions and bespoke media walls.
             </p>
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-4 text-[17px] leading-relaxed text-white/70">
-              The business has grown almost entirely on word of mouth. That tells you the bit
-              I&apos;m most proud of: people come back, and they send their neighbours. Carpentry
-              is my craft, but reliability is the thing I work hardest at.
+              The business has grown almost entirely on word of mouth, and honestly that tells
+              you the bit I&apos;m most proud of. People come back, and they send their neighbours.
+              Carpentry is my craft, but being reliable is the thing I work hardest at.
             </p>
           </Reveal>
           <Reveal delay={260}>
             <p className="mt-4 text-[17px] leading-relaxed text-white/70">
-              My promise is simple: I turn up when I say I will, I give honest advice, and I
-              treat a small repair with the same care as a full build. No pushy sales, no jargon,
-              just quality work with a smile.
+              My promise to you is a simple one. I turn up when I say I will, I give honest
+              advice, and I treat a small repair with just as much care as a full build. No
+              pushy sales, no jargon, just lovely work and a friendly face.
             </p>
           </Reveal>
           <Reveal delay={320}>
@@ -168,8 +169,8 @@ function Accreditations() {
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-5 text-[16px] leading-relaxed text-white/60">
-              Paul is fully qualified, insured and a member of the relevant trade bodies — so
-              you&apos;re covered, and the work meets the standards it should.
+              Paul is fully qualified, insured and a member of the relevant trade bodies, so
+              you&apos;re properly covered and the work always meets the standards it should.
             </p>
           </Reveal>
         </div>
@@ -211,18 +212,18 @@ function HowWeWork() {
             </Reveal>
             <Reveal delay={140}>
               <p className="mt-6 max-w-[460px] text-[17px] leading-relaxed text-white/70">
-                The carpentry is the easy part — it&apos;s the way the job is run that decides
-                whether you&apos;d recommend us afterwards. Here&apos;s what to expect from
-                first call to handover.
+                The carpentry is honestly the easy part. It&apos;s the way a job is run that
+                decides whether you&apos;d happily recommend us afterwards. Here&apos;s what you
+                can expect from that first call right through to handover.
               </p>
             </Reveal>
             <Reveal delay={200}>
               <ul className="mt-8 space-y-3.5">
                 {[
-                  "One trusted point of contact — Paul, not a call centre",
-                  "Free, no-obligation visit and quote",
-                  "Tidy sites, daily updates, sensible hours",
-                  "Snags fixed properly before we leave",
+                  "One trusted point of contact: Paul himself, never a call centre",
+                  "A free, no-obligation visit and quote",
+                  "Tidy sites, daily updates and sensible working hours",
+                  "Every snag fixed properly before we leave",
                 ].map((p) => (
                   <li key={p} className="flex items-start gap-3 text-[15px] text-white/75">
                     <span className="mt-0.5 shrink-0 text-brand">

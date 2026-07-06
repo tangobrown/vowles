@@ -72,14 +72,14 @@ export function ContactForm() {
     try {
       await submitToFormspree({
         ...form,
-        _subject: `New message from vowlescarpentry.co.uk — from ${form.name}`,
+        _subject: `New message from vowlescarpentry.co.uk, from ${form.name}`,
       });
       setSent(true);
     } catch (err) {
       setSubmitError(
         err instanceof Error
           ? err.message
-          : "Sorry — couldn't send that. Please try again or call Paul.",
+          : "Sorry, we couldn't send that just now. Please try again, or give Paul a call.",
       );
     } finally {
       setSubmitting(false);
@@ -99,8 +99,8 @@ export function ContactForm() {
           Thanks, {form.name.split(" ")[0] || "there"}!
         </h3>
         <p className="mt-3 max-w-[420px] text-[15px] leading-relaxed text-white/65">
-          Your message is on its way. Paul will get back to you as soon as he can — usually within
-          a day. If it&apos;s urgent, give him a call on{" "}
+          Your message is on its way. Paul will get back to you as soon as he can, usually within
+          a day. If it&apos;s urgent, do give him a call on{" "}
           <a href={PHONE_HREF} className="font-semibold text-brand hover:text-brandDark">
             {PHONE_DISPLAY}
           </a>

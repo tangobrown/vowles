@@ -92,8 +92,8 @@ export default function ContactPage() {
           <Reveal delay={120}>
             <p className="mt-4 max-w-[620px] text-[17px] leading-relaxed text-white/75 sm:text-[19px]">
               Whether it&apos;s a full extension or a single door that&apos;s been bothering you
-              for years, Paul&apos;s happy to help. Get in touch for a free, no-obligation chat —
-              no job too small.
+              for years, Paul would be really happy to help. Do get in touch for a free,
+              no-obligation chat. No job is ever too small.
             </p>
           </Reveal>
         </Container>
@@ -111,8 +111,8 @@ export default function ContactPage() {
             </Reveal>
             <Reveal delay={120}>
               <p className="mt-5 max-w-[420px] text-[16px] leading-relaxed text-white/65">
-                Prefer to talk it through? Call or email and you&apos;ll get Paul himself — not
-                a call centre.
+                Prefer to talk it through? Give Paul a call or drop him an email and you&apos;ll
+                get the man himself, never a call centre.
               </p>
             </Reveal>
 
@@ -123,7 +123,7 @@ export default function ContactPage() {
                   label="Call or text"
                   value={PHONE_DISPLAY}
                   href={PHONE_HREF}
-                  sub="Mon–Sat, 8am–6pm"
+                  sub="Mon to Sat, 8am to 6pm"
                 />
               </Reveal>
               <Reveal delay={200}>
