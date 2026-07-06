@@ -118,10 +118,10 @@ function PaulSection() {
           </Reveal>
           <Reveal delay={140}>
             <p className="mt-6 text-[17px] leading-relaxed text-white/70">
-              I&apos;m a carpenter and builder, born in Devon and based in Bishopsteignton.
-              I&apos;ve spent more than twenty years on the tools across South Devon, working on
-              everything from sticking doors and new skirting through to loft conversions,
-              extensions and bespoke media walls.
+              I&apos;m a carpenter and builder, born in Devon and based in Bishopsteignton, where
+              I live with my wife and daughter. I&apos;ve spent more than twenty years on the
+              tools across South Devon, working on everything from sticking doors and new skirting
+              through to loft conversions, extensions and bespoke media walls.
             </p>
           </Reveal>
           <Reveal delay={200}>
