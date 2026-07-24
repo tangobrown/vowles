@@ -58,7 +58,7 @@ function AboutHero() {
       className="relative isolate flex min-h-[380px] items-end overflow-hidden border-b border-white/10 bg-surface"
     >
       <CornerLines />
-      <Container className="relative z-10 pb-12 pt-36 lg:pr-32">
+      <Container className="relative z-10 pb-12 pt-36">
         <Reveal className="mb-4 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-white/45">
           <Link href="/#top" className="transition-colors hover:text-brand">Home</Link>
           <span className="text-white/25">/</span>
@@ -77,8 +77,8 @@ function AboutHero() {
           </p>
         </Reveal>
 
-        {/* Accreditation seals — right side, desktop only */}
-        <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
+        {/* Accreditation seals — bottom-right, aligned with the text, desktop only */}
+        <div className="absolute bottom-12 right-0 hidden items-center gap-3 lg:flex">
           {CREDENTIAL_BADGES.map((b) => (
             <span
               key={b.src}
