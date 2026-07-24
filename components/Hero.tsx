@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Container, Reveal, Eyebrow } from "@/components/ui";
 import { ImageSlot } from "@/components/ImageSlot";
 import { PhoneIcon } from "@/components/icons";
-import { PHONE_DISPLAY, PHONE_HREF, CREDENTIAL_BADGES } from "@/lib/data";
+import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
 import { useQuote } from "@/components/QuoteContext";
 
 const HERO_SLOTS = [
@@ -103,24 +102,6 @@ export function Hero() {
               </span>
             </a>
           </Reveal>
-        </div>
-
-        {/* Accreditation seals — right side, desktop only */}
-        <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
-          {CREDENTIAL_BADGES.map((b) => (
-            <div
-              key={b.src}
-              className="relative h-20 w-20 overflow-hidden rounded-full bg-white shadow-xl ring-1 ring-black/5 xl:h-24 xl:w-24"
-            >
-              <Image
-                src={b.src}
-                alt={b.alt}
-                fill
-                sizes="96px"
-                className="object-contain p-2"
-              />
-            </div>
-          ))}
         </div>
       </Container>
 
