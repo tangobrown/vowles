@@ -13,6 +13,7 @@ const HERO_SLOTS = [
   { id: "hero-photo-2", label: "On site with Paul Vowles Carpentry" },
   { id: "hero-photo-3", label: "Installing gable-end glazing" },
   { id: "hero-photo-4", label: "Cut roof carpentry with worker on the ridge" },
+  { id: "hero-photo-5", label: "Bespoke shaker kitchen with marble island" },
 ];
 
 export function Hero() {

@@ -10,6 +10,7 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "hero-photo-2": "/images/paul-vowles-carpentry-van.jpg",
   "hero-photo-3": "/images/gable-end-glazing-install.jpg",
   "hero-photo-4": "/images/cut-roof-carpentry.jpg",
+  "hero-photo-5": "/images/fitted-shaker-kitchen-island.jpg",
 
   // Paul — home page teaser (Guild of Master Craftsmen shot) and About page
   // portrait (on-site in Torbay). Two different photos.
@@ -40,10 +41,11 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "gal-19": "/images/roof-valley-carpentry.jpg",
   "gal-20": "/images/slatted-office-fit-out.jpg",
   "gal-21": "/images/media-wall-exminster.jpg",
+  "gal-22": "/images/fitted-shaker-kitchen-island.jpg",
 
   // Home service cards + service page heroes share the same photo per service.
   "svc-kit": "/images/shaker-kitchen-fit.jpg",
-  "kit-hero": "/images/shaker-kitchen-fit.jpg",
+  "kit-hero": "/images/fitted-shaker-kitchen-island.jpg",
   "svc-loft": "/images/dormer-loft-conversion.jpg",
   "loft-hero": "/images/dormer-loft-conversion.jpg",
   "svc-doors": "/images/timber-french-doors.jpg",
