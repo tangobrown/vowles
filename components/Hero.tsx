@@ -17,21 +17,20 @@ const HERO_SLOTS = [
 
 export function Hero() {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
+  // `tick` lets a manual dot click restart the timer so the slide the user
+  // picked gets a full interval before advancing.
+  const [tick, setTick] = useState(0);
   const { open: openQuote } = useQuote();
 
   useEffect(() => {
-    if (paused) return;
     const t = setInterval(() => setActive((a) => (a + 1) % HERO_SLOTS.length), 3500);
     return () => clearInterval(t);
-  }, [paused]);
+  }, [tick]);
 
   return (
     <section
       id="top"
       className="relative isolate overflow-hidden bg-ink"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       <div className="absolute inset-0 z-0">
         {HERO_SLOTS.map((s, i) => (
@@ -111,7 +110,10 @@ export function Hero() {
           {HERO_SLOTS.map((s, i) => (
             <button
               key={s.id}
-              onClick={() => setActive(i)}
+              onClick={() => {
+                setActive(i);
+                setTick((t) => t + 1);
+              }}
               aria-label={`Show hero image ${i + 1}`}
               className={`h-2 transition-all duration-300 ${
                 i === active ? "w-7 bg-brand" : "w-2 bg-white/35 hover:bg-white/60"
