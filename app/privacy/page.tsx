@@ -108,8 +108,9 @@ const SECTIONS: { title: string; body: ReactNode }[] = [
     body: (
       <>
         <p>
-          We keep your information to ourselves as much as we possibly can. We only use a couple of
-          trusted providers to run the website and receive your messages:
+          We keep your information to ourselves as much as we possibly can. We only use a small
+          number of trusted providers to run the website, receive your messages and understand how
+          the site is doing:
         </p>
         <ul>
           <li>
@@ -120,10 +121,15 @@ const SECTIONS: { title: string; body: ReactNode }[] = [
             <strong className="font-semibold text-white/90">Vercel</strong>, which hosts the
             website.
           </li>
+          <li>
+            <strong className="font-semibold text-white/90">Google</strong>, whose Analytics and
+            Search Console tools help us see how people find and use the site. There is more on this
+            in the cookies and analytics section below.
+          </li>
         </ul>
         <p>
-          These providers act on our behalf and are not allowed to use your information for their
-          own purposes. We would only ever share your information further if the law required us to.
+          These providers process information on our behalf, each under their own privacy terms, and
+          we would only ever share your information further if the law required us to.
         </p>
       </>
     ),
@@ -139,13 +145,51 @@ const SECTIONS: { title: string; body: ReactNode }[] = [
     ),
   },
   {
-    title: "Cookies and tracking",
+    title: "Cookies and analytics",
     body: (
-      <p>
-        We like to keep things simple. This website does not use advertising or analytics cookies,
-        and we do not track you around the web. Your browser may store basic technical data needed
-        to display the site properly, but we do not use it to identify you.
-      </p>
+      <>
+        <p>
+          We use a little analytics to understand how people find and use the site, so we can keep
+          making it better. We do not use advertising cookies, we do not sell your data, and we do
+          not track you around the web for marketing.
+        </p>
+        <p>
+          <strong className="font-semibold text-white/90">Google Analytics.</strong> We use Google
+          Analytics to see things like which pages are visited, how people arrive at the site, and
+          roughly which town or region they are in, never a precise location. To do this, Google
+          sets cookies on your device and processes some technical information such as your device
+          type, browser and IP address. You can read how Google handles this in{" "}
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkCls}
+          >
+            Google&apos;s privacy policy
+          </a>
+          , and you can opt out on every website using{" "}
+          <a
+            href="https://tools.google.com/dlpage/gaoptout"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkCls}
+          >
+            Google&apos;s opt-out browser add-on
+          </a>
+          .
+        </p>
+        <p>
+          <strong className="font-semibold text-white/90">Google Search Console.</strong> We also
+          use Search Console, which shows us how the site appears in Google searches, for example
+          the search terms that bring people to us. This works from Google&apos;s own search data
+          and does not place any extra cookies on your device.
+        </p>
+        <p>
+          <strong className="font-semibold text-white/90">Managing cookies.</strong> You are always
+          in control. You can block or delete cookies through your browser settings at any time,
+          though a few parts of the site may not work quite as smoothly if you do.
+        </p>
+      </>
     ),
   },
   {
