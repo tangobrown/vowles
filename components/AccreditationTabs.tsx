@@ -39,11 +39,12 @@ const ACCREDITATIONS: Accreditation[] = [
     abbr: "CS",
     title: "CSkills",
     tagline: "Qualified",
-    logo: null,
-    learnMoreUrl: null,
+    logo: "/badges/city-and-guilds.png",
+    learnMoreUrl:
+      "https://www.cityandguilds.com/qualifications-and-apprenticeships/construction/construction/6219-construction-skills#tab=information",
     body: [
-      "CSkills is one of the construction industry's most trusted awarding bodies, setting the standard for practical, on-site competence right across the building trades.",
-      "Paul's CSkills qualifications sit behind his hands-on experience with formally assessed, industry-recognised training, so you can be confident the work is carried out to a proper professional standard.",
+      "CSkills is a City & Guilds construction qualification, built around real, hands-on building skills rather than theory alone. It's learned with proper tools and materials and assessed on the practical work you produce, so it reflects what someone can genuinely do on site.",
+      "It spans the core construction crafts, from carpentry and joinery through to the trades that sit alongside them on a build. For Paul, it's part of the grounding that lets him turn his hand to the whole job and know it's been done to a proper standard.",
     ],
   },
   {
