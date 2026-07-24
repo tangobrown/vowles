@@ -78,9 +78,10 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "ext-gal-5": "/images/vaulted-extension-plaster.jpg",
   "ext-gal-6": "/images/timber-frame-build.jpg",
 
-  // Kitchens (short — 2 of 6)
+  // Kitchens (short — 3 of 6)
   "kit-gal-1": "/images/shaker-kitchen-fit.jpg",
   "kit-gal-2": "/images/shaker-kitchen-fit-torquay.jpg",
+  "kit-gal-3": "/images/fitted-shaker-kitchen-island.jpg",
 
   // Media Walls (short — 4 of 6)
   "media-gal-1": "/images/media-wall-exminster.jpg",
