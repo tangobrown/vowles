@@ -195,13 +195,15 @@ export function ContactForm() {
             onChange={set("service")}
             className={`${field} border-white/15 ${form.service ? "text-white" : "text-white/40"}`}
           >
-            <option value="">Select a service (optional)</option>
+            <option value="" className="bg-ink text-white/60">
+              Select a service (optional)
+            </option>
             {SERVICES.map((s) => (
-              <option key={s.id} value={s.name} className="text-ink">
+              <option key={s.id} value={s.name} className="bg-ink text-white">
                 {s.name}
               </option>
             ))}
-            <option value="Something else" className="text-ink">
+            <option value="Something else" className="bg-ink text-white">
               Something else
             </option>
           </select>
