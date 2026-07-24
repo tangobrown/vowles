@@ -30,9 +30,9 @@ export const TRUST = [
 export type Testimonial = { quote: string; name: string; town: string };
 
 export const TESTIMONIALS: Testimonial[] = [
-  { quote: "Paul fitted our media wall and it turned out better than we could have imagined! Reasonably priced, quality work and amazing service. Highly recommended!", name: "Tim B.", town: "Exeter" },
-  { quote: "We had our loft converted into a proper double bedroom. Paul talked us through what was possible, kept us in the loop the whole way and the finish is spot on.", name: "Dave & Lou", town: "Torquay" },
-  { quote: "Honest, reliable and genuinely good at what he does. He treated our little kitchen job with the same care you'd expect on a much bigger build.", name: "Helen R.", town: "Exeter" },
+  { quote: "I cannot fault the service or work that Paul and Harry have done. They are considerate, conscientious, hard working and they really care about the work they do.", name: "James Cooper", town: "Torbay" },
+  { quote: "Paul did an absolutely phenomenal job on our loft conversion, working with us from the design process to best utilise the space and completing everything from constructing the spiral staircase, boarding floors, insulating and fitting windows.", name: "Catrin Eira Peake", town: "Torquay" },
+  { quote: "Paul and Harry give a full professional experience, when working on any project. When fitting our new kitchen he helped with those extra details that are often forgotten, and they are easy to work with.", name: "Brian", town: "Newton Abbot" },
 ];
 
 export type GalleryItem = { slot: string; label: string; span?: "lg" | "wide" };

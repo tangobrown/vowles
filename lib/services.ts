@@ -64,6 +64,26 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
       { q: "Will it add value to my home?", a: "A well-built loft conversion is one of the most reliable ways to add both living space and value, often returning more than it costs when it's done properly." },
       { q: "Do you handle everything, or do I need other trades?", a: "Paul looks after the whole job from start to finish, including the structural work, carpentry, electrics, plumbing and plastering, coordinating any specialists so you only ever deal with one trusted, friendly person." },
     ],
+    testimonials: [
+      {
+        quote:
+          "We have recently had a small loft conversion with skylight windows completed by Paul and Harry. We are very impressed by the quality of their work and such tidy and respectful workers too.",
+        name: "Ally",
+        town: "Exeter",
+      },
+      {
+        quote:
+          "Paul has done an amazing job converting our loft into an incredible bedroom and en suite. His workmanship is first class and we are very pleased with the end result. Whilst on site he kept everything very clean and tidy.",
+        name: "Andy Balsdon",
+        town: "Brixham",
+      },
+      {
+        quote:
+          "The professionalism and personal approach from Paul was excellent throughout our loft conversion. Paul took care of the lion's share of the entire job, fitting it neatly into the exact estimated time originally discussed.",
+        name: "Robert Clutterbuck",
+        town: "Teignmouth",
+      },
+    ],
   },
 
   "extensions": {
