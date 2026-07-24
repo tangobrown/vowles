@@ -1,20 +1,21 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useState, type KeyboardEvent } from "react";
 
 /* Vertical tabbed accreditations shown in the About page's "Qualified &
    insured" section. Guild of Master Craftsmen is open by default.
 
-   TODO (logos): each entry has a `logo` path under public/badges/. Once the
-   real artwork is supplied, drop the files in and swap the placeholder abbr
-   badges (both the small tab thumbnail and the larger panel badge) for
-   next/image using that path. */
+   Logos: entries with a `logo` path under public/badges/ render the real
+   emblem on a white chip (see CredentialMark). Entries with `logo: null`
+   fall back to a placeholder abbreviation badge. TODO: add cskills.png and
+   city-and-guilds.png once that artwork is supplied, then set their `logo`. */
 type Accreditation = {
   id: string;
   abbr: string;
   title: string;
   tagline: string;
-  logo: string;
+  logo: string | null;
   body: string[];
 };
 
@@ -35,7 +36,7 @@ const ACCREDITATIONS: Accreditation[] = [
     abbr: "CS",
     title: "CSkills",
     tagline: "Qualified",
-    logo: "/badges/cskills.png",
+    logo: null,
     body: [
       "CSkills is one of the construction industry's most trusted awarding bodies, setting the standard for practical, on-site competence right across the building trades.",
       "Paul's CSkills qualifications sit behind his hands-on experience with formally assessed, industry-recognised training, so you can be confident the work is carried out to a proper professional standard.",
@@ -46,13 +47,61 @@ const ACCREDITATIONS: Accreditation[] = [
     abbr: "C&G",
     title: "City & Guilds",
     tagline: "Qualified",
-    logo: "/badges/city-and-guilds.png",
+    logo: null,
     body: [
       "City & Guilds is one of the most established names in vocational training in the UK, with qualifications recognised and respected across the trades.",
       "Paul's City & Guilds training grounds his craft in properly taught, assessed skills, from the fundamentals of carpentry through to the finer detail work. It's the reassurance of a tradesman who was taught to do things the right way.",
     ],
   },
 ];
+
+/* Renders a credential's mark: the real logo on a white chip when available,
+   otherwise a placeholder abbreviation badge. `variant` sizes it for the tab
+   list (sm) or the panel header (lg). */
+function CredentialMark({
+  item,
+  variant,
+  selected = false,
+}: {
+  item: Accreditation;
+  variant: "tab" | "panel";
+  selected?: boolean;
+}) {
+  const box = variant === "tab" ? "h-12 w-12" : "h-16 w-16";
+
+  if (item.logo) {
+    return (
+      <span
+        className={`relative ${box} shrink-0 overflow-hidden rounded-full bg-white ${
+          variant === "tab" && selected ? "ring-2 ring-brand" : ""
+        }`}
+      >
+        <Image
+          src={item.logo}
+          alt=""
+          fill
+          sizes={variant === "tab" ? "48px" : "64px"}
+          className="object-contain p-1"
+        />
+      </span>
+    );
+  }
+
+  return (
+    <span
+      className={`grid ${box} shrink-0 place-items-center rounded-full border font-bold tracking-wide ${
+        variant === "panel"
+          ? "border-brand/30 bg-brand/10 text-[15px] text-brand"
+          : selected
+            ? "border-brand/40 bg-brand/10 text-[13px] text-brand"
+            : "border-white/15 text-[13px] text-white/50"
+      }`}
+      aria-hidden="true"
+    >
+      {item.abbr}
+    </span>
+  );
+}
 
 export function AccreditationTabs() {
   const [active, setActive] = useState(0);
@@ -99,17 +148,7 @@ export function AccreditationTabs() {
                   : "border-white/10 bg-ink/40 hover:border-brand/40"
               }`}
             >
-              {/* Thumbnail logo (placeholder abbr — see TODO at top) */}
-              <span
-                className={`grid h-12 w-12 shrink-0 place-items-center rounded-full border text-[13px] font-bold tracking-wide ${
-                  selected
-                    ? "border-brand/40 bg-brand/10 text-brand"
-                    : "border-white/15 text-white/50"
-                }`}
-                aria-hidden="true"
-              >
-                {a.abbr}
-              </span>
+              <CredentialMark item={a} variant="tab" selected={selected} />
               <span className="min-w-0">
                 <span className="block truncate text-[15px] font-semibold text-white">
                   {a.title}
@@ -133,13 +172,7 @@ export function AccreditationTabs() {
         style={{ animation: "lbFade .3s ease both" }}
       >
         <div className="flex items-center gap-5">
-          {/* Larger panel logo (placeholder abbr — see TODO at top) */}
-          <span
-            className="grid h-16 w-16 shrink-0 place-items-center rounded-full border border-brand/30 bg-brand/10 text-[15px] font-bold text-brand"
-            aria-hidden="true"
-          >
-            {current.abbr}
-          </span>
+          <CredentialMark item={current} variant="panel" />
           <h3 className="display text-[24px] leading-tight text-white sm:text-[28px]">
             {current.title}
           </h3>
