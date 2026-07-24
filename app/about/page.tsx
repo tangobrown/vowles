@@ -5,6 +5,7 @@ import { ImageSlot } from "@/components/ImageSlot";
 import { QuoteButton } from "@/components/QuoteButton";
 import { CheckIcon, PhoneIcon } from "@/components/icons";
 import { Testimonials, GalleryPreview, FinalCTA } from "@/components/Sections";
+import { AccreditationTabs } from "@/components/AccreditationTabs";
 import { JsonLd } from "@/components/JsonLd";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
 import { breadcrumbJsonLd, personJsonLd } from "@/lib/seo";
@@ -21,16 +22,6 @@ export const metadata: Metadata = {
     url: "/about",
   },
 };
-
-/* Placeholder accreditations. Swap each entry below for Paul's actual
-   accreditations (logo + name) once confirmed. Drop logo SVGs/PNGs into
-   public/badges/<id>.svg and replace the inline placeholder graphic. */
-const ACCREDITATIONS = [
-  { abbr: "FMB", name: "Federation of Master Builders" },
-  { abbr: "TM", name: "TrustMark Approved" },
-  { abbr: "CHAS", name: "CHAS Accredited" },
-  { abbr: "C&G", name: "City & Guilds Qualified" },
-];
 
 const PROCESS = [
   {
@@ -175,72 +166,7 @@ function Accreditations() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
-          {ACCREDITATIONS.map((a, i) => (
-            <Reveal
-              key={a.abbr}
-              delay={i * 70}
-              className="flex flex-col items-center gap-4 border border-white/10 bg-ink p-6 text-center transition-colors hover:border-brand/40 sm:p-8"
-            >
-              <span
-                className="grid h-20 w-20 place-items-center rounded-full border border-brand/30 bg-brand/10 text-[15px] font-bold tracking-wide text-brand"
-                aria-hidden="true"
-              >
-                {a.abbr}
-              </span>
-              <div className="text-[14px] font-semibold leading-snug text-white">{a.name}</div>
-            </Reveal>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function GuildOfMasterCraftsmen() {
-  return (
-    <section className="relative overflow-hidden bg-ink py-24 sm:py-28">
-      <Container className="grid items-center gap-12 md:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-        <Reveal className="relative">
-          {/* TODO: replace this placeholder with the supplied Guild of Master
-              Craftsmen logo. Drop the artwork at
-              public/badges/guild-of-master-craftsmen.png (or .svg) and swap the
-              inner placeholder for a next/image. Adjust the panel background if
-              the logo needs a lighter backdrop. */}
-          <div className="relative mx-auto flex aspect-square w-full max-w-[320px] items-center justify-center border border-white/10 bg-surface p-10">
-            <div className="text-center text-white/35">
-              <div className="text-[12px] font-semibold uppercase tracking-[0.2em]">Logo</div>
-              <div className="mt-2 text-[13px] leading-snug">
-                Guild of Master<br />Craftsmen
-              </div>
-            </div>
-          </div>
-        </Reveal>
-
-        <div>
-          <Reveal><Eyebrow>A mark of quality</Eyebrow></Reveal>
-          <Reveal delay={80}>
-            <h2 className="display mt-5 text-[32px] leading-[1.05] text-white sm:text-[42px]">
-              A proud member of the Guild of Master Craftsmen
-            </h2>
-          </Reveal>
-          <Reveal delay={140}>
-            <p className="mt-6 text-[17px] leading-relaxed text-white/70">
-              Members are welcomed into the Guild to honour their skill, integrity and expertise
-              in their chosen trade. It&apos;s a mark of quality and excellence that homeowners
-              recognise, and a reassuring sign that the person on your job genuinely knows their
-              craft.
-            </p>
-          </Reveal>
-          <Reveal delay={200}>
-            <p className="mt-4 text-[17px] leading-relaxed text-white/70">
-              The Guild keeps a register of skilled, reputable professionals who are true masters
-              of their trade, so people can always find tradespeople they can trust. For Paul,
-              membership is a lovely testament to more than twenty years of careful, dedicated
-              work, and to being thoroughly assessed and awarded the title of master craftsman.
-            </p>
-          </Reveal>
-        </div>
+        <AccreditationTabs />
       </Container>
     </section>
   );
@@ -317,7 +243,6 @@ export default function AboutPage() {
       <AboutHero />
       <PaulSection />
       <Accreditations />
-      <GuildOfMasterCraftsmen />
       <HowWeWork />
       <GalleryPreview />
       <Testimonials divided />
