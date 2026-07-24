@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useState, type KeyboardEvent } from "react";
+import { ArrowUpRight } from "@/components/icons";
 
 /* Vertical tabbed accreditations shown in the About page's "Qualified &
    insured" section. Guild of Master Craftsmen is open by default.
@@ -16,6 +17,7 @@ type Accreditation = {
   title: string;
   tagline: string;
   logo: string | null;
+  learnMoreUrl: string | null;
   body: string[];
 };
 
@@ -26,6 +28,7 @@ const ACCREDITATIONS: Accreditation[] = [
     title: "The Guild of Master Craftsmen",
     tagline: "Accredited member",
     logo: "/badges/guild-of-master-craftsmen.png",
+    learnMoreUrl: "https://www.guildmc.com/",
     body: [
       "Members are welcomed into the Guild to honour their skill, integrity and expertise in their chosen trade. It's a mark of quality and excellence that homeowners recognise, and a reassuring sign that the person on your job genuinely knows their craft.",
       "The Guild keeps a register of skilled, reputable professionals who are true masters of their trade, so people can always find tradespeople they can trust. For Paul, membership is a lovely testament to more than twenty years of careful, dedicated work, and to being thoroughly assessed and awarded the title of master craftsman.",
@@ -37,6 +40,7 @@ const ACCREDITATIONS: Accreditation[] = [
     title: "CSkills",
     tagline: "Qualified",
     logo: null,
+    learnMoreUrl: null,
     body: [
       "CSkills is one of the construction industry's most trusted awarding bodies, setting the standard for practical, on-site competence right across the building trades.",
       "Paul's CSkills qualifications sit behind his hands-on experience with formally assessed, industry-recognised training, so you can be confident the work is carried out to a proper professional standard.",
@@ -48,6 +52,7 @@ const ACCREDITATIONS: Accreditation[] = [
     title: "City & Guilds",
     tagline: "Qualified",
     logo: null,
+    learnMoreUrl: null,
     body: [
       "City & Guilds is one of the most established names in vocational training in the UK, with qualifications recognised and respected across the trades.",
       "Paul's City & Guilds training grounds his craft in properly taught, assessed skills, from the fundamentals of carpentry through to the finer detail work. It's the reassurance of a tradesman who was taught to do things the right way.",
@@ -184,6 +189,17 @@ export function AccreditationTabs() {
             </p>
           ))}
         </div>
+        {current.learnMoreUrl && (
+          <a
+            href={current.learnMoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/more mt-7 inline-flex items-center gap-1.5 text-[14px] font-semibold text-brand underline-offset-4 hover:underline"
+          >
+            Learn more about {current.title}
+            <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/more:translate-x-0.5 group-hover/more:-translate-y-0.5" />
+          </a>
+        )}
       </div>
     </div>
   );
