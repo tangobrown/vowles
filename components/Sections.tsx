@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container, Reveal, Eyebrow, Button, CornerLines } from "@/components/ui";
 import { ImageSlot } from "@/components/ImageSlot";
@@ -7,6 +8,7 @@ import {
   SERVICES,
   GALLERY,
   TESTIMONIALS,
+  CREDENTIAL_BADGES,
   PHONE_DISPLAY,
   PHONE_HREF,
   servicePath,
@@ -100,6 +102,16 @@ export function AboutTeaser() {
         </Reveal>
 
         <div>
+          <Reveal className="mb-6 flex gap-3">
+            {CREDENTIAL_BADGES.map((b) => (
+              <span
+                key={b.src}
+                className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-white shadow-md ring-1 ring-black/5"
+              >
+                <Image src={b.src} alt={b.alt} fill sizes="56px" className="object-contain p-1.5" />
+              </span>
+            ))}
+          </Reveal>
           <Reveal><Eyebrow>Meet your builder</Eyebrow></Reveal>
           <Reveal delay={80}>
             <h2 className="display mt-5 text-[38px] leading-[1] text-white sm:text-[48px]">

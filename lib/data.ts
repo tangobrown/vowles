@@ -69,6 +69,18 @@ export const GALLERY_EXTRA: GalleryItem[] = [
 
 export const GALLERY_FULL: GalleryItem[] = [...GALLERY, ...GALLERY_EXTRA];
 
+/* The two headline accreditation logos (black/transparent artwork, so they
+   render on white chips). Shown as trust seals in the hero and the home-page
+   "meet your builder" teaser. The full set with copy lives in
+   components/AccreditationTabs.tsx. */
+export const CREDENTIAL_BADGES = [
+  {
+    src: "/badges/guild-of-master-craftsmen.png",
+    alt: "Member of the Guild of Master Craftsmen",
+  },
+  { src: "/badges/city-and-guilds.png", alt: "City & Guilds qualified" },
+];
+
 export const PHONE_DISPLAY = "07866 599 043";
 export const PHONE_HREF = "tel:+447866599043";
 export const EMAIL = "paul@vowlescarpentry.co.uk";

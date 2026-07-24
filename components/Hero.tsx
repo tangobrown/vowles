@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Container, Reveal, Eyebrow } from "@/components/ui";
 import { ImageSlot } from "@/components/ImageSlot";
 import { PhoneIcon } from "@/components/icons";
-import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
+import { PHONE_DISPLAY, PHONE_HREF, CREDENTIAL_BADGES } from "@/lib/data";
 import { useQuote } from "@/components/QuoteContext";
 
 const HERO_SLOTS = [
@@ -14,16 +14,6 @@ const HERO_SLOTS = [
   { id: "hero-photo-2", label: "On site with Paul Vowles Carpentry" },
   { id: "hero-photo-3", label: "Installing gable-end glazing" },
   { id: "hero-photo-4", label: "Cut roof carpentry with worker on the ridge" },
-];
-
-/* Accreditation seals shown on the right of the hero (desktop only). Black /
-   transparent logos, so they sit on white chips to stay visible on the photo. */
-const HERO_BADGES = [
-  {
-    src: "/badges/guild-of-master-craftsmen.png",
-    alt: "Member of the Guild of Master Craftsmen",
-  },
-  { src: "/badges/city-and-guilds.png", alt: "City & Guilds qualified" },
 ];
 
 export function Hero() {
@@ -117,7 +107,7 @@ export function Hero() {
 
         {/* Accreditation seals — right side, desktop only */}
         <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-4 lg:flex">
-          {HERO_BADGES.map((b) => (
+          {CREDENTIAL_BADGES.map((b) => (
             <div
               key={b.src}
               className="relative h-20 w-20 overflow-hidden rounded-full bg-white shadow-xl ring-1 ring-black/5 xl:h-24 xl:w-24"
