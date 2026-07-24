@@ -13,7 +13,26 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [svcOpen, setSvcOpen] = useState(false);
   const svcRef = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { open: openQuote } = useQuote();
+
+  /* Hover open, with a short close delay so moving the pointer from the
+     trigger into the panel doesn't flicker it shut. Touch/keyboard fall back
+     to the button's onClick toggle below. */
+  const openSvc = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setSvcOpen(true);
+  };
+  const scheduleCloseSvc = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setSvcOpen(false), 120);
+  };
+  useEffect(
+    () => () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+    },
+    [],
+  );
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -84,7 +103,12 @@ export function Header() {
             About
           </Link>
 
-          <div className="relative" ref={svcRef}>
+          <div
+            className="relative"
+            ref={svcRef}
+            onMouseEnter={openSvc}
+            onMouseLeave={scheduleCloseSvc}
+          >
             <button
               type="button"
               onClick={() => setSvcOpen((v) => !v)}
