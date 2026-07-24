@@ -26,9 +26,9 @@ const EMPTY: FormState = {
 };
 
 const STEPS = [
-  "Tell Paul a little about your project in the form below.",
-  "He'll come back to you personally, usually within a day, to arrange a free site visit.",
-  "You'll get a clear, written quote. No pressure and no surprise extras.",
+  "Tell me about your project.",
+  "I'll be in touch to arrange a free site visit.",
+  "You'll get a clear, written quote.",
 ];
 
 export function QuotePanel() {
