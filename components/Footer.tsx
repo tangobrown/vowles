@@ -129,7 +129,7 @@ export function Footer() {
         <Container className="flex flex-col items-center justify-between gap-3 py-6 text-[13px] text-white/40 sm:flex-row">
           <div>© {new Date().getFullYear()} Vowles Carpentry & Building. Fully insured.</div>
           <div className="flex gap-5">
-            <a href="#" className="transition-colors hover:text-white/70">Privacy</a>
+            <Link href="/privacy" className="transition-colors hover:text-white/70">Privacy</Link>
             <a href="#" className="transition-colors hover:text-white/70">Terms</a>
           </div>
         </Container>
