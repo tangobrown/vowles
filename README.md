@@ -93,6 +93,20 @@ Central config lives in [`lib/seo.ts`](lib/seo.ts) — site URL, business info, 
 - **`app/robots.ts`** allows all crawlers and points at the sitemap. **`app/sitemap.ts`** generates `/sitemap.xml` at build with all static and service pages.
 - **Favicon**: `app/icon.svg` — a yellow "V" on dark background, picked up automatically by Next.
 
+## Analytics & cookies
+
+Google Analytics is wired up but **off by default**. It loads only when both:
+
+1. `NEXT_PUBLIC_GA_ID` is set (a GA4 Measurement ID like `G-XXXXXXXXXX`) in the Vercel dashboard, **and**
+2. the visitor clicks **Accept** on the cookie banner.
+
+With `NEXT_PUBLIC_GA_ID` unset (the default), neither the banner nor GA render — the site behaves exactly as if analytics didn't exist. Config lives in [`lib/consent.ts`](lib/consent.ts); the banner + GA loader is [`components/CookieConsent.tsx`](components/CookieConsent.tsx).
+
+- **Consent model**: prior consent — GA is not loaded at all until the visitor accepts, which is the approach UK PECR/GDPR expects for analytics cookies. The choice is stored in `localStorage` under `vowles-cookie-consent`.
+- **Withdrawing consent**: a "Cookie settings" link appears in the footer (only when GA is configured) and reopens the banner. Declining after having accepted also sets GA's `ga-disable-<id>` flag so tracking stops immediately, not just on the next page load.
+- **Google Search Console**: needs no code — verify the domain via a DNS record (recommended), or add a `verification` meta tag if preferred (not currently wired). It sets no visitor cookies.
+- The `/privacy` page already documents both Google Analytics and Search Console.
+
 ## Contact + quote forms
 
 Both the `/contact` form and the slide-out `<QuotePanel>` submit to **Formspree**. The endpoint lives in `lib/formspree.ts` — change it there once (not per form) to move to a different provider or a new inbox.

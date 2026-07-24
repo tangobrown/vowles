@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteProvider } from "@/components/QuoteContext";
 import { QuotePanel } from "@/components/QuotePanel";
+import { CookieConsent } from "@/components/CookieConsent";
 import { JsonLd } from "@/components/JsonLd";
 import {
   SITE_URL,
@@ -118,6 +119,7 @@ export default function RootLayout({
           <Footer />
           <QuotePanel />
         </QuoteProvider>
+        <CookieConsent />
         <JsonLd data={localBusinessJsonLd()} />
       </body>
     </html>

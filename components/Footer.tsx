@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui";
+import { CookieSettingsButton } from "@/components/CookieSettingsButton";
+import { GA_ID } from "@/lib/consent";
 import { PhoneIcon, MailIcon, PinIcon } from "@/components/icons";
 import {
   SERVICES,
@@ -131,6 +133,9 @@ export function Footer() {
           <div className="flex gap-5">
             <Link href="/privacy" className="transition-colors hover:text-white/70">Privacy</Link>
             <a href="#" className="transition-colors hover:text-white/70">Terms</a>
+            {GA_ID && (
+              <CookieSettingsButton className="transition-colors hover:text-white/70" />
+            )}
           </div>
         </Container>
       </div>
