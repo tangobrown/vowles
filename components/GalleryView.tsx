@@ -121,8 +121,8 @@ export function GalleryView() {
       >
         <div className="absolute inset-0 z-0">
           <ImageSlot id="hero-photo" label="Gallery banner photo" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/30" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/55 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/75 via-transparent to-ink/20" />
         </div>
 
         <Container className="relative z-10 pb-12 pt-36">
@@ -139,8 +139,10 @@ export function GalleryView() {
           <Reveal delay={120}>
             <p className="mt-4 max-w-[620px] text-[17px] leading-relaxed text-white/75 sm:text-[19px]">
               A lovely look at some of the projects Paul has completed across South Devon, from
-              full builds right down to the smaller jobs done properly. Do tap any photo to take a
-              closer look.
+              full builds right down to the smaller jobs done properly.{" "}
+              <span className="box-decoration-clone bg-brand px-2 py-0.5 font-bold text-ink">
+                Do tap any photo to take a closer look.
+              </span>
             </p>
           </Reveal>
         </Container>
