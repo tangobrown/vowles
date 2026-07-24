@@ -6,11 +6,18 @@ import {
   PhoneIcon,
   MailIcon,
   PinIcon,
-  ClockIcon,
+  FacebookIcon,
+  ArrowUpRight,
 } from "@/components/icons";
 import { ContactForm } from "@/components/ContactForm";
 import { JsonLd } from "@/components/JsonLd";
-import { TOWNS, PHONE_DISPLAY, PHONE_HREF, EMAIL } from "@/lib/data";
+import {
+  TOWNS,
+  PHONE_DISPLAY,
+  PHONE_HREF,
+  EMAIL,
+  FACEBOOK_URL,
+} from "@/lib/data";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -32,12 +39,18 @@ function DetailCard({
   value,
   href,
   sub,
+  body,
+  cta,
+  external,
 }: {
   icon: ReactNode;
   label: string;
   value: string;
   href?: string;
   sub?: string;
+  body?: string;
+  cta?: string;
+  external?: boolean;
 }) {
   const inner = (
     <>
@@ -48,14 +61,29 @@ function DetailCard({
         <div className="text-[12px] font-semibold uppercase tracking-[0.16em] text-white/45">
           {label}
         </div>
-        <div className="mt-1 truncate text-[17px] font-semibold text-white">{value}</div>
+        <div className={`mt-1 text-[17px] font-semibold text-white ${body ? "" : "truncate"}`}>
+          {value}
+        </div>
+        {body && <p className="mt-1.5 text-[14px] leading-relaxed text-white/60">{body}</p>}
         {sub && <div className="mt-0.5 text-[13px] text-white/50">{sub}</div>}
+        {cta && (
+          <span className="mt-2.5 inline-flex items-center gap-1 text-[13px] font-semibold text-brand">
+            {cta}
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </span>
+        )}
       </div>
     </>
   );
-  const cls = "group flex items-center gap-4 border border-white/10 bg-surface p-5 transition-colors";
+  const cls = `group flex gap-4 border border-white/10 bg-surface p-5 transition-colors ${
+    body ? "items-start" : "items-center"
+  }`;
   return href ? (
-    <a href={href} className={`${cls} hover:border-brand/50`}>
+    <a
+      href={href}
+      className={`${cls} hover:border-brand/50`}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
       {inner}
     </a>
   ) : (
@@ -136,18 +164,21 @@ export default function ContactPage() {
               </Reveal>
               <Reveal delay={260}>
                 <DetailCard
-                  icon={<PinIcon size={20} />}
-                  label="Based in"
-                  value="Bishopsteignton, Devon"
-                  sub={`Covering ${TOWNS.join(", ")}`}
+                  icon={<FacebookIcon size={20} />}
+                  label="Facebook"
+                  value="Stay up to date with our latest projects!"
+                  body="Follow us on Facebook for weekly behind-the-scenes updates from our everyday work."
+                  href={FACEBOOK_URL}
+                  cta="Follow on Facebook"
+                  external
                 />
               </Reveal>
               <Reveal delay={320}>
                 <DetailCard
-                  icon={<ClockIcon size={20} />}
-                  label="Response time"
-                  value="Usually within a day"
-                  sub="A real, no-obligation reply"
+                  icon={<PinIcon size={20} />}
+                  label="Based in"
+                  value="Bishopsteignton, Devon"
+                  sub={`Covering ${TOWNS.join(", ")}`}
                 />
               </Reveal>
             </div>

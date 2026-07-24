@@ -72,3 +72,5 @@ export const GALLERY_FULL: GalleryItem[] = [...GALLERY, ...GALLERY_EXTRA];
 export const PHONE_DISPLAY = "07866 599 043";
 export const PHONE_HREF = "tel:+447866599043";
 export const EMAIL = "paul@vowlescarpentry.co.uk";
+export const FACEBOOK_URL =
+  "https://www.facebook.com/p/Paul-Vowles-Carpentry-100092185217368/";
