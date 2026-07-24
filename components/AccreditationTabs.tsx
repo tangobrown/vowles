@@ -51,7 +51,7 @@ const ACCREDITATIONS: Accreditation[] = [
     abbr: "C&G",
     title: "City & Guilds",
     tagline: "Qualified",
-    logo: null,
+    logo: "/badges/city-and-guilds.png",
     learnMoreUrl: null,
     body: [
       "City & Guilds is one of the most established names in vocational training in the UK, with qualifications recognised and respected across the trades.",
