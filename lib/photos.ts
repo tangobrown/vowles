@@ -10,6 +10,7 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "hero-photo-3": "/images/gable-end-glazing-install.jpg",
   "hero-photo-4": "/images/cut-roof-carpentry.jpg",
   "hero-photo-5": "/images/fitted-shaker-kitchen-island.jpg",
+  "hero-photo-6": "/images/bespoke-fitted-wardrobes-exeter.jpg",
   // Gallery page banner background (heavily overlaid).
   "hero-photo": "/images/home-extension-build.jpg",
 
