@@ -14,7 +14,7 @@ export const SITE_DESCRIPTION =
 
 /* Default social preview image (the shaker kitchen finished shot works well
    as a hero). Absolute URL so it renders on Slack, Facebook, LinkedIn and X. */
-export const OG_IMAGE = `${SITE_URL}/images/shaker-kitchen-fit-torquay.jpg`;
+export const OG_IMAGE = `${SITE_URL}/images/fitted-shaker-kitchen-island.jpg`;
 export const OG_IMAGE_ALT = `${SITE_NAME}, a recent kitchen fit-out`;
 
 export const OWNER_NAME = "Paul Vowles";

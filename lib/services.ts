@@ -154,8 +154,7 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     galleryHeading: "Kitchens we've fitted",
     gallerySlots: [
       { id: "kit-gal-1", label: "Grey shaker kitchen with glass splashback" },
-      { id: "kit-gal-2", label: "Sage shaker kitchen with oak worktops" },
-      { id: "kit-gal-3", label: "Bespoke shaker kitchen with marble island" },
+      { id: "kit-gal-2", label: "Bespoke shaker kitchen with marble island" },
     ],
     faqEyebrow: "Good to know",
     faqHeading: "Kitchen questions, answered",

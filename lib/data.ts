@@ -65,7 +65,6 @@ export const GALLERY_EXTRA: GalleryItem[] = [
   { slot: "gal-19", label: "Roof valley carpentry from the scaffold" },
   { slot: "gal-20", label: "Slatted office fit-out with signage" },
   { slot: "gal-21", label: "Slatted media wall with recessed TV in Exminster" },
-  { slot: "gal-1", label: "Shaker kitchen fit in Torquay" },
 ];
 
 export const GALLERY_FULL: GalleryItem[] = [...GALLERY, ...GALLERY_EXTRA];

@@ -3,14 +3,15 @@
    placeholder otherwise. Add entries as photos are processed. */
 
 export const SLOT_PHOTOS: Record<string, string> = {
-  // Home hero slideshow (placeholder — 4 diverse landscape shots covering
-  // finished interiors, on-site work, action, and craft). Swap for dedicated
-  // hero photography when it arrives.
-  "hero-photo": "/images/shaker-kitchen-fit-torquay.jpg",
+  // Home hero slideshow — landscape shots: on-site work, action, craft and a
+  // finished kitchen. (hero-photo, below, backs the gallery page banner and is
+  // no longer part of the slideshow.)
   "hero-photo-2": "/images/paul-vowles-carpentry-van.jpg",
   "hero-photo-3": "/images/gable-end-glazing-install.jpg",
   "hero-photo-4": "/images/cut-roof-carpentry.jpg",
   "hero-photo-5": "/images/fitted-shaker-kitchen-island.jpg",
+  // Gallery page banner background (heavily overlaid).
+  "hero-photo": "/images/home-extension-build.jpg",
 
   // Paul — home page teaser (Guild of Master Craftsmen shot) and About page
   // portrait (on-site in Torbay). Two different photos.
@@ -18,7 +19,6 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "about-paul": "/images/paul-vowles-carpenter-torbay.jpg",
 
   // Home gallery bento
-  "gal-1": "/images/shaker-kitchen-fit-torquay.jpg",
   "gal-2": "/images/cedar-clad-extension-teignmouth.jpg",
   "gal-3": "/images/cedar-garden-building-torbay.jpg",
   "gal-4": "/images/bespoke-fitted-wardrobes-exeter.jpg",
@@ -78,10 +78,9 @@ export const SLOT_PHOTOS: Record<string, string> = {
   "ext-gal-5": "/images/vaulted-extension-plaster.jpg",
   "ext-gal-6": "/images/timber-frame-build.jpg",
 
-  // Kitchens (short — 3 of 6)
+  // Kitchens (short — 2 of 6)
   "kit-gal-1": "/images/shaker-kitchen-fit.jpg",
-  "kit-gal-2": "/images/shaker-kitchen-fit-torquay.jpg",
-  "kit-gal-3": "/images/fitted-shaker-kitchen-island.jpg",
+  "kit-gal-2": "/images/fitted-shaker-kitchen-island.jpg",
 
   // Media Walls (short — 4 of 6)
   "media-gal-1": "/images/media-wall-exminster.jpg",
