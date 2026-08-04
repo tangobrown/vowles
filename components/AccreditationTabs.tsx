@@ -5,12 +5,10 @@ import { useRef, useState, type KeyboardEvent } from "react";
 import { ArrowUpRight } from "@/components/icons";
 
 /* Vertical tabbed accreditations shown in the About page's "Qualified &
-   insured" section. Guild of Master Craftsmen is open by default.
-
-   Logos: entries with a `logo` path under public/badges/ render the real
-   emblem on a white chip (see CredentialMark). Entries with `logo: null`
-   fall back to a placeholder abbreviation badge. TODO: add cskills.png and
-   city-and-guilds.png once that artwork is supplied, then set their `logo`. */
+   insured" section. Guild of Master Craftsmen is open by default. Each entry's
+   logo lives under public/badges/ and renders on a white chip (see
+   CredentialMark); the abbreviation badge is only a fallback for a missing
+   logo. */
 type Accreditation = {
   id: string;
   abbr: string;
@@ -35,19 +33,6 @@ const ACCREDITATIONS: Accreditation[] = [
     ],
   },
   {
-    id: "cskills",
-    abbr: "CS",
-    title: "CSkills",
-    tagline: "Qualified",
-    logo: "/badges/city-and-guilds.png",
-    learnMoreUrl:
-      "https://www.cityandguilds.com/qualifications-and-apprenticeships/construction/construction/6219-construction-skills#tab=information",
-    body: [
-      "CSkills is a City & Guilds construction qualification, built around real, hands-on building skills rather than theory alone. It's learned with proper tools and materials and assessed on the practical work you produce, so it reflects what someone can genuinely do on site.",
-      "It spans the core construction crafts, from carpentry and joinery through to the trades that sit alongside them on a build. For Paul, it's part of the grounding that lets him turn his hand to the whole job and know it's been done to a proper standard.",
-    ],
-  },
-  {
     id: "city-and-guilds",
     abbr: "C&G",
     title: "City & Guilds",
@@ -57,6 +42,30 @@ const ACCREDITATIONS: Accreditation[] = [
     body: [
       "City & Guilds is one of the most established names in vocational training in the UK, with qualifications recognised and respected across the trades.",
       "Paul's City & Guilds training grounds his craft in properly taught, assessed skills, from the fundamentals of carpentry through to the finer detail work. It's the reassurance of a tradesman who was taught to do things the right way.",
+    ],
+  },
+  {
+    id: "cskills",
+    abbr: "CS",
+    title: "CSkills",
+    tagline: "Approved centre",
+    logo: "/badges/cskills.png",
+    learnMoreUrl: null,
+    body: [
+      "Cskills Awards is a respected construction awarding body, with qualifications recognised across the trades as a mark of real, hands-on competence.",
+      "It's another sign that Paul's skills have been trained and assessed to proper industry standards, so you can trust the work on your project is carried out the right way.",
+    ],
+  },
+  {
+    id: "citb",
+    abbr: "CITB",
+    title: "CITB",
+    tagline: "Construction skills",
+    logo: "/badges/citb.png",
+    learnMoreUrl: "https://www.citb.co.uk/",
+    body: [
+      "CITB, the Construction Industry Training Board, champions training, safety and high standards right across UK construction.",
+      "Working to CITB standards keeps Paul's skills, safety and workmanship grounded in nationally recognised construction best practice, for a job done properly and responsibly.",
     ],
   },
 ];
@@ -73,7 +82,7 @@ function CredentialMark({
   variant: "tab" | "panel";
   selected?: boolean;
 }) {
-  const box = variant === "tab" ? "h-12 w-12" : "h-16 w-16";
+  const box = variant === "tab" ? "h-16 w-16" : "h-20 w-20";
 
   if (item.logo) {
     return (
@@ -86,7 +95,7 @@ function CredentialMark({
           src={item.logo}
           alt=""
           fill
-          sizes={variant === "tab" ? "48px" : "64px"}
+          sizes={variant === "tab" ? "64px" : "80px"}
           className="object-contain p-1"
         />
       </span>
@@ -125,7 +134,7 @@ export function AccreditationTabs() {
   const current = ACCREDITATIONS[active];
 
   return (
-    <div className="mt-12 grid gap-4 md:grid-cols-[minmax(0,300px)_1fr] lg:gap-6">
+    <div className="mt-12 grid gap-4 md:grid-cols-[minmax(0,340px)_1fr] lg:gap-6">
       {/* Tab list */}
       <div
         role="tablist"
@@ -148,7 +157,7 @@ export function AccreditationTabs() {
               aria-controls={`acc-panel-${a.id}`}
               tabIndex={selected ? 0 : -1}
               onClick={() => setActive(i)}
-              className={`flex items-center gap-4 border p-4 text-left transition-colors ${
+              className={`flex items-center gap-5 border p-5 text-left transition-colors ${
                 selected
                   ? "border-brand bg-ink"
                   : "border-white/10 bg-ink/40 hover:border-brand/40"
@@ -156,7 +165,7 @@ export function AccreditationTabs() {
             >
               <CredentialMark item={a} variant="tab" selected={selected} />
               <span className="min-w-0">
-                <span className="block truncate text-[15px] font-semibold text-white">
+                <span className="block truncate text-[16px] font-semibold text-white">
                   {a.title}
                 </span>
                 <span className="mt-0.5 block text-[12px] font-medium uppercase tracking-[0.14em] text-white/40">
