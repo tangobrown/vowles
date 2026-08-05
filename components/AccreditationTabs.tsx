@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRef, useState, type KeyboardEvent } from "react";
 import { ArrowUpRight } from "@/components/icons";
+import { GUILD_PROFILE_URL } from "@/lib/data";
 
 /* Vertical tabbed accreditations shown in the About page's "Qualified &
    insured" section. Guild of Master Craftsmen is open by default. Each entry's
@@ -16,6 +17,7 @@ type Accreditation = {
   tagline: string;
   logo: string | null;
   learnMoreUrl: string | null;
+  learnMoreLabel?: string;
   body: string[];
 };
 
@@ -26,7 +28,8 @@ const ACCREDITATIONS: Accreditation[] = [
     title: "The Guild of Master Craftsmen",
     tagline: "Accredited member",
     logo: "/badges/guild-of-master-craftsmen.png",
-    learnMoreUrl: "https://www.guildmc.com/",
+    learnMoreUrl: GUILD_PROFILE_URL,
+    learnMoreLabel: "View Paul's Guild of Master Craftsmen profile",
     body: [
       "Members are welcomed into the Guild to honour their skill, integrity and expertise in their chosen trade. It's a mark of quality and excellence that homeowners recognise, and a reassuring sign that the person on your job genuinely knows their craft.",
       "The Guild keeps a register of skilled, reputable professionals who are true masters of their trade, so people can always find tradespeople they can trust. For Paul, membership is a lovely testament to more than twenty years of careful, dedicated work, and to being thoroughly assessed and awarded the title of master craftsman.",
@@ -206,7 +209,7 @@ export function AccreditationTabs() {
             rel="noopener noreferrer"
             className="group/more mt-7 inline-flex items-center gap-1.5 text-[14px] font-semibold text-brand underline-offset-4 hover:underline"
           >
-            Learn more about {current.title}
+            {current.learnMoreLabel ?? `Learn more about ${current.title}`}
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/more:translate-x-0.5 group-hover/more:-translate-y-0.5" />
           </a>
         )}

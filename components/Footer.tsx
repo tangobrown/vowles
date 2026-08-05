@@ -11,6 +11,7 @@ import {
   EMAIL,
   FACEBOOK_URL,
   INSTAGRAM_URL,
+  GUILD_PROFILE_URL,
   servicePath,
 } from "@/lib/data";
 
@@ -43,7 +44,16 @@ export function Footer() {
           />
           <p className="mt-5 max-w-[300px] text-[14px] leading-relaxed text-white/55">
             Friendly, skilled carpentry and building across South Devon. Run by Paul
-            Vowles, where no job is ever too small.
+            Vowles, where no job is ever too small. A proud member of the{" "}
+            <a
+              href={GUILD_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white/75 underline-offset-2 transition-colors hover:text-brand hover:underline"
+            >
+              Guild of Master Craftsmen
+            </a>
+            .
           </p>
           <div className="mt-6 flex gap-2.5">
             {SOCIAL.map((s) => (

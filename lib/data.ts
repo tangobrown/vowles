@@ -87,3 +87,5 @@ export const EMAIL = "paulvowlescarpentry@gmail.com";
 export const FACEBOOK_URL =
   "https://www.facebook.com/p/Paul-Vowles-Carpentry-100092185217368/";
 export const INSTAGRAM_URL = "https://www.instagram.com/paulvowlescarpentry06/";
+export const GUILD_PROFILE_URL =
+  "https://www.findacraftsman.com/listing/paul-vowles-carpentry";
