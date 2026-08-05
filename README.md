@@ -83,7 +83,7 @@ export function ImageSlot({ id, label, fit = "cover" }: Props) {
 
 Central config lives in [`lib/seo.ts`](lib/seo.ts) — site URL, business info, and JSON-LD generators.
 
-- **Canonical domain**: `SITE_URL` in `lib/seo.ts` defaults to `https://vowlescarpentry.co.uk`. Override at build time via the `NEXT_PUBLIC_SITE_URL` env var in the Vercel dashboard once the real domain is connected (or if the site launches on a different domain).
+- **Canonical domain**: `SITE_URL` in `lib/seo.ts` defaults to `https://www.paulvowlescarpentry.co.uk`. Override at build time via the `NEXT_PUBLIC_SITE_URL` env var in the Vercel dashboard if the site ever moves to a different domain.
 - **Metadata**: root `app/layout.tsx` sets `metadataBase`, a title template (`%s | Vowles Carpentry & Building`), Open Graph + Twitter card defaults, robots directives, viewport theme colour, and application category. Each page overrides `title`, `description`, and `alternates.canonical`.
 - **Structured data (JSON-LD)**:
   - Site-wide: `GeneralContractor` LocalBusiness with address, service area, phone/email, and services.

@@ -111,7 +111,7 @@ export function QuotePanel() {
     try {
       await submitToFormspree({
         ...form,
-        _subject: `New quote enquiry from vowlescarpentry.co.uk, from ${form.name}`,
+        _subject: `New quote enquiry from paulvowlescarpentry.co.uk, from ${form.name}`,
       });
       setSent(true);
     } catch (err) {

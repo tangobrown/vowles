@@ -72,7 +72,7 @@ export function ContactForm() {
     try {
       await submitToFormspree({
         ...form,
-        _subject: `New message from vowlescarpentry.co.uk, from ${form.name}`,
+        _subject: `New message from paulvowlescarpentry.co.uk, from ${form.name}`,
       });
       setSent(true);
     } catch (err) {

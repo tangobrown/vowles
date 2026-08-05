@@ -4,7 +4,7 @@ import { PHONE_HREF, EMAIL, TOWNS } from "@/lib/data";
    build time via `NEXT_PUBLIC_SITE_URL` (set in the Vercel dashboard) once
    the real domain is live. */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://vowlescarpentry.co.uk"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.paulvowlescarpentry.co.uk"
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Vowles Carpentry & Building";
