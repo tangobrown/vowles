@@ -16,8 +16,7 @@ type Accreditation = {
   title: string;
   tagline: string;
   logo: string | null;
-  learnMoreUrl: string | null;
-  learnMoreLabel?: string;
+  links?: { label: string; url: string }[];
   body: string[];
 };
 
@@ -28,8 +27,10 @@ const ACCREDITATIONS: Accreditation[] = [
     title: "The Guild of Master Craftsmen",
     tagline: "Accredited member",
     logo: "/badges/guild-of-master-craftsmen.png",
-    learnMoreUrl: GUILD_PROFILE_URL,
-    learnMoreLabel: "View Paul's Guild of Master Craftsmen profile",
+    links: [
+      { label: "More information", url: "https://www.guildmc.com/" },
+      { label: "View Paul's profile", url: GUILD_PROFILE_URL },
+    ],
     body: [
       "Members are welcomed into the Guild to honour their skill, integrity and expertise in their chosen trade. It's a mark of quality and excellence that homeowners recognise, and a reassuring sign that the person on your job genuinely knows their craft.",
       "The Guild keeps a register of skilled, reputable professionals who are true masters of their trade, so people can always find tradespeople they can trust. For Paul, membership is a lovely testament to more than twenty years of careful, dedicated work, and to being thoroughly assessed and awarded the title of master craftsman.",
@@ -41,7 +42,7 @@ const ACCREDITATIONS: Accreditation[] = [
     title: "City & Guilds",
     tagline: "Qualified",
     logo: "/badges/city-and-guilds.png",
-    learnMoreUrl: "https://www.cityandguilds.com/",
+    links: [{ label: "Learn more about City & Guilds", url: "https://www.cityandguilds.com/" }],
     body: [
       "City & Guilds is one of the most established names in vocational training in the UK, with qualifications recognised and respected across the trades.",
       "Paul's City & Guilds training grounds his craft in properly taught, assessed skills, from the fundamentals of carpentry through to the finer detail work. It's the reassurance of a tradesman who was taught to do things the right way.",
@@ -53,7 +54,6 @@ const ACCREDITATIONS: Accreditation[] = [
     title: "CSkills",
     tagline: "Approved centre",
     logo: "/badges/cskills.png",
-    learnMoreUrl: null,
     body: [
       "Cskills Awards is a respected construction awarding body, with qualifications recognised across the trades as a mark of real, hands-on competence.",
       "It's another sign that Paul's skills have been trained and assessed to proper industry standards, so you can trust the work on your project is carried out the right way.",
@@ -65,7 +65,7 @@ const ACCREDITATIONS: Accreditation[] = [
     title: "CITB",
     tagline: "Construction skills",
     logo: "/badges/citb.png",
-    learnMoreUrl: "https://www.citb.co.uk/",
+    links: [{ label: "Learn more about CITB", url: "https://www.citb.co.uk/" }],
     body: [
       "CITB, the Construction Industry Training Board, champions training, safety and high standards right across UK construction.",
       "Working to CITB standards keeps Paul's skills, safety and workmanship grounded in nationally recognised construction best practice, for a job done properly and responsibly.",
@@ -202,16 +202,21 @@ export function AccreditationTabs() {
             </p>
           ))}
         </div>
-        {current.learnMoreUrl && (
-          <a
-            href={current.learnMoreUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group/more mt-7 inline-flex items-center gap-1.5 text-[14px] font-semibold text-brand underline-offset-4 hover:underline"
-          >
-            {current.learnMoreLabel ?? `Learn more about ${current.title}`}
-            <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/more:translate-x-0.5 group-hover/more:-translate-y-0.5" />
-          </a>
+        {current.links && current.links.length > 0 && (
+          <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+            {current.links.map((link) => (
+              <a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/more inline-flex items-center gap-1.5 text-[14px] font-semibold text-brand underline-offset-4 hover:underline"
+              >
+                {link.label}
+                <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/more:translate-x-0.5 group-hover/more:-translate-y-0.5" />
+              </a>
+            ))}
+          </div>
         )}
       </div>
     </div>
