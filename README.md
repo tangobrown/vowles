@@ -109,9 +109,39 @@ With `NEXT_PUBLIC_GA_ID` unset (the default), neither the banner nor GA render �
 
 ## Contact + quote forms
 
-Both the `/contact` form and the slide-out `<QuotePanel>` submit to **Formspree**. The endpoint lives in `lib/formspree.ts` — change it there once (not per form) to move to a different provider or a new inbox.
+Both the `/contact` form and the slide-out `<QuotePanel>` post to **`/api/enquiry`**, which relays the enquiry to Paul by email via **Postmark**.
 
-Client-side validation runs first (name required, phone or email required, etc.); on valid submit both forms POST JSON to Formspree, disable the button while sending, show any error message inline, and switch to a success state on 200. The success screen offers a "send another" reset.
+Postmark needs a secret server token, so the send happens server-side — the browser never sees it. This is the only server route in the project; everything else is still static.
+
+```
+browser ──POST /api/enquiry──▶ route handler ──▶ Postmark API ──▶ Paul's inbox
+                                (token, server-side only)
+```
+
+| File | Role |
+|---|---|
+| `lib/enquiry.ts` | Shared types, validation, and the client `submitEnquiry()` helper. No secrets — safe to import from client components. |
+| `lib/postmark.ts` | Postmark transport and env config. **Server-only — never import from a client component.** |
+| `app/api/enquiry/route.ts` | Validates, drops honeypot hits, builds the email, sends. |
+
+### Required environment variables
+
+Set these in the Vercel dashboard (Project → Settings → Environment Variables). The site builds fine without them, but the form returns an error at runtime and logs which are missing.
+
+| Variable | Required | Notes |
+|---|---|---|
+| `POSTMARK_SERVER_TOKEN` | yes | Postmark **Server** API token, from Servers → *your server* → API Tokens. Not the Account token. Secret — no `NEXT_PUBLIC_` prefix, never commit it. |
+| `POSTMARK_FROM_EMAIL` | yes | Must be a verified Sender Signature, or an address on a domain verified in Postmark. Postmark rejects anything else. |
+| `POSTMARK_TO_EMAIL` | yes | Where enquiries land. |
+| `POSTMARK_MESSAGE_STREAM` | no | Defaults to `outbound`. Must be a transactional stream, not a broadcast one. |
+
+`From` is always the verified sender; the visitor's address goes in `Reply-To`, so replying in the inbox reaches the customer. Sending *as* the visitor would fail Postmark's signature check and their domain's DMARC policy.
+
+### Validation and spam
+
+Validation rules live once in `validateEnquiry()` (`lib/enquiry.ts`) and run in both places — the browser for inline feedback, the route because a client can send anything. Field lengths are capped server-side.
+
+The hidden honeypot field (`components/HoneypotField.tsx`) is checked on the server. A filled trap returns success to the caller — so a bot can't tell it was dropped — and writes a `[enquiry] Dropped as spam` warning to the Vercel function log. That log line matters: the field is named `website`, which some password managers will autofill for a real visitor, and without it such an enquiry disappears with no trace.
 
 ## What's not done
 

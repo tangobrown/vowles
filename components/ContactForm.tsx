@@ -4,7 +4,7 @@ import { useState } from "react";
 import { CheckCircleIcon } from "@/components/icons";
 import { HoneypotField } from "@/components/HoneypotField";
 import { SERVICES, PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
-import { submitToFormspree } from "@/lib/formspree";
+import { submitEnquiry, validateEnquiry } from "@/lib/enquiry";
 
 type FormState = {
   name: string;
@@ -37,31 +37,13 @@ export function ContactForm() {
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
       setForm((f) => ({ ...f, [k]: e.target.value }));
 
-  const validate = (): Errors => {
-    const er: Errors = {};
-    if (!form.name.trim()) er.name = "Please tell us your name.";
-    if (!form.phone.trim() && !form.email.trim()) {
-      er.phone = "Add a phone or email so Paul can reply.";
-      er.email = "Add a phone or email so Paul can reply.";
-    } else if (
-      form.email.trim() &&
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)
-    ) {
-      er.email = "That email doesn't look right.";
-    }
-    if (!form.message.trim()) er.message = "A few words about the job, please.";
-    return er;
-  };
+  /* Delegates to the same rules the API route enforces, so browser feedback
+     and server validation can't drift apart. */
+  const validate = (): Errors =>
+    validateEnquiry({ formType: "contact", ...form }) as Errors;
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Honeypot: bots fill the hidden "website" field. Silently show success
-    // without hitting Formspree so they can't tell they were dropped.
-    if (honeypot.trim()) {
-      setSent(true);
-      return;
-    }
 
     const er = validate();
     setErrors(er);
@@ -70,10 +52,8 @@ export function ContactForm() {
     setSubmitting(true);
     setSubmitError(null);
     try {
-      await submitToFormspree({
-        ...form,
-        _subject: `New message from paulvowlescarpentry.co.uk, from ${form.name}`,
-      });
+      // The honeypot travels with the payload; the server decides on it.
+      await submitEnquiry({ formType: "contact", ...form }, honeypot);
       setSent(true);
     } catch (err) {
       setSubmitError(

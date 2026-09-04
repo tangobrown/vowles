@@ -114,7 +114,7 @@ const SECTIONS: { title: string; body: ReactNode }[] = [
         </p>
         <ul>
           <li>
-            <strong className="font-semibold text-white/90">Formspree</strong>, which delivers the
+            <strong className="font-semibold text-white/90">Postmark</strong>, which delivers the
             messages you send through our forms straight to Paul&apos;s inbox.
           </li>
           <li>
