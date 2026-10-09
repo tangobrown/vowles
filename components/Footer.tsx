@@ -55,6 +55,11 @@ export function Footer() {
             </a>
             .
           </p>
+          {/* Companies House registration. Matches the fine-print treatment
+              used by the copyright line in the bottom bar. */}
+          <p className="mt-3 text-[13px] text-white/40">
+            Company Number: 17503042
+          </p>
           <div className="mt-6 flex gap-2.5">
             {SOCIAL.map((s) => (
               <a
