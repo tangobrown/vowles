@@ -280,7 +280,7 @@ export function FinalCTA() {
             className="pointer-events-none absolute inset-0 opacity-[0.08]"
             style={{
               backgroundImage:
-                "repeating-linear-gradient(0deg, #151617 0 4px, transparent 4px 12px)",
+                "repeating-linear-gradient(0deg, #1a1b1c 0 4px, transparent 4px 12px)",
             }}
           />
 

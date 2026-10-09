@@ -20,9 +20,9 @@ const config: Config = {
     },
     extend: {
       colors: {
-        ink: "#151617",
-        surface: "#1b1c1e",
-        surface2: "#212325",
+        ink: "#1a1b1c",
+        surface: "#202123",
+        surface2: "#26282a",
         brand: "#ffde59",
         brandDark: "#ecca47",
       },

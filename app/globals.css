@@ -7,27 +7,27 @@
     scroll-behavior: smooth;
   }
   body {
-    background: #151617;
+    background: #1a1b1c;
     color: #fff;
     -webkit-font-smoothing: antialiased;
   }
   ::selection {
     background: #ffde59;
-    color: #151617;
+    color: #1a1b1c;
   }
   /* Custom scrollbar (dark) */
   ::-webkit-scrollbar {
     width: 11px;
   }
   ::-webkit-scrollbar-track {
-    background: #151617;
+    background: #1a1b1c;
   }
   ::-webkit-scrollbar-thumb {
-    background: #2c2e30;
-    border: 2px solid #151617;
+    background: #313335;
+    border: 2px solid #1a1b1c;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #3a3c3e;
+    background: #3f4143;
   }
 }
 

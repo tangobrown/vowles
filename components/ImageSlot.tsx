@@ -52,7 +52,7 @@ export function ImageSlot({
       className={`relative flex h-full w-full items-end overflow-hidden ${className}`}
       style={{
         background:
-          "#1b1c1e repeating-linear-gradient(135deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 11px)",
+          "#202123 repeating-linear-gradient(135deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 11px)",
         ...style,
       }}
       aria-label={label}
