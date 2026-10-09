@@ -144,7 +144,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <Container className="flex flex-col items-center justify-between gap-3 py-6 text-[13px] text-white/40 sm:flex-row">
-          <div>© {new Date().getFullYear()} Vowles Carpentry & Building. Fully insured.</div>
+          <div>© {new Date().getFullYear()} Vowles Carpentry & Building Ltd</div>
           <div className="flex gap-5">
             <Link href="/privacy" className="transition-colors hover:text-white/70">Privacy</Link>
             <a href="#" className="transition-colors hover:text-white/70">Terms</a>
