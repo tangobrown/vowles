@@ -43,8 +43,8 @@ export function Hero() {
             <ImageSlot id={s.id} label={s.label} />
           </div>
         ))}
-        <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-r from-ink/90 via-ink/55 to-transparent" />
-        <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-ink/65 via-transparent to-ink/15" />
+        <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-r from-ink/80 via-ink/45 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-ink/55 via-transparent to-ink/10" />
       </div>
 
       <Container className="pointer-events-none relative z-10 flex min-h-[760px] flex-col justify-center pt-36 pb-20 sm:min-h-[820px]">

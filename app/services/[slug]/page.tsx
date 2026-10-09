@@ -78,8 +78,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       >
         <div className="absolute inset-0 z-0">
           <ImageSlot id={page.heroSlot} label={`${page.name} hero photo`} />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/55 to-transparent" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/75 via-transparent to-ink/25" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/45 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-ink/20" />
         </div>
 
         <Container className="relative z-10 pb-16 pt-44">
