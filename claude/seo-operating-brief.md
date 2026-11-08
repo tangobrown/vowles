@@ -117,10 +117,17 @@ aggregate claims are a compliance risk.
   `@id` tied to its URL; a child's `isPartOf` points at the parent's `@id`.
   Blog posts carry `BlogPosting`. Every page carries one `BreadcrumbList`.
 - `og:type` is `website` for pages, `article` for blog posts.
-- **No `FAQPage` and no `aggregateRating`** unless genuinely substantiated.
-  **Note: this site currently emits `FAQPage`** on service pages, generated
-  from the FAQs in `lib/services.ts`. This conflicts with the rule and needs a
-  decision — see §9.
+- **No `aggregateRating`** unless genuinely substantiated. Verified absent
+  across all 13 live pages as of 6 November 2026 — keep it that way.
+- **`FAQPage` is a documented exception on this site. Do not remove it.**
+  Decided by Tim on 8 November 2026 (TAN-62, closed): the FAQs in
+  `lib/services.ts` are real questions with real answers, shown to users in
+  the accordion on each service page, so the schema describes content that
+  genuinely exists. That is what the substantiation rule asks for. Worth
+  knowing that Google restricted FAQ rich results to government and health
+  sites in August 2023, so the markup probably earns no SERP feature either
+  way — but it is honest, and the decision is to keep it. **Do not re-raise
+  this and do not strip `faqPageJsonLd`.**
 - Every new URL appears in the sitemap (`app/sitemap.ts` generates it at build;
   confirm in built output and note the before/after count). Canonicals use the
   www host exactly.
@@ -194,9 +201,20 @@ shared workspace-wide; the **project** is what scopes an issue to this site.
   technical name.
 - Anything else genuinely useful.
 
-If GA4 or Search Console aren't connected, **say so plainly** and leave the
-figures as clearly-marked `[ FILL ]` fields. Do not guess numbers and do not
-substitute market data for site traffic.
+**Traffic figures are switched off by decision.** Tim decided on 8 November
+2026 (TAN-63, parked at Low) that traffic figures are not needed for now, so
+`NEXT_PUBLIC_GA_ID` stays unset and GA4 collects nothing.
+
+So **omit the "Traffic at a glance" section entirely** rather than printing
+`[ FILL ]` fields nobody can ever fill. State once, plainly, that analytics is
+off by choice. The report then leads on enquiries and on what shipped, both of
+which are real.
+
+Enquiry counts are unaffected: they come from Postmark Activity, not GA4.
+Search Console is verified and still collecting independently, so query,
+impression and click data remain available if a search signal is wanted.
+
+Never guess numbers, and never substitute market data for site traffic.
 
 ---
 
@@ -208,16 +226,27 @@ Things true of this site that differ from Devon Joinery:
    blog post is not a content-only task here; the route has to be built first.
 2. **No sub-service pages.** The eight `/services/[slug]` pages are the deepest
    level. Sub-service pages mean a new routing depth.
-3. **`FAQPage` schema is live** on service pages, against the §5 rule. Decide:
-   remove it, or confirm the FAQs justify it.
-4. **GA4 may not be collecting.** `lib/consent.ts` loads analytics only when
-   `NEXT_PUBLIC_GA_ID` is set in Vercel *and* the visitor accepts the cookie
-   banner. If unset, there is no traffic data at all and §8 cannot report
-   visits.
+3. **`FAQPage` — DECIDED 8 Nov 2026, keep it.** The FAQs substantiate the
+   schema. See §5. TAN-62 closed. Do not re-raise.
+4. **GA4 — DECIDED 8 Nov 2026, stays off.** Confirmed by inspection of the
+   live bundle that no measurement ID is present: GA4 collects nothing, and
+   that is deliberate. See §8. TAN-63 parked at Low. Do not re-raise. Note
+   there is no backfill — history before it is ever switched on is lost, which
+   is a known and accepted cost.
 5. **Enquiry delivery is Postmark**, moved from Formspree. Enquiry counts come
    from Postmark Activity.
 6. **No Google Business Profile workstream** is scoped yet, unlike Devon
    Joinery.
+7. **TAN-61 (`/about` accreditation claims) is ON HOLD by Tim's decision of
+   8 November 2026. Do not action it.** This one needs stating explicitly
+   because §4's default points the other way: *"ship the version that claims
+   strictly less if an answer doesn't arrive"* would, read literally by an
+   unattended run, mean going and stripping the CSkills and CITB entries
+   unprompted. **That default is suspended for TAN-61** until Paul answers the
+   five questions on the issue. Do not edit
+   `components/AccreditationTabs.tsx`, do not edit `app/about/page.tsx:176`,
+   and do not delete anything from `public/badges/`. The finding itself still
+   stands: parked is not resolved.
 
 ---
 
