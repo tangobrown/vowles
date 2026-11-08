@@ -28,6 +28,21 @@ about process. Linear remains the source of truth for *what work exists*.
 
 Canonical host is `www`. Getting this wrong breaks internal links and schema `@id`s.
 
+### The eight service slugs, verified against the live site
+
+Read these from `Object.keys(SERVICE_PAGES)` in `lib/services.ts`, never from
+the display names. One of them does not match its label:
+
+```
+loft-conversions   extensions        kitchens     media-walls
+cut-roofs          flooring-decking  maintenance  windows-doors
+```
+
+**`maintenance` is the trap.** The page is titled "Maintenance Contracts" but
+the URL is `/services/maintenance`. Writing `/services/maintenance-contracts`
+produces a 404 and a broken internal link. The kickoff audit of 6 November
+2026 caught exactly this error in its own run instructions.
+
 ---
 
 ## 1. Standing instruction: ship to live
