@@ -12,8 +12,10 @@ import { JsonLd } from "@/components/JsonLd";
 import { SERVICE_PAGES, SERVICE_SLUGS } from "@/lib/services";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
 import {
+  SITE_NAME,
   breadcrumbJsonLd,
   faqPageJsonLd,
+  pageOpenGraph,
   serviceJsonLd,
 } from "@/lib/seo";
 import { SLOT_PHOTOS } from "@/lib/photos";
@@ -32,17 +34,19 @@ export function generateMetadata({
     return { title: "Service Not Found" };
   }
   const title = `${page.name} in South Devon`;
-  const description = page.heroSubhead;
+  /* Not heroSubhead: that is visible copy and runs well past the 170-char
+     meta ceiling on every service. */
+  const description = page.metaDescription;
   const canonical = `/services/${params.slug}`;
   return {
     title,
     description,
     alternates: { canonical },
-    openGraph: {
-      title: `${page.name} in South Devon | Vowles Carpentry & Building`,
+    openGraph: pageOpenGraph({
+      title: `${title} | ${SITE_NAME}`,
       description,
-      url: canonical,
-    },
+      path: canonical,
+    }),
   };
 }
 

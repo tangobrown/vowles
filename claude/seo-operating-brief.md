@@ -92,7 +92,10 @@ children. Only hand a term to a child that **actually exists**.
   apply to meta titles/descriptions or a title template.
 - **Meta titles: counted, never estimated.** The rendered title must be under
   **70 characters**. This site's template is `%s | Vowles Carpentry & Building`
-  — a 32-character suffix — so the source budget is about **37 characters**.
+  — a **30**-character suffix, so the source budget is **39 characters** to
+  land under 70. (The kickoff audit estimated 32 and 37; counted on
+  13 November 2026 it is 30 and 39. Count it, do not carry either number
+  forward on trust.)
   That is tighter than most sites. Count every time, and never repeat the brand
   in the source.
 - **Meta descriptions: 120–170 characters**, counted.
@@ -130,7 +133,10 @@ aggregate claims are a compliance risk.
 
 - Each service/sub-service page carries its own `Service` JSON-LD with a stable
   `@id` tied to its URL; a child's `isPartOf` points at the parent's `@id`.
-  Blog posts carry `BlogPosting`. Every page carries one `BreadcrumbList`.
+  Blog posts carry `BlogPosting`. **Every page below the root carries one
+  `BreadcrumbList`.** The homepage deliberately has none: a single-item
+  breadcrumb on a root URL has no consumer. Verified 13 November 2026 as one
+  per page on all twelve non-root pages, zero on `/`.
 - `og:type` is `website` for pages, `article` for blog posts.
 - **No `aggregateRating`** unless genuinely substantiated. Verified absent
   across all 13 live pages as of 6 November 2026 — keep it that way.

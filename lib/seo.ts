@@ -9,8 +9,12 @@ export const SITE_URL = (
 
 export const SITE_NAME = "Vowles Carpentry & Building";
 export const SITE_TAGLINE = "Local Builder in South Devon";
+/* 148 characters. Meta descriptions are capped at 170, and this value is
+   also the homepage description, the Open Graph description and the
+   LocalBusiness JSON-LD description, so it is kept inside the cap once
+   rather than duplicated into a shorter variant. */
 export const SITE_DESCRIPTION =
-  "Friendly, skilled carpentry and building across Torquay, Teignmouth, Newton Abbot, Torbay and Exeter. Run by Paul Vowles in Bishopsteignton, where no job is ever too small. Free, no-obligation quotes and honest advice.";
+  "Friendly, skilled carpentry and building across Torquay, Teignmouth, Newton Abbot, Torbay and Exeter. Run by Paul Vowles, where no job is too small.";
 
 /* Default social preview image (the shaker kitchen finished shot works well
    as a hero). Absolute URL so it renders on Slack, Facebook, LinkedIn and X. */
@@ -21,6 +25,38 @@ export const OWNER_NAME = "Paul Vowles";
 export const BUSINESS_LOCALITY = "Bishopsteignton";
 export const BUSINESS_REGION = "Devon";
 export const BUSINESS_COUNTRY = "GB";
+
+/* Builds a page's Open Graph object.
+
+   Next.js REPLACES a parent `openGraph` rather than deep-merging it, so a
+   child page declaring its own used to drop every inherited field: type,
+   siteName, locale and the preview image all vanished, leaving only title,
+   description and url. That cost twelve of the thirteen pages their og:image,
+   which is what decides whether a shared link shows a picture at all.
+
+   Every page below the root builds its object through here so the shared
+   fields survive. Pass a leading-slash path; metadataBase makes it absolute. */
+export function pageOpenGraph({
+  title,
+  description,
+  path,
+}: {
+  title: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    type: "website" as const,
+    locale: "en_GB",
+    siteName: SITE_NAME,
+    url: path,
+    title,
+    description,
+    images: [
+      { url: OG_IMAGE, width: 1600, height: 1200, alt: OG_IMAGE_ALT },
+    ],
+  };
+}
 
 /* Absolute URL helper — pass a leading-slash path, returns SITE_URL + path. */
 export const absoluteUrl = (path: string) =>

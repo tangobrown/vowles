@@ -18,19 +18,19 @@ import {
   EMAIL,
   FACEBOOK_URL,
 } from "@/lib/data";
-import { breadcrumbJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, pageOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Contact Paul | Free, No-Obligation Quote in South Devon",
+  title: "Contact Paul for a Free Quote in Devon",
   description:
-    "Get in touch with Paul Vowles for a free, no-obligation chat about your carpentry or building project across Torquay, Teignmouth, Newton Abbot, Torbay and Exeter. Call, email or send a message and you'll always get Paul himself.",
+    "Get in touch with Paul Vowles for a free, no-obligation chat about your carpentry or building project anywhere across South Devon. Call or message.",
   alternates: { canonical: "/contact" },
-  openGraph: {
-    title: "Contact Paul | Free, No-Obligation Quote in South Devon",
+  openGraph: pageOpenGraph({
+    title: "Contact Paul for a Free Quote in Devon | Vowles Carpentry & Building",
     description:
       "Call or message Paul Vowles for a free, friendly chat about your project. Usually a reply within a day.",
-    url: "/contact",
-  },
+    path: "/contact",
+  }),
 };
 
 function DetailCard({

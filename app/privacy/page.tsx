@@ -4,21 +4,23 @@ import Link from "next/link";
 import { Container, Reveal, CornerLines } from "@/components/ui";
 import { JsonLd } from "@/components/JsonLd";
 import { EMAIL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/data";
-import { SITE_NAME, breadcrumbJsonLd } from "@/lib/seo";
+import { SITE_NAME, breadcrumbJsonLd, pageOpenGraph } from "@/lib/seo";
 
 const LAST_UPDATED = "24 July 2026";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Vowles Carpentry & Building",
+  /* Brand omitted: the layout's title template appends it. It used to be
+     here too, so the rendered title carried the brand twice. */
+  title: "Privacy Policy",
   description:
     "How Vowles Carpentry & Building looks after your personal information. What we collect when you get in touch, how we use it, who we share it with, and your rights.",
   alternates: { canonical: "/privacy" },
-  openGraph: {
+  openGraph: pageOpenGraph({
     title: "Privacy Policy | Vowles Carpentry & Building",
     description:
       "How we look after your personal information, and the simple promises we make about your privacy.",
-    url: "/privacy",
-  },
+    path: "/privacy",
+  }),
 };
 
 const mailto = `mailto:${EMAIL}`;

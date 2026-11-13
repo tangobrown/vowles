@@ -3,7 +3,13 @@ import type { Testimonial } from "@/lib/data";
 export type ServicePage = {
   name: string;
   eyebrow: string;
+  /* Visible hero copy. Also feeds the Service JSON-LD description. It is NOT
+     the meta description: that is `metaDescription`, which is length-capped.
+     These were the same value until Nov 2026, which pushed every service page
+     over the 170-character meta ceiling. */
   heroSubhead: string;
+  /* Search-result description, 120 to 170 characters, counted. */
+  metaDescription: string;
   heroSlot: string;
   introHeading: string;
   introBody: string;
@@ -27,6 +33,8 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     eyebrow: "Loft Conversions",
     heroSubhead:
       "Let's turn that dusty, forgotten roof space into a bright, beautiful room you'll actually want to spend time in. An extra bedroom, a home office or a quiet retreat, adding real space and genuine value to your home.",
+    metaDescription:
+      "Loft conversions across South Devon. Turn unused roof space into a bright extra bedroom, home office or quiet retreat, adding real space and value.",
     heroSlot: "loft-hero",
     introHeading: "More room, without the upheaval of moving",
     introBody:
@@ -91,6 +99,8 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     eyebrow: "Extensions",
     heroSubhead:
       "Let's add the space your family really needs, whether that's a bigger kitchen, an extra bedroom or a proper utility. Built to last and looked after from start to finish, so an extension feels far less daunting than you'd think.",
+    metaDescription:
+      "House extensions across South Devon. A bigger kitchen, an extra bedroom or a proper utility, built to last and looked after from start to finish.",
     heroSlot: "ext-hero",
     introHeading: "The space you need, without the cost of moving",
     introBody:
@@ -135,6 +145,8 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     eyebrow: "Kitchens",
     heroSubhead:
       "The heart of the home, fitted beautifully and built to last. From careful installs of your chosen kitchen to the bespoke carpentry and building work behind it, Paul creates a kitchen that looks lovely and works beautifully for years to come.",
+    metaDescription:
+      "Kitchen fitting across South Devon. Careful installs of your chosen kitchen, plus all the bespoke carpentry and building work that sits behind it.",
     heroSlot: "kit-hero",
     introHeading: "A kitchen built around how you live",
     introBody:
@@ -175,6 +187,8 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     eyebrow: "Media Walls",
     heroSubhead:
       "Bespoke feature walls with lovely carpentry on show. A made-to-measure media wall turns a blank living-room wall into a real centrepiece, and it shows off exactly the kind of work Paul loves doing best.",
+    metaDescription:
+      "Bespoke media walls across South Devon. A made-to-measure feature wall turns a blank living room wall into a proper centrepiece for the room.",
     heroSlot: "media-hero",
     introHeading: "A centrepiece, made to measure",
     introBody:
@@ -216,6 +230,8 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     eyebrow: "Cut Roofs",
     heroSubhead:
       "Traditional roof carpentry, cut by hand on site. From new builds to complex extensions and repairs, Paul cuts roofs the proper way, accurate, strong and built to last for generations.",
+    metaDescription:
+      "Traditional cut roofs across South Devon, cut by hand on site. New builds, complex extensions and repairs, done accurate, strong and built to last.",
     heroSlot: "roof-hero",
     introHeading: "Proper roof carpentry, cut on site",
     introBody:
@@ -259,6 +275,8 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     eyebrow: "Flooring & Decking",
     heroSubhead:
       "Quality floors indoors and decking made to enjoy outdoors. Whether it's solid timber underfoot or a deck to make the most of the garden, Paul lays it level, solid and beautifully finished.",
+    metaDescription:
+      "Flooring and decking across South Devon. Solid timber underfoot or a deck to enjoy the garden, laid level, solid and beautifully finished.",
     heroSlot: "floor-hero",
     introHeading: "Solid underfoot, indoors and out",
     introBody:
@@ -299,6 +317,8 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     eyebrow: "Maintenance Contracts",
     heroSubhead:
       "Reliable, friendly care for homes and businesses. One trusted local tradesman on hand for the repairs, jobs and upkeep that keep a property in lovely order, with no chasing and no surprises.",
+    metaDescription:
+      "Property maintenance across South Devon. One trusted local tradesman for the repairs, jobs and upkeep that keep a home or business in good order.",
     heroSlot: "maint-hero",
     introHeading: "One trusted tradesman, on call",
     introBody:
@@ -340,6 +360,8 @@ export const SERVICE_PAGES: Record<string, ServicePage> = {
     eyebrow: "Windows & Doors",
     heroSubhead:
       "Supply and fit, with the everyday jobs done properly. From a single internal door to new windows throughout, Paul fits them square, sealed and finished to a standard you'll notice and enjoy every single time you use them.",
+    metaDescription:
+      "Windows and doors across South Devon, supplied and fitted. From a single internal door to new windows throughout, fitted square, sealed and finished.",
     heroSlot: "doors-hero",
     introHeading: "The everyday jobs, done properly",
     introBody:

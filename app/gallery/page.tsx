@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import { GalleryView } from "@/components/GalleryView";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, pageOpenGraph } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Gallery | Recent Carpentry & Building Work in South Devon",
+  title: "Gallery of Recent Work in South Devon",
   description:
-    "A little look at projects Paul Vowles has completed across South Devon, from loft conversions, extensions and cut roofs to bespoke joinery, kitchens and media walls. Tap any photo to take a closer look.",
+    "Recent carpentry and building projects across South Devon, from loft conversions and extensions to cut roofs, kitchens and bespoke joinery.",
   alternates: { canonical: "/gallery" },
-  openGraph: {
-    title: "Gallery | Recent Carpentry & Building Work in South Devon",
+  openGraph: pageOpenGraph({
+    title: "Gallery of Recent Work in South Devon | Vowles Carpentry & Building",
     description:
       "Loft conversions, extensions, cut roofs, kitchens, media walls and bespoke joinery from across South Devon.",
-    url: "/gallery",
-  },
+    path: "/gallery",
+  }),
 };
 
 export default function GalleryPage() {
